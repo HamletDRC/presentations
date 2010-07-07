@@ -1,0 +1,19 @@
+usePlugin 'groovy'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.0'
+}
+
+
+manifest.mainAttributes(
+    'Bundle-SymbolicName': 'org.example.UsableModularBundle',
+    'Export-Package': 'org.example;version="1.0.0",groovy.lang;version="1.6.0.beta-2"',
+    'Import-Package': 'groovy.lang;version="1.6.0.beta-2",org.codehaus.groovy.runtime;version="1.6.0.beta-2",org.codehaus.groovy.runtime.callsite;version="1.6.0.beta-2",org.codehaus.groovy.reflection;version="1.6.0.beta-2"'
+)
+

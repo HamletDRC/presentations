@@ -1,0 +1,58 @@
+4 Weeks with the Pomodoro
+
+Decide on task to be done
+Plan to work on it in 4 25-minute sections
+After each pomodoro take a short break. 
+After 4 pomodoros take a longer break
+Track your progress with pen and paper
+
+Insights: 
+* The most important part is microplanning your work. You quickly realize you have no idea what you are trying to do. Forces you to decompose the problem and strategize earlier about a solution. 
+* Track your process visually with pen and paper. To see a sheet of paper next to you with zero accomplished over 4 iterations makes you realize you need to change your strategy. Without the paper you may spend 1/2 a day or even a full day chasing down a dead end. With the paper you see it usually before 2 hours. If what you are doing isn't working then _stop_ doing it. It's amazing we need a visual reminder for this. 
+* Synchronizing your breaks with a partner means you check in once every 1/2 hour. We aren't pair programming and maybe we don't collaborate as much as we should. The breaks forces you into collabo mode and, IMO, is a nice alternative to pairing. 
+* Some tasks just aren't good for pomodoro. Sometimes you have no idea what to do, like a pure research project. A lot of our explaratory work was like this: you get a defect about something crashing. How do you plan 2 hours of work? The first step is to look at the log files, but after that it is anybody's guess. Many tasks need to be timeboxed to 25 minutes with 1.5 hours of mystery time. 
+* 25 minutes is rigid. Oftentimes we tell ourselves "just 5 more minutes", which usually means 30 to 60 more minutes. This is refreshing to stop and break every 25 minutes rather than to work on and get drained. However, it really is best to break between tasks where we don't interrupt ourselves mentally, and sometimes "just 5 more minutes" does mean "just 5 more minutes". I am not longer a slave to the pomodoro 25 minute rigidity. I am more loose. 
+* 2 hour work spells does not translate well with lunch time and daily standups. We found ourselves doing 5 pomodoros before lunch, and then 2 pomodoros after lunch, on good days (one on bad days). 
+* 25 minutes is a short period of time, and checking emails, skype, and twitter will eat all your time up if you do not shut them off. This is good. Focus, shut out distractions, and turn off all those tiny interruptions. 
+* It's fun. It's a good time to try something new that is at worst harmless. The verbage "i am in a tomato" and "eating a slice" adds levity. 
+
+Pomodoro Evolved: 
+* I continue to do it, especially for home projects. This works excellent for open ended tasks like blogging and writing. 
+* I do it at work a little, depending on the task. When I can think about a strategy for fixing a problem then I use pomodoro. When I have an amorphous, open ended task (like "Fix Broken CSS") then I do not. 
+* Pen and paper planning is an important ritual and visual reminder
+* The Tomato timer is hella annoying to you and others. I use KAlarm to broadcast a massive popup at the end of a pomodoro. 
+
+Advice: 
+Try it for one week. Try it with a partner. Use Pen & Paper planning and a computerized clock. Be very strict for one week and then see if you want to continue. Let me know how it goes. 
+
+
+
+* The directions on Wikipedia seem really simple: make a task, work for 25 minutes, take a break, every fourth break is longer. How did anyone manage to write a book about this? 
+* When is lunch? I forsee breaking the pomodoro rules in order to eat sensibly. 
+*  - All distractions shut off. no twitter, no blogs, no email. 
+*  25 minutes went by quickly
+* should have checked email on break. 
+* quit Skype. Tray icon was too tempting. worry wife. 
+* checking in every 25 minutes is a great alternative to pair programming
+* between tasks is a perfect time for a break. Why can I not just take one? 
+* 25 minutes is super short. I need to read why longer times are not allowed. 
+* breaking the rules to do a task 5 without a long break. Need to work around Lunch after all! 
+* ring - just started rolling. this is really minimizing interruptions? 
+* Mmmm... lunch was good. Planning Demo release in 4th Iteration here. 
+* cheated by checking the weather
+* i have something really pithy to post on twitter... must resists urge. 
+* ring... great progress not ready for break
+* Installed KTimer to not annoy everyone. KTimer sucks. Installed KAlarm. Maybe i am procrastinating. 
+* Yet again, feel like I am two minutes from check in. i suppose i can get more water. would like to tork 5 minutes more. And KAlarm works great. 
+*  I was _not_ 2 minutes from being finished. 
+* my go-to compile action is now to empty trash instead of check twitter. 
+* Totally crashed out of cycle to pair program. Now I am exhausted and do not want to have a tomato so close to lunch. 
+Without the timer and this close to lunch, I am totally cheating and checking out pictures of my kid on facebook. 
+*  resettign with espresso, partner, and real tomato
+*  damn the tomato is loud
+*  like the verbage: "we make a tomato"
+  found great problem, not directly related... shaving a yak
+  haven't worn headphones since Thursday. Coincidence? No. 
+ Only browser on my system responding is Chrome... how do I not surf the net? 
+hard to plan 4 slices when co worker arrive 100 minutes later. only time for two. 
+

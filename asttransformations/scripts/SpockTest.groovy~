@@ -1,0 +1,18 @@
+package example
+
+import org.junit.runner.RunWith
+import spock.lang.*
+
+@Speck
+@RunWith (Sputnik)
+class HelloSpock {
+
+  def "Does size method work?"() {
+
+    expect: 
+      name.size() == size
+    where:          
+      name << ['New', 'Orleans']
+      size << [3, 7]
+  }
+}

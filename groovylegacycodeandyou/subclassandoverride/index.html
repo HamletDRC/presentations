@@ -1,0 +1,105 @@
+When your only tool is a hammer... and your metaphorical hammer is Groovy... then you'll find yourself losing a lot of arguments about when it's appropriate to use Groovy. Which is where I found myself Friday afternoon, arguing that the best way to solve our testability problem was to change our file extensions from .java to .groovy (I suppose changing the compiler from javac to groovyc would be required too but I hadn't thought that far ahead). 
+
+See, we're in a really painful spot. We're rolling out a new web service framework and unit test coverage is hovering in the low teens. Ouch, that's just awful. The problem is that we're hamstrung by a massive set of legacy business objects that have persistence baked into their interfaces. Our new services are mostly just exposing a new set of domain objects that move data back and forth between the old business objects. 
+
+How do you write a Java unit test for a document style service whose simplest implementation looks something like this: 
+
+
+public class UserService {
+
+	private DataSource datasource;
+	
+	public void create(UserDTO input) {
+		User user = new User(datasource); 
+		user.setFirstName(input.getFirstName()); 
+		user.setLastName(input.getLastName()); 
+		user.save(); 
+	}
+	
+	// read, update, and delete methods omitted 
+}
+
+The constructor call to the User business object (that importantly requires a datasource) needs to somehow be mocked out. A natural solution in Java would be to introduce a UserFactory that simply wraps the constructor call with a layer of abstraction. But nobody really wants to create factories just to wrap constructors. What a headache. Groovy's <a href="http://groovy.codehaus.org/gapi/groovy/mock/interceptor/MockFor.html">mockFor</a>  class offers a simple way to mock out constructor calls. Here is what the body of a unit test would look like if the service were written in Groovy instead of Java:  
+
+public void testCreate() {
+	def userMock = new MockFor(User)
+	userMock.demand.setFirstName { assert it == 'Michael' }
+	userMock.demand.setLastName { assert it == 'Jackson' }
+	userMock.demand.save { }
+
+	userMock.use {
+	    def service = new UserService()
+	    service.create(new UserDTO('Michael', 'Jackson'))
+	}
+}
+
+mockFor and stubFor have been getting a bad rap lately, but they are very convenient ways to mock out constructor calls. Just create the mock, set up some expectations/demands, and then use it within a 'use' block. The problem is that the constuctor can only be mocked out when invoked from a Groovy class and not from a Java class. And hence my arguing for using Groovy in our service layer. Easy testability. Groovy for the win. Just switch the file extension and viola. 
+
+There's a fairly obvious and pure-Java alternative: subclass and override. Adding a layer of abstraction in Java doesn't just mean a factory or a new interface. Inheritence works just fine. Instead of wrapping the constructor call in a new class, just wrap it in a protected method, and let a <a href="http://xunitpatterns.com/Test-Specific%20Subclass.html">test-specific subclass</a> override and mock out the object: 
+
+Here is the production Java service: 
+
+public class UserService {
+
+	private DataSource datasource;
+	
+	public void create(UserDTO input) {
+		User user = makeUser(); 
+		user.setFirstName(input.getFirstName()); 
+		user.setLastName(input.getLastName()); 
+		user.save(); 
+	}
+	
+	protected User makeUser() {
+		return new User(datasource); 	
+	}
+}
+
+Now the makeUser() method can be overridden and mocked out in a subclass. Here is the passing Java unit test: 
+
+@Test
+public void testCreate() {
+
+	MockUser mockUser = new MockUser(); 
+	UserService service = new TestingUserService(mockUser); 
+	service.create(new UserDTO("Michael", "Jackson")); 
+	Assert.assertEquals("Michael", mockUser.getFirstName()); 
+	Assert.assertEquals("Jackson", mockUser.getLastName()); 
+	Assert.assertTrue(mockUser.saveWasCalled); 
+}
+	
+Not horrible. Not horrible. It's pure Java. No libraries other than JUnit. That's important to a lot of people. I did have to mark the production class as not final, which might bug some folks. I cheated a little in the example by not showing the test specific subclass of UserService. I had to define that as an inner class within the TestCase: 
+
+private static class TestingUserService extends UserService {
+	private User user; 
+		
+	TestingUserService(User user) {
+		this.user = user; 	
+	}
+		
+	@Override
+	public User makeUser() {
+		return user; 
+	}
+}
+
+That's an added bit of cruft that the Groovy version didn't have, but any decent IDE will generate this quickly for you. I also cheated by not showing the mock User object, which I handrolled in my example but could easily be replaced with a mock object framework: 
+
+private static class MockUser extends User {
+	private boolean saveWasCalled = false; 
+		
+	MockUser() { 
+		super(null); 
+	}
+		
+	@Override	
+	public void save() {
+		saveWasCalled = true; 
+	}
+}
+
+So was it all worth it? On the Groovy hand, you get testability within about 8 lines of code by using Groovy. On the Java hand, you get testability in about 40 lines but you get to stay inside the cozy little Java box and not get worried about introducing new languages. The point is that you don't need to settle for low test coverage just because you're using Java. There are a lot of techniques available beyond what Groovy offers. Subclass and Override is described in <a href="http://www.informit.com/store/product.aspx?isbn=0131177052">Working Effectively with Legacy Code</a>, and that's a great place to start if you want to add more tools to your Java testing toolbox. Is Groovy testability really the killer feature that is going to make you switch languages? Not likely in this scenario. 
+
+
+
+

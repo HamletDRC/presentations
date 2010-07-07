@@ -1,0 +1,24 @@
+usePlugin 'groovy'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    flatDir dirs: [
+        '../../../../osgi/lib',                // equinox jar
+        '../usablemodularbundle/build/libs'      // greeter jar
+    ]
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.0'
+    compile( ':osgi:3.4.0', ':usablemodularbundle:1.0' )
+}
+
+
+manifest.mainAttributes(
+    'Bundle-SymbolicName': 'org.example.UsefulBundle',
+    'Bundle-Activator': 'org.example.sayhello.GreetingActivator',
+    'Import-Package': 'org.example;version="1.0.0",org.osgi.framework;version="1.3.0",groovy.lang;version="1.6.0.beta-2",org.codehaus.groovy.runtime;version="1.6.0.beta-2",org.codehaus.groovy.runtime.callsite;version="1.3.0",org.codehaus.groovy.reflection;version="1.3.0"', 
+)
+

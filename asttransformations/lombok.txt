@@ -1,0 +1,125 @@
+------------------------------------------------------------------------------
+--
+--              Lombock
+--
+------------------------------------------------------------------------------
+http://projectlombok.org
+
+For most features, you do not need Lombock on your classpath...
+all you need to javac -cp lombock.jar MyClass.java
+
+To install into Eclipse, download and double click Jar. 
+
+@Getter and @Setter Demo
+
+
+@Getter @Setter Before
+import lombok.Getter;
+import lombok.Setter;
+
+public class MyBean {
+
+  @Getter @Setter String firstName; 
+  @Getter @Setter String lastname;   
+
+}
+
+public class MyBean {
+
+  String firstName; 
+  String lastname;   
+
+  void setFirstName(String firstName) {
+    this.firstName = firstName; 
+  }
+  
+  void setLastName(String lastName) {
+    this.lastName = lastName; 
+  }
+  
+  String getFirstName() {
+    return firstName; 
+  }
+  
+  String getLastName() {
+    return lastName; 
+  }
+}
+
+
+@Cleanup
+
+  @Cleanup InputStream in = new FileInputStream(...);
+  ... // do something with in
+  
+  InputStream in = new FileInputStream(...); 
+  try {
+     ... // do something with in
+  } finally {
+    in.close(); 
+  }
+
+
+@Synchronized - Makes private locking variables
+
+import lombok.Synchronized;
+
+public class SynchronizedClass {
+  
+  @Synchronized
+  public void run() {
+    ...
+  }
+}
+
+public class SynchronizedClass {
+  private final Object $lock = new Object[0];
+  
+  public void run() {
+    synchronized($lock) {
+      ...
+    }
+  }
+}
+
+Works on static methods. is configurable. why is it an Object[0]
+
+
+@ToString, @EqualsAndHashCode, @Data, @SneakyThrows - an opt out mechanism for checked exceptions
+
+
+Be sure to read the small print on the Lombock website! 
+
+Less Code. Good metaprogramming. 
+
+There is also a delombok that writes the source code into your java files so that 
+
+
+------------------------------------------------------------------------------
+--
+--              Spring Roo
+--
+------------------------------------------------------------------------------
+
+You work with Roo by loading its "shell" in a window and leaving it running. You can interact with Roo via commands typed into the shell if you like, but most of the time you'll just go about programming in your text editor or IDE as usual.
+
+As you make changes to your project, Roo intelligently determines what you're trying to do and takes care of doing it for you automatically. This usually involves automatically detecting file system changes you've made and then maintaining files in response. We say "maintaining files" because Roo is fully round-trip aware. This means you can change any code you like, at any time and without telling Roo about it, yet Roo will intelligently and automatically deal with whatever changes need to be made in response.
+
+Roo is not a runtime. Roo is not an annotation processing library. 
+
+Spring Roo also has a rollout mechanism. "Lock In Free"
+
+It's no longer necessary to switch platform or language to achieve extremely high levels of productivity! We designed Roo from the outset so those people with existing Java 5 knowledge, skills and experience would feel right at home. If you've ever built an enterprise application with Java, some or all of the technologies that Roo uses by default will already be familiar to you.
+Some of the common technologies Roo projects use include Spring (such as Spring Framework, Spring Security and Spring Web Flow), Maven, Java Server Pages (JSP), Java Persistence API (JPA, such as Hibernate), Tiles and AspectJ.
+
+Speaking of startup times, Roo uses AspectJ's excellent compile-time weaving approach. This gives us a lot more power and flexibility than we'd ordinarily have, allowing us to tackle advanced requirements like advising domain objects and dependency injecting them with singletons. It also means the dynamic proxies typically created when loading Spring are no longer required. Roo applications therefore startup more quickly, as there's no dynamic proxy creation overhead. Plus Roo applications operate more quickly, as there's no dynamic proxy objects adding CPU time to the control flow.
+Because Roo's AspectJ usage means there are no proxy objects, you also save the memory expense of having to hold them. Furthermore, Roo has no runtime component, so you won't lose any memory or CPU time there either. Plus because Roo applications use Java as their programming language, there won't be any classes being created at runtime. This means a normal Roo application won't suffer exhaustion of permanent generation memory space.
+
+
+While AspectJ is most commonly known for its aspect oriented programming (AOP) features such as applying advice at defined pointcuts, Roo projects use AspectJ's powerful inter-type declaration (ITD) features. This is where the real magic of Roo comes from, as it allows us to code generate members (artifacts like methods, fields etc) in a different compilation unit (ie source file) from the normal .java code you'd write as a developer. Because the generated code is in a separate file, we can maintain that file's lifecycle and contents completely independently of whatever you are doing to the .java files. Your .java files do not need to do anything unnatural like reference the generated ITD file and the whole process is completely transparent.
+
+Roo doesn't believe in magic!  (vs, do you know what Groovy is generating?)
+
+
+
+

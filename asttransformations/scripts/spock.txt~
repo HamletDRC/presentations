@@ -1,0 +1,40 @@
+Groovy AST Transformations by Example: Spock Data Tables
+
+Some of the <a href="http://code.google.com/p/spock/">Spock Framework</a> 0.4 features are starting to see the light of day, with the <a href="http://meetspock.appspot.com/?id=8001">Data Tables</a> being explained last week in a nice <a href="http://pniederw.wordpress.com/2010/03/11/whats-new-in-spock-0-4-episode-1-data-tables/">blog post</a>. In this blog post we're going to look deeper into Data Tables, exploring how they work under the covers using the Groovy <a href="http://groovy.codehaus.org/Groovy+Console">AST Browser</a>, <a href="http://www.jetbrains.com/idea/">IntelliJ IDEA</a>, and good old <a href="http://java.sun.com/javase/6/docs/technotes/tools/windows/javap.html">javap</a>. Maybe we'll all learn a little something... 
+
+Spock Data Tables Briefly
+The syntax for the new Spock Data tables is an interesting table style layout for data driven tests. Instead of declaring several variables with one variable on each line, you declare them in tabular format, where the variables names are the header row. This is the simple example from the Spock Docs: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import spock.lang.*
+
+class TableTest extends Specification {
+
+   def &quot;maximum of two numbers&quot;() {
+      expect:
+      Math.max(a, b) == c
+  
+      where:
+      a &#124; b &#124; c
+      3 &#124; 7 &#124; 7
+      5 &#124; 4 &#124; 5
+      9 &#124; 9 &#124; 9
+   }
+}
+</code></pre>
+I've been asked several times what the "value proposition" is for Spock. When you do your best to explain something, and somebody immedietly 
+
+
+http://code.google.com/p/specs/wiki/AdvancedSpecifications?
+
+
+
+
+0. Show Syntax
+  (and unroll)
+1. How to Run in Groovy Console
+  (add jar) 
+2. Unroll Mechanics
+  (IDEA) 
+3. Javap output
+  (javap)
+4. AstBrowser Output
+  (ast browser, compiler phases)

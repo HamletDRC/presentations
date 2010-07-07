@@ -1,0 +1,23 @@
+usePlugin 'groovy'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.0'
+}
+
+jar {
+    fileSet(dir: '../../../../osgi/groovylib-1.6/lib') {
+        include('**/groovy-all-1.6-beta-2.jar')  
+    }
+}
+
+manifest.mainAttributes(
+    'Bundle-SymbolicName': 'org.example.UsableBundle',
+    'Export-Package': 'org.example;version="1.0.0",groovy.lang;version="1.6.0.beta-2",org.codehaus.groovy.runtime.callsite;version="1.6.0.beta-2"',
+    'Bundle-ClassPath': '.,groovy-all-1.6-beta-2.jar',
+)

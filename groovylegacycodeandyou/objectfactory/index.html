@@ -1,0 +1,106 @@
+Patterns of Enterprise Cruft: Generic Object Factory
+
+Hmmm, what to do about unit testing a production component that clearly needs to call an object's dependency laden constructor... 
+
+My last post detailed the <a href="http://hamletdarcy.blogspot.com/2009/07/groovytestability-maybe-not-killer.html">subclass and override</a> approach, which is a simple, non-intrusive mechanism to allow you to mock out constructor calls. An alternative that a lot of people reach for is to create some sort of generic object factory that provides a layer of indirection across all constructor calls. This sounds like a decent enough idea. Let's see how far we can take it before things go wrong. 
+
+As context, imagine a system of legacy business objects with persistence baked into the interfaces. This means that persistence and domain objects are not separate and there is no entity manager... a pretty common legacy scenario in my experience. 
+
+An example document-style service to work with User objects would just move data from DTO objects into the database: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public class UserService {
+
+   private DataSource datasource;
+  
+   public void create(UserDTO input) {
+       User user = new User(datasource);
+       user.setFirstName(input.getFirstName());
+       user.setLastName(input.getLastName());
+       user.save();
+   }
+  
+   // read, update, and delete methods omitted
+}</code></pre>
+A naive indirection to provide would be to extract the constructor call to "new User(datasource)" into a seperate UserFactory object, which could then be mocked out for testing. The problem is that the 1-to-1 correspondence of domain objects to factory objects doubles the number of classes in your system. This abundance of classes is fine if your entire domain consists of about five objects. But if that's the case you don't really have an enterprise, do you? You should just refactor the objects to not couple the domain and persistence and stop reading these blog posts. But if your domain is 250 objects, creating 250 factories starts to look like a hassle. 
+
+No, clearly we need a generic factory that can furnish your services with any type of domain object that is requested. Something like a <a href="http://martinfowler.com/eaaCatalog/registry.html">Registry</a> object from <a href="http://martinfowler.com/books.html#eaa">Fowler's PEAA</a>, but just to dole out instances of new objects. If the service were refactored with this factory in mind, then testing is as simple as mocking out factory in the example below: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public class UserService {
+
+    private ObjectFactory factory;
+
+    public UserService(ObjectFactory factory) {
+        this.factory = factory;
+    }
+
+    public void create(UserDTO input) {
+        User user = factory.make(User.class); 
+        user.setFirstName(input.getFirstName());
+        user.setLastName(input.getLastName());
+        user.save();
+    }
+}</code></pre>
+You can use a mock object framework like <a href="http://mockito.org/">Mockito</a> to help you in this endeavor. Mockito is nicer than some other frameworks because it allows you to verify individual methods being invoked rather than all interactions with a particular object. This lets your test methods follow William Wake's arrange-act-assert sequence and makes your tests more understandable: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>    import static org.mockito.Mockito.*;
+
+    // arrange
+    User user = mock(User.class);
+    ObjectFactory factory = mock(ObjectFactory.class);
+    when(factory.make(User.class)).thenReturn(user);
+
+    // act
+    UserService service = new UserService(factory);
+    service.create(new UserDTO(&quot;fname&quot;, &quot;lname&quot;));
+
+    // assert
+    verify(user).setFirstName(&quot;fname&quot;);
+    verify(user).setLastName(&quot;lname&quot;);
+    verify(user).save();</code></pre>
+Easy. And the best part of all this is that ObjectFactory is fun to write. You get to use generics and reflection! Wheee! It's as simple as internally holding a map of interface types to implementation types and reflectively calling a standard constructor when one of the objects is requested: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public class ObjectFactory {
+
+    private Map&lt;Class, Class&gt; classToType = new HashMap&lt;Class, Class&gt;() {{
+        put(User.class, User.class);
+    }};
+    
+    private DataSource datasource;
+
+    public &lt;T&gt; T make(Class&lt;T&gt; clazz) {
+        try {
+            Class type = classToType.get(clazz);
+            if (type == null) throw new RuntimeException(&quot;Type not found: &quot; + clazz); 
+            Constructor constructor = type.getConstructor(DataSource.class);
+            if (constructor == null) throw new RuntimeException(&quot;Constructor not found: &quot; + clazz); 
+            return clazz.cast(constructor.newInstance(datasource));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+}</code></pre>
+I've officially seen 3 variations of this implementation, but they're all pretty similar. As long as you have a standard constructor then this approach works. If by working you mean you can get test coverage using mock objects and verifying side effects. 
+
+What happens when your objects don't share a common constructor and dependencies? Spring to the rescue! You can define a specific Spring factory for your domain objects and then the ObjectFactory can retrieve new prototyped-scoped beans by type whenever one is requested. The implementation is a little simpler in Java but hiding behind it is the complexity of the XML configuration: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public class SpringObjectFactory {
+
+    private XmlBeanFactory factory = new XmlBeanFactory(
+        new ClassPathResource(&quot;objectFactory.sping.xml&quot;)
+    );
+    
+    public &lt;T&gt; T make(Class&lt;T&gt; clazz) {
+        Map&lt;String,T&gt; beanMap = factory.getBeansOfType(clazz);
+        if (beanMap.isEmpty()) throw new RuntimeException(&quot;No beans found of type: &quot; + clazz);
+        if (beanMap.size() &gt; 1) throw new RuntimeException(&quot;Too many beans found: &quot; + beanMap.keySet());
+        return beanMap.values().iterator().next();  
+    }
+}</code></pre>
+This is kinda nice. So why is it a Pattern for Enterprise Cruft? 
+
+What was the root problem again? Oh yeah, the persistence layer was baked into the domain layer, they were not seperate. 
+
+Does a generic object factory solve this problem? Clearly not. It only solves how to <i>test</t> a system written like this. 
+
+Does a generic object factory drive us <i>closer</i> to solving this problem? By most accounts, the solution is removing persistence from the domain objects and placing it in some sort of entity manager. An entity manager would handle saving the domain objects but not creating them. In the future, it would be the entity manager that would be mocked out not the domain object constructor itself. So no, a generic object factory is not going in the right direction. All of out unit tests rely on mocking the domain object instantiation logic, not the save logic! In the future, the instantiation of the objects isn't going to change, but the saving will. When it comes time to create a DAO layer we'll have hundreds of fragile mock-sensitive unit tests that are worthless and need to be rewritten. A better solution is to leave the constructors alone and introduce a generic save mechanism, not a generic construction mechanism. That would be a design that is a step close to a DAO layer. 
+
+Is a generic object factory a good short term solution to getting higher test coverage? If your problem is low test coverage, then this approach can fix that. But what was the root problem again? Persistence, not testability. So onsider the alternatives. <a href="http://hamletdarcy.blogspot.com/2009/07/groovytestability-maybe-not-killer.html">Subclass and override</a> is simpler to the production code at the cost of having extra subclasses in the test tree. However, you can get around this by testing with partial mocks, and the technique at least does not move you away from a more appropriate solution. 
+
+A bigger risk of introducing a generic object factory is death by a thousand clever ideas. It's not your object factory that is so complex. It's that there is probably another one from the team down the hall. And a third tucked inside another module somewhere. And pretty soon you have a 100 different points of cleverness to deal with, and all those clever spots aren't really solving your problem, they're just getting you to (hopefully) hit a delivery date and be proud of your coverage. As far as I can tell, a whole bunch of "Enterprise Complexity" lies in accumulated clever solutions that solve problems one layer away from the root cause. So, I'll ask one last time: What was the root problem? Beware solutions that don't address the answer to this question. 
+
+And welcome to the Enterprise! 

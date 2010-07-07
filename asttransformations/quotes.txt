@@ -1,0 +1,115 @@
+When someone asked Louis Armstrong what jazz was, he replied “If you have
+to ask what jazz is, you’ll never know.” But he did answer the question in a way:
+he showed people what jazz was. That’s one way to explain the power of Lisp—to
+demonstrate techniques that would be difficult or impossible in other languages.
+
+Lisp is an excellent language for writing compilers and interpreters, but it offers another way of defining a new language which is often more elegant and certainly much less work: to define the new language as a modification of Lisp. Then the parts of Lisp which can appear unchanged in the new language (e.g. arithmetic or I/O) can be used as is, and you only have to implement the parts which are different (e.g. control structure). A language implemented in this way is called an embedded language.
+
+This use of functions corresponds to the concept of a method in object-oriented
+programming. Generally speaking, a method is a function which is a property of
+an object, and that’s just what we have.
+Then why do we need methods? [ed]
+
+Lisp and Lisp programs are both built out
+of a single raw material: the function. Like any building material, its qualities
+influence both the kinds of things we build, and the way we build them.
+
+The character of an object is influenced by the elements from which it is made. A
+wooden building looks different from a stone one, for example. Even when you
+are too far away to see wood or stone, you can tell from the overall shape of the
+building what it’s made of. The character of Lisp functions has a similar influence
+on the structure of Lisp programs.
+
+Functional programming means writing programs which work by returning
+values instead of by performing side-effects. Side-effects include destructive
+changes to objects (e.g. by rplaca) and assignments to variables (e.g. by setq).
+If side-effects are few and localized, programs become easier to read, test, and
+debug. Lisp programs have not always been written in this style, but over time
+Lisp and functional programming have gradually become inseparable.
+
+It used to be thought that you could judge someone’s character by looking at
+the shape of his head. Whether or not this is true of people, it is generally true
+of Lisp programs. Functional programs have a different shape from imperative
+ones. The structure in a functional program comes entirely from the composition
+of arguments within expressions, and since arguments are indented, functional
+code will show more variation in indentation. Functional code looks fluid 1 on the
+page; imperative code looks solid and blockish, like Basic.
+
+Having functional
+programming as an ideal doesn’t imply that programs should never have sideeffects.
+It just means that they should have no more than necessary.
+
+Multiple return values is functional. (p 45 abs)
+
+A functional program tells you what it wants; an imperative program tells you what to do.
+
+Like eval at runtime, uninitialized variables are so rarely needed that they should generally be treated as a symptom of some illness in the program.
+
+In Lisp it is comparatively easy to debug programs. A lot of information is
+available at runtime, which helps in tracing the causes of errors. But even more
+important is the ease with which you can test programs. You don’t have to compile
+a program and test the whole thing at once. You can test functions individually
+by calling them from the toplevel loop.
+
+the general principle is the same: instead of mixing the general and the specific,
+define the general and pass the specific as an argument.
+
+A function produces results, but a macro produces expressions—which, when evaluated, produce results.
+
+Many languages offer some form of macro, but Lisp macros are singularly powerful. When a file of Lisp is compiled, a parser reads the source code and sends its output to the compiler. Here’s the stroke of genius: the output of the parser consists of lists of Lisp objects. With macros, we can manipulate the program while it’s in this intermediate form between parser and compiler.
+
+The first step in translating a function into a macro is to ask yourself if you really need to do it. Couldn’t you just as well declare the function inline.
+
+But seeing as this is a low hack, not consonant with the genteel tone of this book, we shall not go into details.
+
+When do macros bring advantages? That is the subject of this chapter. Usually the question is not one of advantage, but necessity.
+
+No function could do that; in a function call, all the arguments are evaluated before the function is even invoked.
+
+5. Using the calling environment. A macro can generate an expansion containing a variable whose binding comes from the context of the macro call.
+
+The behavior of the following macro:
+(defmacro foo (x)
+‘(+ ,x y))
+depends on the binding of y where foo is called.
+
+Cons: 
+Clarity of source code. Macro definitions can be harder to read than the
+equivalent function definitions.
+Clarity at runtime. Macros are sometimes harder to debug than functions.
+
+Macro applications form a continuum between small general-purpose macros
+like while, and the large, special-purpose macros defined in the later chapters. On
+one end are the utilities, the macros resembling those that every Lisp has built-in.
+They are usually small, general, and written in isolation. However, you can write
+utilities for specific classes of programs too, and when you have a collection of
+macros for use in, say, graphics programs, they begin to look like a programming
+language for graphics. At the far end of the continuum, macros allow you to write
+whole programs in a language distinctly different from Lisp. Macros used in this
+way are said to implement embedded languages.
+
+An embedded language is one which is not written on top of Lisp so much
+as commingled with it, so that the syntax is a mixture of Lisp and constructs
+specific to the new language. The naive way to implement an embedded language
+is to write an interpreter for it in Lisp. A better approach, when possible, is
+to implement the language by transformation: transform each expression into
+the Lisp code that the interpreter would have run in order to evaluate it. That’s
+where macros come in. The job of macros is precisely to transform one type
+of expression into another, so they’re the natural choice when writing embedded
+languages.
+
+Macros are vulnerable to a problem called variable capture. Variable capture
+occurs when macroexpansion causes a name clash: when some symbol ends up
+referring to a variable from another context. Inadvertent variable capture can
+cause extremely subtle bugs. This chapter is about how to foresee and avoid
+them. However, intentional variable capture is a useful programming technique,
+and Chapter 14 is full of macros which rely on it.
+
+The first two sections divided instances of variable capture into two types: argument
+capture, where a symbol used in an argument is caught by a binding
+established by the macro skeleton, and free symbol capture, where a free symbol
+in a macroexpansion is caught by a binding in force where the macro is expanded.
+
+There is one certain way to avoid macro argument capture: replacing capturable
+symbols with gensyms.
+

@@ -1,0 +1,54 @@
+Intro to Groovy
+
+"Groovy is the REAL Java 2. Henceforth, we can think of the Java language (not the platform) as forever 1.x. Groovy is what the real second version of Java should have been." Neal Ford
+
+What's the Same?
+* keywords
+* exception handling
+* entity definitions and instantiation
+* Packaging & Imports
+* Java 5 enums, generics
+
+What's Different?
+* True OO with no primitives
+* String templating
+* Closures
+* Operator overloading
+* Better syntax for new types
+* Extended libraries
+
+Groovy Strings
+Need Groovy Console
+def name = "Hamlet"
+println "Hello $name" 
+
+
+Closures
+Need Groovy Console
+3.times { println it }
+(10..15).each { println it } 
+def x = [ 1, 2, 3]
+def f = { e -> e.each { println it } } 
+f x 
+
+Putting it all together
+
+def names = ["Hamlet", "Scott", "Jason"]
+println """
+<root>
+ <people>
+   ${writer -> names.each { writer.write "   <person>$it</person>\n" }}
+  </people>
+</root>
+"""
+Amazing glue langauge. 
+
+How does it work? 
+groovy & groovyc - standard tools
+Bidirectional compiler
+It is Class files
+Demo of scripts and javap output
+Scott: need groovyc and javap in path
+
+What's it good for? Grails
+Can we do create-app & create-domain, then briefly show screens and ORM in GrailsConsole? 

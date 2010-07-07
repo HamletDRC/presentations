@@ -1,0 +1,26 @@
+
+Eclipse Support
+Maven Plugin
+Gradle Plugin
+bnd & Spring alternative
+Spring Server DM
+launching app
+showing all the XML. 
+Dyamic Services - Blueprint, iPojo, peaberry for guice. all interoperate
+
+service model shows that constraining the interface to a single package works well for highly decoupled designs, 
+
+
+Eclipse plugin.xml was ported to an OSGi format. 
+
+Show how Groovy is OSGi compliant. 
+
+Legacy libraries like to do Class.forName (Hibernate and some logging APIs). This will break the OSGi modularity. 
+
+
+How a jar can be transformed into a bundle: 
+http://blog.springsource.com/2008/02/18/creating-osgi-bundles/
+
+http://www.osgilook.com/2009/08/12/four-articles-to-get-started-with-osgi-tests/
+
+

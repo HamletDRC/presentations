@@ -1,0 +1,21 @@
+usePlugin 'groovy'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.0'
+}
+
+jar {
+    fileSet(dir: '../../../../osgi/groovylib-1.6/lib') {
+        include('**/groovy-all-1.6-beta-2.jar')  
+    }
+}
+
+manifest.mainAttributes(
+    'Bundle-SymbolicName': 'org.example.ValidBundle'
+)

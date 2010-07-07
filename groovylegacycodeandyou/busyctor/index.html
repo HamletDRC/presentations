@@ -1,0 +1,35 @@
+Busy Constructors (are no problem to test)
+
+For whatever <a href="http://googletesting.blogspot.com/2009/07/why-are-we-embarrassed-to-admit-that-we.html">reason</a>, I was browsing <a href="http://misko.hevery.com">Miško Hevery's</a> old testability blog entries and found a nice <a href="http://misko.hevery.com/2008/07/30/top-10-things-which-make-your-code-hard-to-test/">top 10 list</a> of developer practices that make code hard to test. 
+
+Too bad I totally disagree with Item #3: Doing work in constructor. There's nothing untestable about big long constructors. No, really. Consider this horrorshow constructor, in which a global Datasource is retrieved from a <a href="http://code.google.com/p/google-singleton-detector/wiki/Mingleton">mingleton</a> and a concrete class is instantiated: <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>import javax.sql.DataSource;
+
+public class UserService {
+
+    private final DataSource dataSource;
+    private final UserSettings settings;
+
+    public UserService() {
+        dataSource = DatasourceFactory.getDefault();
+        settings = new UserSettingsImpl(); 
+    }
+}</code></pre>
+Don't get me wrong, this is a horrible design. For one, retrieving the datasource from a global static method is an example of a mingleton, which is global state by any other name: near impossible to inject any sort of variable behavior or polymorphism into. And instantiating a concrete implementation class (new UserSettingsImpl()) tightly couples this service to that class, another undesireable trait. This service is incredibly tightly coupled to the dependencies it requires. You'll never be able to reuse this service in another context where the datasource and user settings are different. And a test would be reusing this service... so what possibly makes this easy to test? 
+
+Package local constructors mixed with an <a href="http://www.industriallogic.com/xp/refactoring/extractParamter.html">Extract Parameter</a> refactoring is what makes this easy to test. Simply create a new constructor for the object and leave out a visibilty modifier. This makes the method only visible to objects in the same package (like your unit test)! Then add all the fields created in the original constructor to the parameter list. If you want to get fancy, chain the original constructor call into the new one: <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public class UserService {
+
+    private final DataSource dataSource;
+    private final UserSettings settings;
+
+    public UserService() {
+        this(DatasourceFactory.getDefault(), new UserSettingsImpl()); 
+    }
+
+    UserService(DataSource dataSource, UserSettings settings) {
+        this.dataSource = dataSource;
+        this.settings = settings; 
+    }
+}
+</code></pre>This transformation preserves all the type signatures that were previously in the class, so all the clients that compile against this code will continue to work just fine, without recompiling. So even if the class you need to refactor is depended upon everywhere, this is still a local refactoring. None of your refactor fearing coworkers even needs to know; it'll just be between us. 
+
+Did this buy us anything? Yes. All the dependencies of the class are now exposed for mocking and stubbing, without requiring changes to any calling code. Of course, your original constructor can't be tested, so if you have behavior or logic in the constructor that you need to test, then a little more creative refactoring is needed and it may not be supported with <i>just</i> automated IDE refactorings. Some might complain that we've modified the production code simply to enable testability... but to them I ask for alternatives. When weighing time committments and code impacts, I find this "expose local constructor" refactoring to be of real benefit and frequently used. 

@@ -1,0 +1,51 @@
+GWT for Non GWT Fans
+
+* It worked. 
+  We have a nice looking, rich, and fast application. 
+  We did it within budget. 
+  I am not angry about my toolkit. 
+
+* It was all Java (sort of). 
+  We never wrote any Javascript. 
+  But, I spent as much time in FireBug looking at HTML and CSS as in test cases and the debugger. 
+  And I definitely wrote HTML and CSS. 
+  For performance reasons, a lot of HTML was generated manually on the server side. 
+  
+* We implemented Drag and Drop in the Java Language.  
+  I don't know when you would need to write JSNI. I never did, even for advanced uses like drag and drop. 
+  But it was not easy or obvious how to get it working across all three browsers. 
+  This is a problem with the browser as a platform not with GWT! 
+  Different browsers implement and support things differently. IE6 accounted in the
+  end for 20% of our budget. That is too much. So many things are inconsistent and you 
+  have to build time into your schedule for this. That's lame. 
+  Targeting the JVM or Flash VM as a platform is a much better experience. 
+  
+* You can style your application in CSS. 
+  True CSS is supported, not some subset like Flex allows. 
+  But, I had to spend a lot of time in CSS. 
+
+* It was often confusing. 
+  Do you know the difference between: 
+    com.google.gwt.dom.client.Element
+    com.google.gwt.user.client.Element
+    com.google.gwt.xml.client.Element
+  I do not. 
+
+* The Developer Tools were Decent
+  You can set breakpoints and step through client side code. This is good. The debugger can't 
+  always calculate values though, so you end up putting printlns everywhere. This is bad. At
+  least changes are deployed with the refresh button. This is good. 
+
+* Testing the UI was difficult
+  Testing the UI is always difficult. GWT limits your toolset because you cannot instantiate
+  any UI object ever from a test unless you subclass GwtTestCase. This limits the tools you can 
+  use. We left large areas of the UI untested because the alternative was an artificial and 
+  meaningless seperator of concerns in order to fascilitate testing. No one wanted to write
+  or have to mock out a ContainedWdigetComponentFactoryKit just to get coverage. 
+  
+* Functional Tests Saved our Skins
+  Once again, a comprehensive set of high level functional or integration tests were 
+  hugely beneficial. They were done with Groovy, XMLUnit, CSV files, and customer collaboration. 
+  There is a lot of redundancy, and some days felt like all we did was create test date and
+  failing test cases, but in the end it was worth it. 
+

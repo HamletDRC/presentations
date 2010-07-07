@@ -1,0 +1,51 @@
+h3. 1.0
+* Daily Standup at 9 am
+* 2 week iterations
+* iteration retrospectives
+* story cards with green/yellow cards
+* shelf is story board
+* use jira
+* backlog is story cards
+
+h3. 2.0
+* standup is at 9 am sharp
+* release to demo every friday
+* stories must be decomposed to .5 day effort. 
+* try to work on same card together
+* write acecptance criteria into cards
+* hold card design sessions
+* put effort and burndown in Excel
+
+h3. 2.1
+?
+
+h3. 2.2
+* Zero Defects - Stop the line
+* retrospective with customer
+* retrospective - rotating facilitator
+* retrospective - separate from standup
+* use JIRA to track demo release progress
+* experiment with pomodoro technique
+
+h3. 2.3
+* email customer release notes and time remaining in budget at each release
+* 3rd party vendors - get integration help and directions from Metadata
+* Define stories better before putting them into an iteration
+
+h3. 2.4
+* broadcast agile successes on canoo blog and reading group
+* continue with pomodoro technique
+* use JIRA to esimate and report defects
+* pick a new format for retrospecives, maybe something more formal
+
+h2. Things that really worked
+* Yellow & Green Cards
+
+h2. Things that didn't work
+* Zero Defect Approach
+* Pomodoro? I liked it at least 
+* Story board shelf - we really need a real wall board, not some shelf
+* Fixed bid vs. Time and Materials - Had some billing issues around this. 
+"All projects are fixed bid. Some bids are just more visible than others." David Hussman
+For maximum health, you should move cards to done at least as often as you poop. Something is wrong if this isn't true. 
+* Effort tracking and statistics/measurements could have been a lot better. But at what cost? 

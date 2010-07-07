@@ -1,0 +1,14 @@
+
+// grails shell
+
+new BootStrap().init.call(null)
+
+Person.list()
+
+Person.findAllByNameLike('Scott%')   
+
+Person.findAllByNameLike('% Vlaminck')
+
+Person.findAllByNameLikeAndDateOfBirthGreaterThan('S%', new Date(1980, 1, 1))
+
+

@@ -1,0 +1,5 @@
+Import-Package: org.example;version="[1.0,2.0)", groovy.lang.*;version="1.6-beta-2",org.codehaus.groovy.*;version="1.6-beta-2",org.osgi.framework
+Private-Package: org.bnd
+Bundle-Activator: org.bnd.BndActivator
+Bundle-Version: 1.0.0
+Bundle-SymbolicName: bnd_tooling

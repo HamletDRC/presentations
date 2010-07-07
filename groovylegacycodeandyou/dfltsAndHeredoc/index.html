@@ -1,0 +1,102 @@
+When it comes to unit testing, it's the little things that drive me nuts. Or maybe it's the little things that make testing enjoyable. Optimism is better, I suppose. Now I don't buy into all that <a href="http://en.wikipedia.org/wiki/The_Tipping_Point">tipping point garbage</a>, but there are two Groovy features that I miss immediately when returning to Java. Almost every other rising language has them, they seem like trivialities to add to a language, and they aren't likely to be in <a href="http://openjdk.java.net/projects/coin/">Project Coin</a>. (Beware, all 3 of the previous statements are suppositions). And these two features are... <a href="http://groovy.codehaus.org/Strings+and+GString">multi-line strings</a> and <a href="http://groovy.codehaus.org/Extended+Guide+to+Method+Signatures">default parameter values</a>. 
+
+As ridiculous as it sounds, I'm going to spend several paragraphs extolling the virtues of two language features that are so simple they can be explained in a single sentence each. 
+
+<strong>Multiline Strings</strong>
+
+Why am I constantly testing with XML snippets? This is a question I don't often ask myself in Groovy because XML snippets look really nice embedded in a test method: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>def garage = new Garage(
+  new Car(CAR_NAME1, CAR_MAKE1), 
+  new Car(CAR_NAME2, CAR_MAKE2), 
+  new Car(CAR_NAME3, CAR_MAKE3)
+)
+    
+def actual = serialize(garage, Garage)
+    
+def expected = &quot;&quot;&quot;
+  &lt;garage&gt;
+    &lt;car name=&quot;$CAR_NAME1&quot; make=&quot;$CAR_MAKE1&quot;  /&gt;
+    &lt;car name=&quot;$CAR_NAME2&quot; make=&quot;$CAR_MAKE2&quot;  /&gt;
+    &lt;car name=&quot;$CAR_NAME3&quot; make=&quot;$CAR_MAKE3&quot;  /&gt;
+  &lt;/garage&gt;&quot;&quot;&quot;
+    
+assertXmlEqual(expected, actual)  </code></pre>
+This test method clearly shows a garage full of cars being created and a garage full of cars being expected. There is symmetry and conciseness, and I find it pretty easy to see how the input relates to the expected output. Compare the Java version: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>Garage garage = new Garage(
+  new Car(CAR_NAME1, CAR_MAKE1), 
+  new Car(CAR_NAME2, CAR_MAKE2), 
+  new Car(CAR_NAME3, CAR_MAKE3)
+); 
+    
+String actual = serialize(garage, Garage.class);
+    
+String expected = 
+  &quot;&lt;garage&gt;&quot; + 
+  &quot;  &lt;car name=\&quot;&quot; + CAR_NAME1 + &quot;\&quot; make=\&quot;&quot; + CAR_MAKE1 + &quot;\&quot; /&gt; &quot; +
+  &quot;  &lt;car name=\&quot;&quot; + CAR_NAME2 + &quot;\&quot; make=\&quot;&quot; + CAR_MAKE2 + &quot;\&quot; /&gt; &quot; +      &quot;  &lt;car name=\&quot;&quot; + CAR_NAME3 + &quot;\&quot; make=\&quot;&quot; + CAR_MAKE3 + &quot;\&quot; /&gt; &quot; +
+  &quot;&lt;/garage&gt;&quot;;
+    
+assertXmlEqual(expected, actual); </code></pre>
+Whee! Escaping quote characters is fun! I can't see how the expected block lines up with the input anymore, it's lost in a sea of accidental complexity, back slashes, and quotes. Yuck. And this is some pretty simple XML. The tests as documentation idea starts to suffer without multiline strings because the only thing that finds this format easy to read is the compiler. Speaking of documentation, how about copy and pasting the XML snippet into a user document or email? Or heaven forbid generating user documentation off the test case! You're just not going to do that with the Java version. In fact, I'd say most the time I don't even write the Java version like this... the escapes and quotes bring so much clutter that I just store XML snippets in seperate XML files and read them in during each test: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>Garage garage = new Garage(
+  new Car(CAR_NAME1, CAR_MAKE1), 
+  new Car(CAR_NAME2, CAR_MAKE2), 
+  new Car(CAR_NAME3, CAR_MAKE3)
+); 
+    
+String actual = serialize(garage, Garage.class);
+    
+String expected = readFromFile(&quot;MyTest.sample.xml&quot;); 
+    
+assertXmlEqual(expected, actual);</code></pre>
+
+It's no longer abrasive on the eye, but you also completely lose the ability to see the relationship between the input and the output. You aren't helping the tests document the system by hiding all the input from the reader! 
+
+This is such a small thing that I find so valuable, and it's nothing more than a notational convenience, a little syntactical sugar. 
+
+<strong>Default Parameter Values</strong>
+Tiny feature; big effect on unit testing. 
+
+Unit testing is about building tons of data, all in different configurations or state of construction, and then throwing that data at the system under test, observing and verifying the results. Unit tests look a lot different from production code. In production code, subroutines exist to perform smaller of a larger, decomposed problem. In test code, subroutines exist to build objects. The design principles between production and test are different, and it makes sense that some language features might be very useful in test but of more limited value in production. I find default parameter values to fit within this category. Consider a set of test methods that need to build a login form (username, password fields) in different states: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>JFrame frame1 = makeLoginWindow()
+JFrame frame2 = makeLoginWindow(&quot;some username&quot;) 
+JFrame frame3 = makeLoginWindow(&quot;some username&quot;, &quot;some password&quot;)</code></pre>
+Making a function to build a Login Window in these various states can be done within a single function in Groovy, you just have to use default parameters. 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>private JFrame makeLoginWindow(String username = null, String password = null) {
+
+  JTextField userField = new JTextField()
+  JTextField passwordField = new JTextField()
+  if (username != null) userField.text = username
+  if (password != null) passwordField.text = password 
+
+  JFrame frame = new JFrame()
+  frame.contentPane.add(userField)
+  frame.contentPane.add(passwordField)
+  return frame
+}</code></pre>
+Under the covers, this is still an overloaded method to the JVM. But that's alright. There is a single source for all the test data configuration, and navigating (ie reading) the test case is made easier by having a single source. 
+
+In a Java test case, your stuck defining at least 3 methods. The real rock star programmers are going to chain the method calls together... ohhh: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>private JFrame makeLoginWindow() {
+  makeLoginWindow(null, null); 
+}
+private JFrame makeLoginWindow(String username) {
+  makeLoginWindow(username, null); 
+}    
+private JFrame makeLoginWindow(String username, String password) {
+
+  JTextField userField = new JTextField();
+  JTextField passwordField = new JTextField();
+  if (username != null) userField.setText(username); 
+  if (password != null) passwordField.setText(password);  
+
+  JFrame frame = new JFrame();
+  frame.contentPane.add(userField);
+  frame.contentPane.add(passwordField);
+  return frame;
+}</code></pre>
+Conceptually, we've just added 3 entities to the test case that didn't exist before. Navigating around labyrinths of production code is a necessary evil. There are other design constraints at play and stuffing everything into one place isn't always the right thing to do. But in the test tree, labyrinths of chained code is just evil. Having to chase down dependencies undermines one the chief principles of testing: show clearly and simply how input is transformed to output. Default Parameters for the win. 
+
+Sadly, when advocating using Groovy as a testing language, these two features are unconvincing evidence of Groovy's superiority. They just don't seem like much. They aren't very exciting. So why are they the first things I miss when creating new Java test cases? 
+
+By the way: PHP has both these features. Ha!

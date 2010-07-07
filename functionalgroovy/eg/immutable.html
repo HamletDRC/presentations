@@ -1,0 +1,130 @@
+<body>
+Exploring Immutability
+
+When did immutable objects become idiomatic Java? I suppose it depends on your frame of reference and what your experience brings to coding. It may not be idiomatic Java to you. In fact, Java Beans and fluent interfaces seem to rely on in-place side effects and mutability to function properly. Exactly what place <i>do</i> immutable objects have in the Java world? 
+
+The immutability of String surprised me when I was learning Java. One of the first programs I wrote assumed String#replace did an in-place edit of the String, one of the first debugger sessions I conducted clearly showed me that String#replace was <strong>not</strong> editing the String, and one of the first Sun Forum questions I posted was about String#replace being broken in Java. BROKEN, I say! This represents the one time when an answer to a Sun Forum question clearly solved the poster's problem without a lengthy chain of "please post your code" responses. The point is that immutability has been with Java forever. And now that the days of Object Pools and persistent performance concerns are behind us, it's time to embrace immutability in our own code. 
+
+The benefits of immutability are many and well-documented. Effective Java (either edition) is a good start. I'll touch the highlights with the example of a Person object: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>class Person {
+  def firstName
+  def lastName
+}</code></pre>
+HA! Tricked you, it's Groovy. In the Groovy compiler, the Person class gains two methods for each property defined: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public void setFirstName(Object)
+public Object getFirstName()
+...
+</code></pre>
+The problem with the <i>Class</i> (as the JVM sees it), is that many threads may access Person and see the same instance in different states. It is difficult to share this object correctly across threads. The problem with the <i>Java source</i> is the cruft of writing getters and setters. The problem with the <i>API</i> of Person is that working effectively with the object requires many calls to setX and setY mutators just to get simple interactions working. The problem with <i>maintaining</i> this code is that the object is somewhat non-deterministic and difficult to reason about. Groovy uniquely solves only one of these issues: the source level cruft. Sure, you don't have to write out getters and setters, but that is the least important problem to solve. 
+
+Fluent APIs solve the issue of having to munge up the source code with repetitive calls to setX and setY. Instead of following the Bean pattern of setters being void methods, instead have all your setters return a 'this' reference: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>class Person {
+
+  def firstName
+  def lastName
+
+  def setFirstName(firstName) {
+    this.firstName = firstName
+    this
+  }
+
+  def setLastName(lastName) {
+    this.lastName = lastName
+    this
+  }
+}</code></pre>
+Now you have a nicer API to work with at the expense of not having a standard Java bean. Remember the Java language change proposal to make void methods always implicitly return a 'this' reference? I feel like I'm the only guy wanting that in Project Coin. Oh well. Here is what consuming the API now looks like: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>def person = new Person()
+    .setFirstName('hamlet')
+    .setLastName('darcy')
+assert 'hamlet darcy' ==  &quot;$person.firstName $person.lastName&quot;
+</code></pre>
+Groovy has a solution to this same problem: the with block. All object have a with method, and when inside the closure parameter, all method and field references are resolved back to the object having with invoked. Visual Basic had this feature and I always missed it in Java: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>def person = new Person()
+person.with {
+    firstName = 'hamlet'
+    lastName = 'darcy'
+}
+assert 'hamlet darcy' ==  &quot;$person.firstName $person.lastName&quot;
+</code></pre>
+So both Groovy and Java have an answer for the boilerplate involved with writing and consuming APIs. But again, these aren't the big issue with mutable objects: non-determinism and thread safety are. To help solve that you can use immutable objects.
+
+Can we get nice, fluent interfaces in Java without sacrificing mutability? The go-to solution in Java is the Builder idiom. Make your Person object immutable (all final fields), and the constructor private. Then define a mutable Builder class that wraps the constructor in a better API. In the end, creating Person instances looks like this: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>def person = new PersonBuilder()
+        .setFirstName('hamlet')
+        .setLastName('darcy')
+        .build()
+assert 'hamlet darcy' ==  &quot;$person.firstName $person.lastName&quot;
+</code></pre>
+You instantiate the Builder and the builder instantiates the Person. This is nice... I guess maybe. Remember the idea of a "<a href="http://hamletdarcy.blogspot.com/2009/07/when-testability-and-readability.html">meaningless abstraction</a>"? PersonBuilder is definitely a meaningless abstraction. It does not exist to solve any of the problems the system was designed to do. It exists solely to solve a problem in the implementation. Suspect. Very suspect.
+
+The Builder has by far the longest implementation, and the DRY principle is glaringly violated in the duplicate fields: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>class Person {
+    private final def firstName
+    private final def lastName
+
+    Person(firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+}
+
+class PersonBuilder {
+    def firstName
+    def lastName
+
+    def build() {
+        new Person(firstName, lastName)
+    }
+
+    def setFirstName(firstName) {
+      this.firstName = firstName
+      this
+    }
+
+    def setLastName(lastName) {
+      this.lastName = lastName
+      this
+    }    
+}
+</code></pre>
+It should be said, though, that this idiom <strong>does</strong> solve the determinism and concurrency issues with mutability. Person can now be shared freely across threads, cached safely, and behaves in a more deterministic manner. 
+
+The best approach has not yet been mentioned. Simply create an immutable object without a builder, and also provide a nice fluent API around it. The calling code can look exactly the same as the previous fluent API example: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>def person = new Person()
+        .setFirstName('hamlet')
+        .setLastName('darcy')
+assert 'hamlet darcy' ==  &quot;$person.firstName $person.lastName&quot;
+</code></pre>
+You can do this by slightly tweaking the fluent API example. Don't return a 'this' reference from setters, just return an entirely new object. And don't worry about all those little objects you're creating and tossing away. 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>class Person {
+
+    private final def firstName
+    private final def lastName
+
+    Person() { }
+
+    Person(firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+    
+    def setFirstName(firstName) {
+        new Person(firstName, lastName)
+    }
+
+    def setLastName(lastName) {
+        new Person(firstName, lastName)
+    }
+}</code></pre>
+Is a Person instance threadsafe? Yes. It is immutable.
+Is a Person instance deterministic? Yes. No race conditions here. 
+Is a Person instance API easy to consume? Yup, it has a fluent API. 
+Does the Person class introduce a meaningless abstraction? Nope, and good thing!
+Does the Person class require an <i>exotic</i> programming language to implement? No, this works fine in Java. 
+Does the Person implementation require tons of boilerplate? Maybe. The good part is that every implementation of a setter is exactly the same. The bad part is that every implementation of a setter is exactly the same. Not very DRY, but it could be automated in Groovy at runtime with a little metaprogramming. 
+
+That's it, immutable exploration over. And what place should immutability have in the Java world? It should be front and center. I hope I've shown that immutability and good APIs do not need to conflict with each other. You can get both with a tiny bit of extra work.  
+</body>
+
+

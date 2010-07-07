@@ -1,0 +1,33 @@
+Retrospectives all followed the same format
+
+1. No one sat down - No one sat down in a chair for any of our retrospectives. Everyone stayed engaged and there was pressure not to endlessly discuss issues or go to far over our allotted hour. Standing had a nice effect. 
+
+2. Generate Insights - we used a "Learning Matrix" to help us find issues (good and bad) with our iteration. We drew a four quadrant matrix on paper. The quadrants were: Things that are working (smiley face), are not working (frown face), ideas (a light bulb), and thanks (poorly drawn flowers). 
+
+Our team and project were small, sometimes with only 3 people in the room. The first retrospective filled the four quadrants fully but we had trouble in the later sessions. Maybe there were no more improvements to be made on the project (unlikely) or maybe we were comfortable with the deadline and not driven to make changes (probable). A low risk project can be a good opportunity to try out new or bolder techniques. On the other hand, adopting a process or practice that does not immediately solve a project issue may be unfair to the customer; they might be in effect subsidizing your agile research project. If you are out of problems to fix on your project, can't you always ask the question, "How do we increase our velocity a little more."
+
+One of the quadrants is "Thanks", where you express gratitude directly to someone on the team. The most sincere way to do this is to say their name, look directly at the person, and say thank you. This is amazingly hard to do and, in my experience, harder to do when the group is entirely male. No one wants to go first and everyone squirms a little while giving thanks. But once a single thank you comes out then group pressure kicks in and almost assures that everyone will receive at least one thanks. The first thank you is sincere, and the second one is given because of the pressure to give one back, and the third one results from not wanting to leave anyone out. Slowly everyone gets thanked. Just remember to be sincere! As Jean Giraudoux says, "The secret of success is sincerity. Once you can fake that you've got it made." 
+
+The directions are simple, but invariably most people say thank-you while looking at the manager. "Mr. Manager, sir, I'd like to thank my teammate for helping me solve some problem this week." It is certainly nice for the manager to see the relationships and who is helping whom, but thanking a third party seems weird when you observe it. Are we trying to get our teammate a raise or special bonus or something? Just look at the person you are thanking, say their name, and say thank you. Mr. Manager will hear it. 
+
+As a facilitator, start the thank you ball rolling by doing it once and doing it properly. Others will follow, and if they can't do it right then don't worry. Regardless of technique it's good to start the retrospective on a positive note, it helps us focus on changes and ideas to make the project better, rather than dwelling on the negative. 
+
+
+* talk about what you did wrong (but you need to be ready to fix your mistakes). 
+
+
+
+3. Decide What to Do - We never had any trouble deciding which practices to start and stop after the ideas generation: there were never so many that we could not do them all. Sometimes there were changes that were long-term and beyond our control, like bringing our lessons learned back to the larger company, our changing our bidding process. It was important to get these assigned to someone and follow up on them. Otherwise, it was enough for us to write our new practices into our working agreements. Which is good to mention, we had a working agreements: 
+
+<< insert picture >>
+
+The project kicked off with some practices that we knew we wanted to commit to, we wrote them on paper, and posted them where everyone could see. Each iteration, as ideas and experiments were added, we wrote them into the agreement in a different color (or crossed them out). After three months, the result was a color coded history of our process successes and failures. It took about 1 minute a week to maintain, and now we have a wonderful overview of our entire project. The posted reminders drove us to keep our commitments to one another each week, and it made project recaps like this a breeze. Would definitely do this again. 
+
+
+4. Close the Retrospective - Return on Time Invested (ROTI)
+
+We closed each session with a quick Return on Time Invested (ROTI), which I've blogged about in the past. 
+<< insert picture >>
+http://hamletdarcy.blogspot.com/2010/01/60-second-agility-roti-meetings.html
+
+Briefly: draw a scale from 0 to 4 on a board and have each participant rate the meeting. Regardless of their number (which really is not that important), they should answer one question, "What can we do next time to increase your number by one?" Then do it. Our results were: shorter meetings, separate from status reports, rotate the facilitator, and more. ROTI takes about 60 seconds per participant and is a great way to keep any recurring meeting focused and high value. 

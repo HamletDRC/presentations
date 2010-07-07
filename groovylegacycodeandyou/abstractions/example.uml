@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagramm>
+  <classes>
+    <class fqn="example.UserService" x="195.19110603627666" y="-82.99157704208432" />
+    <class fqn="example.UserServiceaImplTest" x="166.0" y="83.47419369764248" />
+    <class fqn="example.UserServiceImpl" x="78.99999999999989" y="-9.0" />
+    <class fqn="example.MockUserService" x="278.5904787198929" y="-7.2886869284682945" />
+  </classes>
+  <packages />
+  <edges>
+    <edge source="example.UserServiceaImplTest" target="example.UserService" relationship="TO_ONE">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="example.MockUserService" target="example.UserService" relationship="REALIZATION">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="example.UserServiceImpl" target="example.UserService" relationship="REALIZATION">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="example.UserServiceaImplTest" target="example.UserServiceImpl" relationship="CREATE">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings isCamel="false" isColorManagerEnabled="true" isFieldsVisible="false" isConstructorsVisible="false" isMethodsVisible="false" isShowDependencies="true" isShowInnerClasses="false" isVcsFilterEnabled="false" defaultVisibility="private" isPropertiesVisible="false" zoom="1.0" x="320.5" y="169.0" />
+  <SelectedNodes>
+    <node fqn="example.UserServiceaImplTest" />
+  </SelectedNodes>
+</ClassDiagramm>
+

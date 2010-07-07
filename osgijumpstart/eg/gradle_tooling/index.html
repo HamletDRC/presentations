@@ -1,0 +1,129 @@
+<html>
+<title>Groovy + OSGi: Gradle Makes it Easy</title>
+<body>
+
+I'm exploring the tooling around Groovy and OSGi for the September Groovy.MN meeting, where I'm presenting Groovy+OSGi Jumpstart (and then on to 2GX!). 
+
+In the end, creating OSGi bundles from Groovy classes was pretty darn easy with Gradle. The User Guide documentation wasn't exactly clear, and the current 0.7 sample project didn't do much of anything... so here's the goods while you wait for the updates to released. 
+
+A good background on using Groovy and OSGi is the <href="http://hamletdarcy.blogspot.com/2008/12/beginners-guide-to-osgi-on-desktop.html">Beginner's Guide to OSGi on the Desktop</a>. It explains bundles and Activators are, and what the Import-Package and Export-Package metadata specifices. In a nutshell: an OSGi bundle is a JAR file with extra data in the MANIFEST.MF. It's dependencies are specified in the Import-Package attribute and it's exported API is specified in the Export-Package attribute. On bundle startup, a method called Activator.start() is called, and on shutdown Activator.shutdown() is called. The bundle replaces the JAR as a unit of deployment, the dependency management metadata replaces JAR Hell, and the Activator replaces "public static void main". 
+
+This post will show you a few things: 
+  * how to implement an Activator in Groovy
+  * how valid bundle metadata looks
+  * how to create the bundle from Gradle
+  * how to load and execut ethe bundle in Eclipse Equinox
+
+A Groovy Activator
+This couldn't be much simpler. Implement the org.osgi.framework.BundleActivator interface in Groovy. You now have knowledge of 4% of the OSGi API. 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>package org.gradle
+
+import org.osgi.framework.BundleActivator
+import org.osgi.framework.BundleContext
+
+public class GradleActivator implements BundleActivator {
+
+    public void start(BundleContext context) {
+        println &quot;Hello from a Groovy Gradle Activator&quot;
+    }
+
+    public void stop(BundleContext context) { 
+    }
+}
+</code></pre>
+Notice, I put this in the org.gradle package. Now think for a moment about all the public methods on this object. (Can you name all 16 methods Groovy adds?). 
+
+Valid Bundle Metadata
+The bundle metadata (just the JAR's MANIFEST.MF file) needs to specify, at a minimum, a unique SymbolicName, all the ImportPackages that the class will need to run, and all the ExportPackages that other classes will need to run it. 
+
+What does this activator need for ImportPackage? It needs to import org.gradle (itself), and it needs to import org.osgi.framework. You also need to import groovy.lang and a few other Groovy packages so that Groovy method dispatch works correctly. 
+
+What does the activator need for ExportPacakge? Certainly org.gradle, so that the container can invoke the Activator. What else? This hidden dependencies are in the silent API of Groovy objects. All Groovy objects have a get/setMetaClass that operates on type groovy.lang.MetaClass. So to use the Activator you need to export groovy.lang and a few other packages! 
+
+A Gradle Generated MANIFEST.MF
+Luckily, the Gradle OSGi plugin handles all of the ImportPackage and ExportPackage dependencies for you. Here is the full MANIFEST that Gradle generates: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+Created-By: 1.6.0_04 (Sun Microsystems Inc.)
+Export-Package: org.gradle;uses:=&quot;groovy.lang,org.codehaus.groovy.refl
+ ection,org.codehaus.groovy.runtime,org.osgi.framework,org.codehaus.gr
+ oovy.runtime.callsite&quot;;version=&quot;1.0&quot;
+Bundle-Version: 1.0
+Tool: Bnd-0.0.255
+Bnd-LastModified: 1250128067203
+Bundle-Name: Example Gradle Activator
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.gradle.GradleActivator
+Import-Package: groovy.lang;version=&quot;1.6&quot;,org.codehaus.groovy.reflecti
+ on;version=&quot;1.6&quot;,org.codehaus.groovy.runtime;version=&quot;1.6&quot;,org.codeha
+ us.groovy.runtime.callsite;version=&quot;1.6&quot;,org.gradle;version=&quot;1.0&quot;,org
+ .osgi.framework;version=&quot;1.4&quot;
+Bundle-SymbolicName: gradle_tooling.osgi
+</code></pre>
+As you can see, the Export-Package and Import-Package are correct. You can also see in the Tool attribute that bnd is used under the covers. 
+
+In Gradle, there is an OSGi plugin you can use to simplify the generation of this. The following build file specifies that Equinox dependency (to resolve the OSGi classes) and a Groovy dependency (to compile the Groovy). The "configure(jar.osgi)" begins the OSGi configuration. By specifying the * for import and export packages, bnd is invoked to determine the dependencies. 22 lines of build script gives you a "gradle jar" target that creates a valid bundle: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>group = 'gradle_tooling'
+version = '1.0'
+
+usePlugin 'groovy'
+usePlugin 'osgi'
+
+repositories {
+    mavenRepo(urls: 'http://repository.jboss.org/maven2/')
+}
+
+dependencies {
+    groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.6.0'
+    compile( 'org.eclipse:osgi:3.4.3.R34x_v20081215-1030' )
+}
+
+configure(jar.osgi) {
+    version = '1.0'
+    name = 'Example Gradle Activator'
+    instruction 'Bundle-Activator', 'org.gradle.GradleActivator'
+    instruction 'Import-Package', '*'
+    instruction 'Export-Package', '*'
+}
+</code></pre>
+
+Proof Positive
+It's a hello world bundle, right? So let's run it! 
+
+Invoke the OSGi container in console mode: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>java -jar %osgi_jar% -console 
+</code></pre>
+The Gradle script will stick the OSGi jar in the .gradle cache. Mine is at $home/.gradle/cache/org.eclipse/osgi/jars/osgi-3.4.3.R34x_v20081215-1030.jar
+
+Now just install and start the bundle: 
+<pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>osgi&gt; ss
+
+Framework is launched.
+
+id      State       Bundle
+0       ACTIVE      org.eclipse.osgi_3.4.0.v20080605-1900
+
+osgi&gt; install file:/d:/libs/groovy-all-1.6-beta-2.jar
+Bundle id is 27
+
+osgi&gt; install file:/d:/libs/osgi-1.0.jar
+Bundle id is 28
+
+osgi&gt; ss
+
+Framework is launched.
+
+id      State       Bundle
+0       ACTIVE      org.eclipse.osgi_3.4.0.v20080605-1900
+27      INSTALLED   groovy-all_1.6.0.beta-2
+28      INSTALLED   gradle_tooling.osgi_1.0.0
+
+osgi&gt; start 28
+Hello from a Groovy Gradle Activator
+
+osgi&gt;
+</code></pre>
+
+Wheee! 
+</body>
+</html>

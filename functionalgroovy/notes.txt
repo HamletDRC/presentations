@@ -1,0 +1,106 @@
+Sex, Syntax, and Semantics
+Speakers of different languages must attend to and encode strikingly different aspects of the world in order to use their language properly. 
+Whorf, impressed by lingustic diversity, proposed that the categories and distinctions of each language enshrine a way of perceiving, analyzing, and acting in the world. Insofar as languages differ, their speakrers too should differ in how they perceive and act in objectively similar situations. 
+"A pattern language" of GoF affects the way we think. What is the new vocabulary we need to learn? 
+"Does thinking for speaking a particular language have an effect on how people think when not thinking for speaking that same lagnuage?"Color vs. Time. We all experience colors the same but not time. What are the things we all perceive the same and perceive differntly in PL?  
+We have "Thinking in Objects". What is "Thinking in Functions"? What is the vocabulary of FP? What must we forget about from OO? 
+
+defmacro.org intorducing functional languages with "every good developer..."
+"pure/impure" = naggum on hygenic/unhygenic = bolshevik menchevik
+nomads are... monads are...
+Reading type signatures and signature based search engines. 
+Verbing the Nouns - Functional Style has pattern of "Verber".verb(). Cumbersome. 
+Relationship between abstract methods and functional programming. 
+psychology of inherietnce paper. 
+http://secretgeek.net/func_v_imp.asp
+point free programming
+importance of REPL to FP
+"replace nested conditional inside fold with filter" - new pattern 
+point free groovy 
+funcional functions make caching simple, don't they? 
+
+Rv Pol notation - double dot syntax - double dot shows pain of violation of law of demeter. As well it should. 
+clojure - nil falls out with declarative/functional approach. In most cases there is no need to make a distinction between empty, nil, and missing. 
+in point free methods, all pieces are composed? There can be only one level of abstractino? Maybe not if you mix catamorphisms and anamorphisms? 
+prefer sequence transformation to recursion. 
+
+Absolute simplicity of concepts - functions are counting : http://enfranchisedmind.com/blog/posts/what-is-a-functional-programming-language/
+
+FP -> Generic by default
+FP Style -> Return new isntances, never void, never mutate
+for/foreach are not functional. Collection and inject are. 
+Structural typing (in F#?)
+|> and left to right type inference
+Partial function application
+pattern matching 
+Is everything an object or a function? Using fold + or ({X + y}) is inefficient? 
+F# comprehensions? 
+
+http://blog.richdougherty.com/2009/04/tail-calls-tailrec-and-trampolines.html
+http://blogs.sun.com/jrose/entry/tail_calls_in_the_vm
+http://alaska-kamtchatka.blogspot.com/2009/07/disfunctional-bowling.html
+http://enfranchisedmind.com/blog/posts/what-is-a-functional-programming-language/
+http://blog.runcoderun.com/post/145675117/tdd-in-a-functional-language-uncle-bobs-bowling
+
+
+In this short article I'm going to try to show that while type inference and structural types appear to be 
+additions to Scala over and above Java, they can also be explained as the removal of peculiar restrictions 
+from Java. ... Scala isn't a just bunch of features heaped on top of Java. To a significant degree it's a                                                                                                                                                                                                                                                                  
+
+generalization of things already found in Java. The result is that many aspects of Scala are both simpler 
+and more regular than Java. James Iry
+True of FP in general. 
+"Thus, rather than saying Scala adds type inference we can equally well say that it removes a silly restriction from Java's type inference[1]."
+Simplicity is removing all the weird rules from OO languages. 
+
+Referential Transparency
+
+No Stack Trace: there is a loss of debugging information as the stack trace no longer contains a complete accounting. From Linguistic Tools for Diagnostics:
+
+    I've written before about how the stack gets misunderstood as a history thanks to non-tail-recursive languages. Of course, stack traces are indispensable: they're essential for debugging, and they're also useful for reporting crash information from live applications. But this conflates two very different language requirements in one feature: the need for nested (unbounded, if your language isn't broken) function application, and the need for diagnostics of dynamic errors.
+
+Thinking in types - Search engines for function types (Haskell Prime Time)
+
+Pointfree programming + type inference is huge benefit in highly generic systems. Even in Java! 
+
+haskell solution in http://blog.objectmentor.com/articles/2009/07/31/more-clojure-from-uncle-bob-jsps is good
+
+RNRS: 
+Programming languages should be designed not by piling feature on top of feature, but by removing the weaknesses and restrictions that make additional features appear necessary. Scheme demonstrates that a very small number of rules for forming expressions, with no restrictions on how they are composed, suffice to form a practical and efficient programming language that is flexible enough to support most of the major programming paradigms in use today.
+
+The Joy of Tuples and their relationship to pairs. 
+http://apocalisp.wordpress.com/2009/08/21/structural-pattern-matching-in-java/
+
+
+The Joy of Combinators
+
+Debasish Ghosh
+Java programming paradigms have changed since its inception in the late 90s. A clear mandate and recommendation towards immutable abstractions, DSL like interfaces, actor based concurrency models indicate a positive movement towards a trend that nicely aligns with all the language research that has been going on in the community since quite some time. 
+
+Thinking: Metaphors We Live By and Sex & Semantics. 
+
+Laziness, Generators. Using Generators. 
+
+How to Tell Your Co-Workers Have Discovered Functional Programming
+
+void vs. Unit and why it is important. 
+
+To me the appeal of fp is less code so doing fp in Java via the methods the author indicates is less than appealing. 
+
+InfoQ - Haskell and the Arts - Paul Hudak
+http://www.infoq.com/presentations/haskell-arts-paul-hudak
+
+Yale C2 - Creative Consilience of COmputing and the Arts
+Undergrad - BS in Computing and the Arts
+MS and PhD in CS with focus on computing and the arts. 
+
+higher order functions, lazy evaulations
+
+functional reactive programming
+
+Art is declarative. Saying what, not how it is created. 
+aesthetics matter
+
+2 key abstractions: map and fold
+
+

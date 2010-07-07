@@ -1,0 +1,89 @@
+Big Flat Test Cases Suck (and what to do about it)
+
+It seems like all 900 pages of <a href="http://xunitpatterns.com/">xUnit Patterns</a> was just published a little while ago... my how things have changed since May of 2007. Back then, when it came to organizing test methods, we only had three options. Beginners always created a <a href="http://xunitpatterns.com/Testcase%20Class%20per%20Class.html">test case per class</a>; there was always a one to one mapping between production classes and test classes, and I'd guess most people are still doing this. The enlightened testers were creating one <a href="Test case Class per Fixture - http://xunitpatterns.com/Testcase%20Class%20per%20Fixture.html">test case per fixture</a>, in which test methods were all in the same test class if they all shared the same setUp() method. The problem with test case per class was complexity. As the number of test methods increased the cohesion of the test case decreased. More and more fields are added to the test to support different scenarios of testing, and each test method starts to use only a fraction of the fields available within the test case. Test case per fixture solves the problem by breaking out test methods into a new test case when new fixture and setUp() data is added. This was an improvement and was the recommended approach in Astel's <a href="http://www.pearsonhighered.com/educator/product/TestDriven-Development-A-Practical-Guide/9780131016491.page">Test Driven Development</a> book. The really cool kids, however, were doing <a href="http://xunitpatterns.com/Testcase%20Class%20per%20Feature.html">test case per feature</a>. This entails grouping test methods together based on what feature or user story they implement. Kinda sounds like an easyb story, huh? Yeah. 
+
+But don't be fooled! All three of these test organization methods are essentially the same: tests are going to be written as methods and enclosed in a class. How 2007... how xUnit-ish. See, all three approaches share the same deficiency. 
+
+Test cases grow. They grow really long. And they all grow in one direction: down the screen. Navigation isn't too bad an issue... any IDE test runner is going to navigate you right to the correct line number when a test fails. And you'll have a naming convention for tests, so keyboarding around the file isn't too tough. It's not simple though, and some <a href="http://github.com/nealford/presentations/tree/master">speakers</a> are suggesting it's better to use hugely long test names and add underscores to test methods to tell them apart easier. So this: <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public void testInitialPositionSetCorrectlyUponInstantiation()
+</code></pre>
+Is better as: <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>public void test_initial_position_set_correctly_upon_instantiation()
+</code></pre>
+Sure, I guess that's nicer. But exactly what problem is this solving? For that matter, what is the problem with big, long test cases? 
+
+Pretend we do have tests grouped by feature and that we have to make a change to that feature. How many tests are going to fail? Is there any way to tell beyond scrolling through the file and reading all the tests? It would be much easier if you could clearly see how the tests all relate to one another. But a flat list doesn't show relationships. Maybe there is a naming convention for test methods that might help, but you're still reading all the method signatures and making a decision based on name. 
+
+A hierarchical test case would let you do this. Test dependencies would be self-evident if you could define a test scenario and then make test methods or other scenarios children to as many levels deep as you want. You could still have the ease of grouping test methods by class, because you'd get a nice one-to-one mapping between test classes and production classes. But you'd also get test case per feature because the tests for each feature could just be child scenarios under the main scenario. And you'd also get test case per fixture because each scenario could have setUp() data that is shared with all children scenarios. Can you say best of all possible worlds? An easyb example it is then! <pre style="font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; color: #000000; background-color: #eee;font-size: 12px;border: 1px dashed #999999;line-height: 14px;padding: 5px; overflow: auto; width: 100%"><code>
+scenario &quot;testing a simple user service&quot;, {
+
+    scenario &quot;testing service with 0 users&quot;, {
+        
+        given &quot;a zero user service&quot;,  {
+            service = new UserService()
+        }
+        
+        scenario &quot;cannot remove a user&quot;, {
+             then &quot;removing users triggers exception&quot;, {
+                 ensureThrows(IllegalStateException) {
+                     service.removeUser(0)
+                 }
+             }
+        }
+
+        scenario &quot;can add a user&quot;, {            
+            given &quot;a user&quot;, {
+                user = [&quot;August&quot;, &quot;Schells&quot;]
+            }
+            
+            scenario &quot;adding a user once&quot;, {
+                when &quot;he is added&quot;, {
+                    service.addUser(*user)        
+                }
+                then &quot;user count is 1&quot;, {
+                    service.userCount.shouldBe 1    
+                }
+            }
+            
+            scenario &quot;adding the same user twice&quot;, {
+                when &quot;he is added again&quot;, {
+                    service.addUser(*user)        
+                }
+                then &quot;count is 2&quot;, {
+                    service.userCount.shouldBe 2    
+                }
+            }
+        }
+    }
+    
+    scenario &quot;testing a service with 10 users&quot;, {
+
+        given &quot;a 10 user service&quot;,  {
+            service = new UserService()
+            (1..10).each {
+                service.addUser(&quot;fname$it&quot;, &quot;lname$it&quot;)    
+            }
+        }
+
+        scenario &quot;can remove a user&quot;, {
+            when &quot;user is removed&quot;, {
+                service.removeUser(0)    
+            }
+            then &quot;count is decremented&quot;, {
+                service.userCount.shouldBe 9    
+            }
+        }
+
+        scenario &quot;can remove all users&quot;, {
+            when &quot;user is removed&quot;, {
+                service.removeAllUsers()    
+            }
+            then &quot;count remove all users&quot;, {
+                service.userCount.shouldBe 0    
+            }
+        }
+    }
+}    
+</code></pre>This is a long example. I'm sorry, it sort of needs to be if you're going to show scenarios (think: test methods) nested within one another. Any parent scenario is capable of creating test data that is only visible within the scope of that scenario, including child scenarios. No more restrictions to just one setUp and one tearDown per test! And now, if you want to think about how test methods relate to each other, you can simply examine the indentation. The scoping of scenarios guarantees that related tests are going to be grouped together. No more need to scroll through files reasoning about dependencies. 
+
+One note about this approach is that scenario given blocks (think: setUp()) do not create a <a href="http://xunitpatterns.com/Fresh%20Fixture.html">fresh fixture</a>; the scenario given block is run once for all the child scenarios to reuse, not one for each child scenario. This is a <a href="http://xunitpatterns.com/Shared%20Fixture.html">shared fixture</a> pattern and creates <a href="http://xunitpatterns.com/Chained%20Tests.html">chained tests</a>, where as the xUnit setUp does not. Perhaps there is a way for nested scenarios to have fresh fixtures from given blocks, but I'm unaware of it. 
+
+So regardless of your skepticism for behavior driven development, using Groovy and easyb for testing can bring benefits in test understandability and maintainability. Easy. 

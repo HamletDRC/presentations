@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean class="domain.User" singleton="false">
+        <constructor-arg ref="datasource" />
+    </bean>
+
+    <bean class="domain.WarehouseImpl" singleton="false">
+        <constructor-arg ref="datasource" />
+    </bean>
+
+    <bean id="datasource" class="domain.DataSource" singleton="true" />
+</beans>
