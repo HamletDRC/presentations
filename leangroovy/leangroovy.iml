@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/out/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library name="easyb">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../bin/easyb-0.9.7/easyb-0.9.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../bin/easyb-0.9.7/xmlunit-1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../bin/easyb-0.9.7/easyb-xmlunit-plugin-0.9.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../bin/easyb-0.9.7/lib/commons-cli-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="RUNTIME" name="groovy-core" level="application" />
+  </component>
+</module>
+

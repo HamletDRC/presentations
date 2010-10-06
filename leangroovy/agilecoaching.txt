@@ -1,0 +1,62 @@
+PrOpER Cycle - Problem, Options, Experiment, Review
+Pick a problem to work on. What needs to be improved? 
+Consider your Options. What can influence the situation better? List 3 options. 
+Experiment - Pick one option to try. 
+Review - Review the outcome. Did you improve things? If not, have you learned something? 
+
+James Shore: "Organizational change is laregly outside of your control. Find small things at work that you can do every day and that give you a feeling of satisfaction."
+
+Gradient Decision Making - A replacement for yes or no decision making. Create a gradient scale that runs from Endorse to Block, and let everyone vote. You can distinguish a strong yes from a weak no. Helps show a lack on consensus. Alternative: "Fist to Five" where holding up a fist means you block the decision and five means you endorse it. 
+
+Introducing change: 3 options: Educate the team, demonstrate to the team, or make it visible to the team. 
+
+Kent Beck - "Begin with small changes. Do one thing now and everything else later."
+
+"Framing a change as an experiment helps focus that team on the benefit because you'll need to discuss how to evaluate whether the experiment is a success." Experiments quickly become the status quo, even before the end of iteration. "You'll also notice that each change they adopt reduces their resistance to the next change."
+
+5 Whys or 5 Hows? Why questions are about the problem. How questions are about the solution. Let people know when you play 5 whys because it is otherwise condescending and annoying. 
+
+Whole Team - "You can help the team bridge the gap between different disciplines by suggesting they take on another role for a short period. For example, a developer could take on a testing role for a week."
+
+"Make time in iteration plans for them to explore new ideas. This can do wonders for motivation - and for the product. 
+
+Gold Cards - A way to balance not enough technical time. Take the gold cards all on the same day. 
+
+"Exposed Developers" - "Every day we took turns to make sure that some developers were designated "exposed", which meant interruptible for sales and customer support issues. "
+
+Little a agile - The rules of agile exist to help people get started with them. There is no magic in the formula. 
+
+"the whole point of user stories is to ask questions to better understand what users need and to find ways of breaking requirements down" they should definitely not be entered into a tracking system as a historical asset. the executable test is the historical asset. Stories need to be rewritten frequently to have value. "user stories have a half life. they grow stale & drop in value if not rewritten. Want to see a useless story? just let one sit for 2 months." "I expect to see a few ripped up cards every planning meeting. When I don't, them I'm concerned that the team is not engaging with their customer and not questing whether the user stories presented could be sliced differently."
+
+kanban - more focused on improving the flow of work. Very good for maintenance and support teams where the work cannot be grouped easily into iterations and a release plan. 
+
+"The team delivers value only when a whole story is complete. Encourage them to focus on getting a few stories all the way across the board at a time, rather than a scatter-gun approach where lots of stories are in progress."
+
+"Ideally, there should be exactly one task in progress for each developer (or pair)."
+
+"If there are problems in your project or Agile process, it is unlikely that introducing software to track the work will help solve it." "The team board is owned by the team and can be customized by them, whereas planning software is often owned, customized, and even maintained by one person."
+
+
+Use a pairing ladder to show who's pairing together and even out imbalances. 
+
+"The Hidden Backlog" - bugs belong on the team board, or vice versa. otherwise you have a hidden backlog. 
+
+"When you're making plans, remind the team to allow time for learning to write automated tests. The team should also let the customer know up front that the team velocity is likely to dip while they're in this learning period."
+
+Analysis Paralysis - When further discussion is unlikely to reveal the correct answer. 
+
+Stuck decisions - Often happen during a power struggle between developers that have different skill levels. 
+
+Whole Team. "It's actually much harder to get developers on the team to stop specializing by picking bits of the codebase that they consider as their own." "Specializing also makes it less necessary for the team to talk to each other about design and ask for help when they're stuck."
+
+Deployment tests - don't just script deployment, write a script that can test that all the necessary libraries and pieces are present. Are preconditions accurate for a deployment? 
+
+Retrospective actions - "Before deciding any actions, work out with the team how much of their time in the next iteration they can dedicate to process improvements while continuing to develop software."
+
+Fundamental Attribution Error - human tendency to explain actions of others as deliberate choice and downplay the situational factors. 
+
+Without slack time, where is the time to follow up on retrospectives? 
+
+"Very successful people tend to spend most their time doing things that they are good at."
+
+
