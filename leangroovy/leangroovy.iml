@@ -21,7 +21,17 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="RUNTIME" name="groovy-core" level="application" />
+    <orderEntry type="module-library">
+      <library name="spock">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../spock-core/spock-core/build/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../../spock-core/spock-core/build/libs" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="groovy-1.7.4" level="application" />
   </component>
 </module>
 
