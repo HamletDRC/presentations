@@ -6,7 +6,7 @@ class SpockUserTest {
 
     def """ does the user service contain
        a known set of users? """() {
- 
+  
         setup:
         def service = new UserService()
 

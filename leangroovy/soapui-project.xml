@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Math Service" soapui-version="3.6" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MathServiceSoapBinding" type="wsdl" bindingName="{http://respectpeople.leangroovy/}MathServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:6980/MathService?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:6980/MathService?WSDL"><con:part><con:url>http://localhost:6980/MathService?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="MathService" targetNamespace="http://respectpeople.leangroovy/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://respectpeople.leangroovy/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://respectpeople.leangroovy/">
+      <xsd:element name="square" type="tns:square"/>
+      <xsd:complexType name="square">
+        <xsd:sequence>
+          <xsd:element name="arg0" type="xsd:double"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="squareResponse" type="tns:squareResponse"/>
+      <xsd:complexType name="squareResponse">
+        <xsd:sequence>
+          <xsd:element name="return" type="xsd:double"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="add" type="tns:add"/>
+      <xsd:complexType name="add">
+        <xsd:sequence>
+          <xsd:element name="arg0" type="xsd:double"/>
+          <xsd:element name="arg1" type="xsd:double"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="addResponse" type="tns:addResponse"/>
+      <xsd:complexType name="addResponse">
+        <xsd:sequence>
+          <xsd:element name="return" type="xsd:double"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="squareResponse">
+    <wsdl:part element="tns:squareResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addResponse">
+    <wsdl:part element="tns:addResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="add">
+    <wsdl:part element="tns:add" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="square">
+    <wsdl:part element="tns:square" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MathServicePortType">
+    <wsdl:operation name="square">
+      <wsdl:input message="tns:square" name="square"></wsdl:input>
+      <wsdl:output message="tns:squareResponse" name="squareResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="add">
+      <wsdl:input message="tns:add" name="add"></wsdl:input>
+      <wsdl:output message="tns:addResponse" name="addResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MathServiceSoapBinding" type="tns:MathServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="add">
+      <soap:operation soapAction="add" style="document"/>
+      <wsdl:input name="add">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="square">
+      <soap:operation soapAction="square" style="document"/>
+      <wsdl:input name="square">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="squareResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MathService">
+    <wsdl:port binding="tns:MathServiceSoapBinding" name="MathServicePort">
+      <soap:address location="http://localhost:6980/MathService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:6980/MathService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="add" name="add" bindingOperationName="add" type="Request-Response" outputName="addResponse" inputName="add" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation isOneWay="false" action="square" name="square" bindingOperationName="square" type="Request-Response" outputName="squareResponse" inputName="square" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:testSuite name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="MathServiceSoapBinding TestSuite" searchProperties="true"><con:settings/><con:testStep type="request" name="add"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MathServiceSoapBinding</con:interface><con:operation>add</con:operation><con:request name="add"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:6980/MathService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:res="http://respectpeople.leangroovy/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <res:add>
+         <res:arg0>5</res:arg0>
+         <res:arg1>2</res:arg1>
+      </res:add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="GroovyScriptAssertion" name="Script Assertion"><con:configuration><scriptText>def responseHolder = messageExchange.responseContent 
+
+def envelope = new XmlSlurper().parseText(responseHolder).
+		declareNamespace('soap':'http://schemas.xmlsoap.org/soap/envelope/', 
+    						ns1:'http://respectpeople.leangroovy')
+
+assert '7.0' ==  envelope.'soap:Body'.toString()</scriptText></con:configuration></con:assertion><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="add" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="square"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MathServiceSoapBinding</con:interface><con:operation>square</con:operation><con:request name="square"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:6980/MathService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:res="http://respectpeople.leangroovy/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <res:square>
+         <res:arg0>4</res:arg0>
+      </res:square>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="GroovyScriptAssertion" name="Script Assertion"><con:configuration><scriptText>def responseHolder = messageExchange.responseContent 
+
+def envelope = new XmlSlurper().parseText(responseHolder).
+		declareNamespace('soap':'http://schemas.xmlsoap.org/soap/envelope/', 
+    						ns1:'http://respectpeople.leangroovy')
+
+assert '16.0' ==  envelope.'soap:Body'.toString()</scriptText></con:configuration></con:assertion><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="square" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

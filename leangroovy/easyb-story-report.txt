@@ -1,0 +1,10 @@
+1 scenario (including 1 pending) executed successfully.
+
+  Story: pending story test
+
+
+    scenario Existing user should be able to manage account [PENDING]
+      given a valid user
+      given a valid password [PENDING]
+      then the user should be able to update their name [PENDING]
+      then and update their address [PENDING]

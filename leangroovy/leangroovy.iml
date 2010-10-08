@@ -24,14 +24,13 @@
     <orderEntry type="module-library">
       <library name="spock">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../spock-core/spock-core/build/libs" />
+          <root url="jar://$MODULE_DIR$/../../spock-core_1.8/spock-core/build/libs/spock-core-0.5-groovy-1.8-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../spock-core/spock-core/build/libs" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="groovy-1.7.4" level="application" />
+    <orderEntry type="library" name="groovy-core" level="application" />
   </component>
 </module>
 
