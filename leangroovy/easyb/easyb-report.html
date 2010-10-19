@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+<head>
+  <meta http-equiv='content-type' content='text/html; charset=utf-8'/>
+  <title>easyb-report</title>
+  <meta name='keywords' content='BDD, behavior driven development, java, java bdd, groovy, groovy bdd, groovy behavior driven development, java behavior driven development, ruby, rspec, easyb, easy bdd'/>
+  <meta name='description' content='easyb is story verification framework built in the spirit of behavior driven development.'/>
+  <link href='easyb_report.css' rel='stylesheet' type='text/css'/>
+  <script src='prototype.js' type='text/javascript'></script>
+  <script type='text/javascript'>
+    function showOnlyContent(contentDiv, linkId) {
+      $('Summaries').hide();
+      $('summary-menu-link').removeClassName('selected-menu-link');
+    
+    
+      $('StoriesList').hide();
+      $('StoriesListPlain').hide();
+      $('stories-list-menu-link').removeClassName('selected-menu-link');
+      $('stories-list-plain-menu-link').removeClassName('selected-menu-link');
+    
+      $(linkId).addClassName('selected-menu-link');
+      $(contentDiv).show();
+    }
+    function toggleScenariosForStory(storyNumber) {
+      $('scenarios_for_story_' + storyNumber).toggle();
+      return false;
+    }
+    function toggleComponentsForSpecification(specificationNumber) {
+      $('components_for_specification_' + specificationNumber).toggle();
+      return false;
+    }
+  </script>
+</head>
+<body>
+<!-- start header -->
+<div id='header'>
+  <h1>
+    <a href='http://www.easyb.org'>
+      <span>easyb</span>
+    </a>
+  </h1>
+  <h2>&nbsp;&nbsp; -- BDD in java can't get any easier</h2>
+</div>
+<!-- end header -->
+
+
+<!-- start page -->
+<div id='page'>
+  <!-- start content -->
+  <div id='content'>
+    <div class='post'>
+      <div class='entry'>
+        <div id='Summaries'>
+          <h2>Summary</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Behaviors</th>
+                <th>Failed</th>
+                <th>Pending</th>
+                <th>Time (sec)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='primaryRow'>
+                <td>8</td>
+                <td class=''>0</td>
+                <td class='stepResultPending'>8</td>
+                <td>0.515</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Stories Summary</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Stories</th>
+                <th>Scenarios</th>
+                <th>Failed</th>
+                <th>Pending</th>
+                <th>Time (sec)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='primaryRow'>
+                <td>1</td>
+                <td>8</td>
+                <td class=''>0</td>
+                <td class='stepResultPending'>8</td>
+                <td>0.515</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Specifications Summary</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Specifications</th>
+                <th>Failed</th>
+                <th>Pending</th>
+                <th>Time (sec)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class='primaryRow'>
+                <td>0</td>
+                <td class=''>0</td>
+                <td class=''>0</td>
+                <td>0.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        
+<div id='StoriesList' style='display:none;'>
+  <h2>Stories List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Story</th>
+        <th>Scenarios</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Time (sec)</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr class='primaryRow'>
+        <td>
+         
+          <a href="#" onclick="$('scenarios_for_story_' + 0).toggle(); return false;">user management u i</a>
+         
+        </td>
+        <td>8</td>
+        <td class=''>0</td>
+        <td class='stepResultPending'>8</td>
+        <td>0.515</td>
+      </tr>
+
+       
+      <tr id='scenarios_for_story_0' class='scenariosForStory' style='display:none;'>
+        <td colspan='5'>
+          <table class='scenariosForStoriesTable'>
+            <tbody>
+              
+              <tr class='primaryScenarioRow'>
+                <td title='Scenario'>User with valid password can log into system</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.017</td>
+              </tr>
+              
+              
+              <tr class='secondaryScenarioRow'>
+                <td title='Scenario'>User with valid password can log into system</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0</td>
+              </tr>
+              
+              
+              <tr class='primaryScenarioRow'>
+                <td title='Scenario'>3 attempts at login with bad password locks account</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0020</td>
+              </tr>
+              
+              
+              <tr class='secondaryScenarioRow'>
+                <td title='Scenario'>User can view own account information</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0</td>
+              </tr>
+              
+              
+              <tr class='primaryScenarioRow'>
+                <td title='Scenario'>User can change own account information</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0</td>
+              </tr>
+              
+              
+              <tr class='secondaryScenarioRow'>
+                <td title='Scenario'>Admin can view other's account information</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0</td>
+              </tr>
+              
+              
+              <tr class='primaryScenarioRow'>
+                <td title='Scenario'>Admin can change other's account information</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0</td>
+              </tr>
+              
+              
+              <tr class='secondaryScenarioRow'>
+                <td title='Scenario'>Account changes have an audit trail</td>
+                <td title='Result' class='stepResultPending'>pending</td>
+                <td title='Time (sec)'>0.0030</td>
+              </tr>
+              
+              
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<div id='StoriesListPlain' style='display:none;'>
+  <h2>Stories Text</h2>
+  
+  <div>8 scenarios (including 8 pending) executed successfully.</div>
+  <div><br/><br/>&nbsp;&nbsp;Story: user management u i<br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario User with valid password can log into system&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario User with valid password can log into system&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario 3 attempts at login with bad password locks account&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario User can view own account information&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario User can change own account information&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario Admin can view other's account information&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario Admin can change other's account information&nbsp;<span style='color:#BABFEE;'>[PENDING]</span><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;scenario Account changes have an audit trail&nbsp;<span style='color:#BABFEE;'>[PENDING]</span></div>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end content -->
+
+
+  <!-- start sidebar -->
+  <div id='sidebar'>
+    <ul>
+      <li>
+        <h2>Sections</h2>
+        <ul>
+          <li>
+            <a id='summary-menu-link' class='selected-menu-link' href='#' onclick='showOnlyContent("Summaries", "summary-menu-link")'>Summary</a>
+          </li>
+          
+          <li>
+            <a id='stories-list-menu-link' href='#' onclick='showOnlyContent("StoriesList", "stories-list-menu-link")'>Stories</a>
+          </li>
+          <li>
+            <a id='stories-list-plain-menu-link' href='#' onclick='showOnlyContent("StoriesListPlain", "stories-list-plain-menu-link")'>Stories Text</a>
+          </li>
+          
+          
+        </ul>
+      </li>
+    </ul>
+    <div style='clear: both;'>&nbsp;</div>
+  </div>
+  <!-- end sidebar -->
+
+</div>
+<!-- end page -->
+
+<div id='footer'/>
+</body>
+</html>
