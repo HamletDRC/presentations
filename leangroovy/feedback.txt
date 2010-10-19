@@ -1,0 +1,8 @@
+SPin map example to not be negative
+Define value better - Why go faster? 
+Maybe rip out Groovy parts? 
+really, throw away groovy parts? Not reasonable. 
+fix mouse and IDEA
+make sure mouse works
+types of decision making - gradients of decisions, just three with Thumb. 
+Don't blame CMMi, but blame the implementation
