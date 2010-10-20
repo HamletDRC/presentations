@@ -180,5 +180,14 @@
     <mapping directory="" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="gcontracts-core">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/../../../gcontracts-core/target/gcontracts-1.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+  </component>
 </project>
 
