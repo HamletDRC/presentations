@@ -1,10 +1,10 @@
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 
 public class Person {
 
   @Getter @Setter String firstName; 
-  @Setter @Setter String lastname;   
+  @Getter @Setter String lastname;   
   
 }
 
