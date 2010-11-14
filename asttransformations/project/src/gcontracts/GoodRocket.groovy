@@ -25,9 +25,6 @@ shouldFail {
     rocket.accelerate -10
 }
 
-shouldFail {
-    rocket.accelerate Long.MAX_VALUE
-}
 
 
 def shouldFail(f) {

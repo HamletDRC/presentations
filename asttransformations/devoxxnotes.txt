@@ -1,0 +1,33 @@
+About 
+
+Lombok
+     - self running test showing getters, setters and data
+     - show javap
+
+Groovy
+     - show getters / setters - show javap
+     - show @Delegate - show javap
+     - show GroovyConsole (w/out tree) of generated code
+     - show slides for other annotations
+     
+GContracts
+     Rocket Slide
+     Show GContacts in GroovyConsole (and code)
+
+Spock 
+     Show data tables in IDEA
+
+AST Transformations
+     - Show AST Browser
+
+AST Visitor
+     - Show some CodeNarc console rules
+     - show how to write a rule
+
+Actions
+     - Go to Lombok Session
+     - Go to Spock Session
+     - CodeNarc Web Console
+     - Get the CodeNarc source and run "mvn install && groovy codenarc.groovy create-rule 
+     - Canoo Blog
+     - Call Canoo
