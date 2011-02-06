@@ -5,16 +5,17 @@ class GriffonEventDemoController {
     def model
     def view
 
-    // void mvcGroupInit(Map args) {
-    //    // this method is called after model and view are injected
-    // }
-
-    // void mvcGroupDestroy() {
-    //    // this method is called when the group is destroyed
-    // }
-
-    /*
-    def action = { evt = null ->
+    void mvcGroupInit(Map args) {
+        createMVCGroup('Ping', 'ping')
+        createMVCGroup('Pong', 'pong')
     }
-    */
+
+    def serve = { evt = null ->
+
+        view.serveButton.visible = false
+
+        doOutside {
+            app.event("Ping")
+        }
+    }
 }

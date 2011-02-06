@@ -1,14 +1,19 @@
 package griffoneventdemo
 
 application(title: 'GriffonEventDemo',
-  //size: [320,480],
+  size: [320,480],
   pack: true,
-  //location: [50,50],
+  location: [50,50],
   locationByPlatform:true,
   iconImage: imageIcon('/griffon-icon-48x48.png').image,
   iconImages: [imageIcon('/griffon-icon-48x48.png').image,
                imageIcon('/griffon-icon-32x32.png').image,
                imageIcon('/griffon-icon-16x16.png').image]) {
-    // add content here
-    label('Content Goes Here') // deleteme
+
+
+    hbox {
+        serveButton = button('Serve', actionPerformed: controller.&serve)
+        widget(app.views.ping.view)
+        widget(app.views.pong.view)
+    }
 }

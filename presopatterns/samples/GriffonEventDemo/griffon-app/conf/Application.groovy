@@ -9,6 +9,20 @@ application {
     //frameClass = 'javax.swing.JFrame'
 }
 mvcGroups {
+    // MVC Group for "Pong"
+    'Pong' {
+        model = 'griffoneventdemo.PongModel'
+        controller = 'griffoneventdemo.PongController'
+        view = 'griffoneventdemo.PongView'
+    }
+
+    // MVC Group for "Ping"
+    'Ping' {
+        model = 'griffoneventdemo.PingModel'
+        controller = 'griffoneventdemo.PingController'
+        view = 'griffoneventdemo.PingView'
+    }
+
     // MVC Group for "GriffonEventDemo"
     'GriffonEventDemo' {
         model = 'griffoneventdemo.GriffonEventDemoModel'
