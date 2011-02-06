@@ -1,8 +1,9 @@
 package griffoneventdemo
 
+import java.awt.BorderLayout
+
 application(title: 'GriffonEventDemo',
-  size: [320,480],
-  pack: true,
+  size: [820,480],
   location: [50,50],
   locationByPlatform:true,
   iconImage: imageIcon('/griffon-icon-48x48.png').image,
@@ -11,9 +12,12 @@ application(title: 'GriffonEventDemo',
                imageIcon('/griffon-icon-16x16.png').image]) {
 
 
-    hbox {
+    vbox {
         serveButton = button('Serve', actionPerformed: controller.&serve)
-        widget(app.views.ping.view)
-        widget(app.views.pong.view)
+        panel {
+            borderLayout()
+            widget(app.views.ping.view, constraints: BorderLayout.WEST)
+            widget(app.views.pong.view, constraints: BorderLayout.EAST)
+        }
     }
 }
