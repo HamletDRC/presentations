@@ -7,10 +7,10 @@ for (Person p : people) {
     ids.add(p.getId());
 }
 
-def ids1 = Person.findAll()().collect { it.id }
+def ids1 = people.collect { it.id }
 
 
-def ids2 = Person.findAll()()*.id      // found by CodeNarc
+def ids2 = people*.id      // found by CodeNarc
 
 println ids
 println ids1
