@@ -1,0 +1,14 @@
+asttransformations/project/gr8.iws
+nohup.out
+leangroovy/leangroovy.iws
+leangroovy/out
+asttransformations/project/out/
+effectivegroovy/samples/EffectiveGroovy.iws
+presopatterns/samples/GriffonEventDemo/stacktrace.log
+presopatterns/samples/GriffonEventDemo/staging/
+presopatterns/samples/GwtEventDemo/GwtEventDemo.iws
+asttransformations/scripts/lombok/*.class
+asttransformations/scripts/*.class
+presopatterns/samples/GriffonEventDemo/GriffonEventDemo.iws
+effectivegroovy/samples/out/
+asttransformations/scripts/roo/

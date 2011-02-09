@@ -251,7 +251,49 @@ covered by Andres
 
 Item EG1: Use Groovy Serv
 -------------------------
+Makes Groovy a 'real' scripting language
 
+time groovy -e "println new Date()"
+Wed Feb 09 06:41:32 CET 2011
+
+real	0m0.666s
+user	0m0.750s
+sys	0m0.040s
+
+
+time groovyclient -e "println new Date()"
+Wed Feb 09 06:42:48 CET 2011
+
+real	0m0.040s
+user	0m0.010s
+sys	0m0.000s
+
+http://kobo.github.com/groovyserv/
+Put in your path
+alias groovy=groovyclient
+
+
+Item EG2: Know Your Collections
+-------------------------------
+
+List<Person> people = findAllPeople();
+
+List<Integer> ids = new ArrayList<Integer>();
+for (Person p : people) {
+    ids.add(p.getId());
+}
+
+def ids1 = findAllPeople().collect { it.id }
+
+
+def ids2 = findAllPeople()*.id     // codenarc
+
+// find
+// find all
+// join
+// inject
+// unique
+// memoize
 
 Basic: 
 List and Map type Literals (including your own)
@@ -268,9 +310,9 @@ UnnecessaryReturnKeyword
 rule: replace substring with subscript operator
 ConsecutiveStringConcatenation - join or use GStrings
 Use Strings when Strings, GStrings when templated
--> writer parameter
-* Feature - Create UnnecessaryPublicModifier rule
-* Feature - 	rule: unneeded def in method declaration
+  -> writer parameter
+UnnecessaryPublicModifier rule
+rule: unneeded def in method declaration
 * Feature create UnnecessaryAnonymousRunnable rule
 * Feature - create UseEqualsToCompareStrings rule
 * Feature - create UselessStringValueOf rule
@@ -278,7 +320,6 @@ Use Strings when Strings, GStrings when templated
 * Feature - create rule: ternary could be elvis
 * Feature - create rule: prefer head()/first() to get(0) and [0]
 * create rule - should use tr not replaceAll
-* create "should use collect" rule
 * create excessive string newlines (should be multiline string
 
 

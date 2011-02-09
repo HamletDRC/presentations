@@ -7,6 +7,7 @@ class MathSpec extends Specification {
 
     @Unroll
     def "Does simple math work?"() {
+
         expect:
         def s = new ArithmeticShell()
         s.evaluate(input) == output
