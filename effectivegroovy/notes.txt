@@ -276,24 +276,16 @@ alias groovy=groovyclient
 Item EG2: Know Your Collections
 -------------------------------
 
-List<Person> people = findAllPeople();
+01 - Collect 
+02 - Find
+03 - FindAll
+04 - Inject
+05 - unique
+06 - memoize
+07 - trampoline
 
-List<Integer> ids = new ArrayList<Integer>();
-for (Person p : people) {
-    ids.add(p.getId());
-}
-
-def ids1 = findAllPeople().collect { it.id }
-
-
-def ids2 = findAllPeople()*.id     // codenarc
-
-// find
-// find all
 // join
-// inject
-// unique
-// memoize
+
 
 Basic: 
 List and Map type Literals (including your own)
