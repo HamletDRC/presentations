@@ -4,14 +4,66 @@ def s = new String('abc')
 def i = new Integer(5)
 def b = new Boolean(true)
 
+
+
+
+
+
+
+
+
+
+
+
+
 BigInteger bi = new BigInteger('12345')
 BigDecimal bd = new BigDecimal('123.45')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def a = new ArrayList()
 def m = new HashMap()
 def hs = new HashSet()
 def st = new Stack()
+
+
+
+
+
+
+
+
+
+
+
+
+def isBabyBoomer = { birthDate ->
+    Calendar cal = Calendar.getInstance()
+    cal.set(1946, 0, 1, 0, 0, 0)
+    Date boomStart = cal.getTime()
+    cal.set(1965, 0, 1, 0, 0, 0)
+    Date boomEnd = cal.getTime()
+    boomStart.before(birthDate) && boomEnd.after(birthDate)
+}
+println isBabyBoomer(new Date()) // now
+
+
+
+
+
+
 
 
 def myList = [] as CaseInsensitiveList
