@@ -13,3 +13,6 @@ System.out.println(msg);
 
 
 println people.join('\n')
+
+
+println people.toListString()
