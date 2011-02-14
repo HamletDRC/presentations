@@ -55,9 +55,7 @@ MultipleLoggers
 
 
 Other: 
-Spread into arguments
 If statements -> Guard Clauses -> chained function methods
-prefer private static methods
 
 Return from closure -- confusing
 

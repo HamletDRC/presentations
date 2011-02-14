@@ -1,4 +1,4 @@
-Tip EJ02: Consider a Builder when faced with many constructor parameters
+Tip EJ02: Consider a builder when faced with many constructor parameters
 ------------------------------------------------------------------------
 01 - Plain Old Java Constructor
 02 - Builder Syntax
@@ -34,12 +34,7 @@ CodeNarc & IDEA have analysis for this common problem
 --------------  unused -------------------
 ------------------------------------------
 
-
-Tip 21: Use Function Objects to represent strategies
------------------------------------------------------
-Closures
-
-
+Item Tip 21: Use Function Objects to represent strategies
 Item EJ19: Use Interfaces only to define types - Covered by CodeNarc
 Item EJ36: Consistently use @Override - Covered by both IDEA and CodeNarc
 Item EJ43: Return Empty Arrays or Collections, not nulls - Covered by both IDEA and CodeNarc
