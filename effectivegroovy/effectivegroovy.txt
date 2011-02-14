@@ -1,0 +1,96 @@
+Item EG1: Use Groovy Serv
+-------------------------
+Makes Groovy a 'real' scripting language
+
+time groovy -e "println new Date()"
+Wed Feb 09 06:41:32 CET 2011
+
+real	0m0.666s
+user	0m0.750s
+sys	0m0.040s
+
+
+time groovyclient -e "println new Date()"
+Wed Feb 09 06:42:48 CET 2011
+
+real	0m0.040s
+user	0m0.010s
+sys	0m0.000s
+
+http://kobo.github.com/groovyserv/
+Put in your path
+alias groovy=groovyclient
+
+
+Item EG02: Know Your Collections
+-------------------------------
+
+01 - collect        // Tip: Use collect for transformations
+02 - find
+03 - findAll
+04 - inject         // Tip: Use inject to accumulate data (often can be collect)
+05 - unique
+06 - memoize        // Tip: Use memoize to 
+07 - trampoline     // Tip: Use trampoline for recursive functions
+08 - join           // Tip: Use join for String manipulation
+09 - any
+10 - every          // Tip: Use any/every for logical operations (not find)
+11 - each           // Tip: Use for-each not .each 
+
+Item EG03: Know Your Files
+--------------------------
+01 - getText / setText
+02 - File.readLine
+03 - File.append
+
+Item EF04: Synchronization
+--------------------------
+01 - not thread safe
+02 - method synchronization
+03 - internal synchronization
+04 - @Synchronized
+05 - Reentrant Lock
+06 - with Block          Tip: Should write arm block, not call close method. 
+07 - @WithReadLock/@WithWriteLock
+
+Item EG05: Coordination
+-----------------------
+01 - Thread.start and join      - Item EJ69: Prefer concurrency utilities to wait and notify
+02 - Prefer executor services   - Item EJ68: Prefer Executors to Threads
+03 - GPars Dataflows            - Item EG05a: Prefer GPars
+04 - Coordination via dataflows
+
+Item EG06: Understand Default Parameters
+----------------------------------------
+Effective Java Tip 41: Use Overloading Judisiously (overturned)
+"Selection among overloaded methods is static, while selection among overridden methods is dynamic. The correct version of an overridden method is chosen at runtime based on the runtime type of the object on which the method is invoked."
+Groovy does this at Runtime
+
+"A safe, conservative policy is never to export two overloadings with the same number of parameters"
+Overloaded methods -> Default Parameters
+Understand that it creates overloaded methods. 
+But understand the dispatch happens at runtime. 
+
+
+
+Item EG07: Use Map Interfaces Judiciously
+-----------------------------------------
+I put them only in tests
+
+
+
+
+
+------------------------------------------
+--------------  unused -------------------
+------------------------------------------
+Tip: Learn to Write a Builder
+Tip: XMLSlurper/XMLParser - Do not mix with business logic/layers/etc
+
+
+Threading Tips 
+Tip: Avoid Busy Wait - CodeNarc Rule
+Tip: Avoid Double Checked Locking - CodeNarc Rule
+Tip: Inconsistent Property Locking - CodeNarc Rule
+Tip: Inconsistent Property Synchronization - CodeNarc and IDEA rule
+Tip: Synchronized On Boxed Primitive - CodeNarc and IDEA rule

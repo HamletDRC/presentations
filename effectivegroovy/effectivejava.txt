@@ -1,0 +1,52 @@
+Tip EJ02: Consider a Builder when faced with many constructor parameters
+------------------------------------------------------------------------
+01 - Plain Old Java Constructor
+02 - Builder Syntax
+03 - Groovy Solution w/ @Immutable
+Tip EJ15 - Minimize Mutability
+
+
+* Object w/ many ctor params, same type
+* Builder lets object be immutable
+
+
+Tip EJ05: Avoid Creating Unnecessary Objects
+-----------------------------------------
+-- both CodeNarc and IDEA catch these for you
+
+
+Tip EJ08: Obey the general contract when overriding equals
+--------------------------------------------------------
+Reflexive, symmetric, transitive, consistent, null is false
+
+// 1. Generate code
+// 2. Replace with @EqualsAndHashCode
+
+CodeNarc & IDEA have analysis for this common problem
+09 - Always override hashCode when you override equals
+10 - Always override toString()
+
+
+
+
+
+------------------------------------------
+--------------  unused -------------------
+------------------------------------------
+
+
+Tip 21: Use Function Objects to represent strategies
+-----------------------------------------------------
+Closures
+
+
+Item EJ19: Use Interfaces only to define types - Covered by CodeNarc
+Item EJ36: Consistently use @Override - Covered by both IDEA and CodeNarc
+Item EJ43: Return Empty Arrays or Collections, not nulls - Covered by both IDEA and CodeNarc
+Item EJ71: Use Lazy Initialization judiciously - Or use @Lazy from Groovy
+Item EJ47: Know and use the libraries - Read the standard GDK Docs and Release Notes
+Item EJ12: Consider implementing Comparable - Important b/c of GroovyTruth & CodeNarc's CompareToWithoutComparable rule
+Item EJ63: Include Failure-capture information in detailed messages - Especially important in Groovy where you don't need to catch exceptions (see blog)
+Item EJ16: Favor Composition over Inheritence - Use @Delegate
+Item EJ11: Override Clone Judiciously - Use Groovy's @AutoClone (judiciously) or @Canonical (judiciously)
+
