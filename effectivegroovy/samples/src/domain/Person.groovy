@@ -1,8 +1,5 @@
 package domain
 
-
-import groovy.transform.ToString
-
 class Person {
     int id
     String firstName
