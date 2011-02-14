@@ -1,12 +1,19 @@
-package eg02
+package domain
+
 
 import groovy.transform.ToString
 
-@ToString
 class Person {
     int id
     String firstName
     String lastName
+
+    Person(int id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     static findAll() {[
             new Person(id: 1, firstName: 'Chuck', lastName: 'Buck'),
             new Person(id: 2, firstName: 'Mario', lastName: 'Plumber'),

@@ -1,5 +1,7 @@
 package eg02
 
+import domain.Person
+
 List<Person> people = Person.findAll();
 
 boolean mismatch = true;

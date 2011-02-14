@@ -1,4 +1,5 @@
-package eg02
+package domain
+
 
 import groovy.transform.ToString
 

@@ -1,8 +1,8 @@
 package eg05
 
-import eg02.Person
 import java.util.concurrent.Executors
 import java.util.concurrent.Callable
+import domain.Person
 
 def exe = Executors.newSingleThreadExecutor()
 

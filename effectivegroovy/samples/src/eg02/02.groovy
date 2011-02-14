@@ -1,4 +1,4 @@
-import eg02.Person
+import domain.Person
 
 List<Person> people = Person.findAll();
 

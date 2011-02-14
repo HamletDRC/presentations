@@ -1,6 +1,6 @@
 package eg05
 
-import eg02.Person
+import domain.Person
 
 def count
 def t = Thread.start {

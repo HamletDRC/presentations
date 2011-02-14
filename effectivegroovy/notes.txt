@@ -1,60 +1,14 @@
-Tip 2: Consider a Builder
-------------------
+Tip EJ02: Consider a Builder when faced with many constructor parameters
+------------------------------------------------------------------------
+01 - Plain Old Java Constructor
+02 - Builder Syntax
+03 - Groovy Solution w/ @Immutable
+Tip EJ15 - Minimize Mutability
+
+
 * Object w/ many ctor params, same type
 * Builder lets object be immutable
 
-class Person {
-     private final String firstName
-     private final String lastName    
-     public String getFirstName() { return firstName; }
-     public String getLastName() { return lastName; }
-     public Person(String firstName, String lastName) {
-          this.firstName = firstName; 
-          this.lastName = lastName; 
-     }
-}
-Person p = new Person("David", "Villa"); 
-
-class Person {
-     private final String firstName
-     private final String lastName    
-     public String getFirstName() { return firstName; }
-     public String getLastName() { return lastName; }
-     private Person(String firstName, String lastName) {
-          this.firstName = firstName; 
-          this.lastName = lastName; 
-     }
-     public static class PersonBuilder {
-          private String firstName
-          private String lastName    
-          public PersonBuilder withFirstName(String firstName) {
-               this.firstName = firstName; 
-               return this; 
-          }
-          public PersonBuilder withLastName(String lastName) {
-               this.lastName = lastName; 
-               return this; 
-          }
-          public Person build() {
-               return new Person(firstName, lastName); 
-          }
-     }
-}
-Person p = new PersonBuilder()
-               .withFirstName("David")
-               .withLastName("Villa")
-               .build();
-
-
-
-@groovy.transform.Immutable
-class Person {
-
-    String firstName
-    String lastName    
-}
-
-new Person(firstName: 'David', lastName: 'Villa')
 
 
 Tip 5: Avoid Creating Unnecessary Objects
@@ -216,6 +170,8 @@ Groovy does this at Runtime
 Tip 43: Return Empty Arrays or Collections, not nulls
 -----------------------------------------------------
 CodeNarc and IDEA
+ReturnsNullInsteadOfEmptyArray Rule
+ReturnsNullInsteadOfEmptyCollection
 
 
 
@@ -276,17 +232,17 @@ alias groovy=groovyclient
 Item EG02: Know Your Collections
 -------------------------------
 
-01 - collect 
+01 - collect        // Tip: Use collect for transformations
 02 - find
 03 - findAll
-04 - inject
+04 - inject         // Tip: Use inject to accumulate data (often can be collect)
 05 - unique
-06 - memoize
-07 - trampoline
-08 - join
+06 - memoize        // Tip: Use memoize to 
+07 - trampoline     // Tip: Use trampoline for recursive functions
+08 - join           // Tip: Use join for String manipulation
 09 - any
-10 - every
-11 - each
+10 - every          // Tip: Use any/every for logical operations (not find)
+11 - each           // Tip: Use for-each not .each 
 
 Item EG03: Know Your Files
 --------------------------
@@ -312,15 +268,21 @@ Item EG05: Coordination
 04 - Coordination via dataflows
 
 
-Item EG06: Prefer Literals
---------------------------
-List and Map type Literals (including your own)
 
 
 
 
 
+Unused Tips
+-----------
+Prefer Literals - List and Map type Literals (including your own)
 
+
+
+
+
+Notes
+-----
 
 Basic: 
 Elvis and ConfusingTernary, UnnecessaryTernaryExpression
@@ -347,10 +309,6 @@ rule: unneeded def in method declaration
 * create rule - should use tr not replaceAll
 * create excessive string newlines (should be multiline string
 
-
-Best Practice: 
-ReturnsNullInsteadOfEmptyArray Rule
-ReturnsNullInsteadOfEmptyCollection
 
 
 Threading: 
@@ -388,12 +346,10 @@ MultipleLoggers
 
 Other: 
 Overloaded methods -> Default Parameters
-Use foreach not .each 
 Spread into arguments
 Should write arm block, not call close method. 
 If statements -> Guard Clauses -> chained function methods
 prefer private static methods
-Memoize function / Trampoline
 
 Return from closure -- confusing
 
@@ -429,18 +385,5 @@ WithPool for multithreading
 collect parallel, find all parallel
 
 *** Analyze Eclipse Intentions
-
-
-
-Builder Pattern: 
-
-@groovy.transform.Immutable
-class Person {
-
-    String firstName
-    String lastName    
-}
-
-new Person(firstName: 'hamlet', lastName: "d'Arcy")
 
 

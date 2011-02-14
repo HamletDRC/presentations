@@ -3,7 +3,7 @@ package eg05
 @Grab(group = 'org.codehaus.gpars', module = 'gpars', version = '0.11')
 import static groovyx.gpars.dataflow.DataFlow.task
 import groovyx.gpars.dataflow.DataFlowVariable
-import eg02.Person
+import domain.Person
 
 final def count = new DataFlowVariable()
 
