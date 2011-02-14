@@ -8,6 +8,24 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="$groovy_library_name$" level="application" />
+    <orderEntry type="module-library">
+      <library name="Grab:gpars-0.11.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.codehaus.gpars/gpars/jars/gpars-0.11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:jsr166y-070108.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.coconut.forkjoin/jsr166y/jars/jsr166y-070108.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

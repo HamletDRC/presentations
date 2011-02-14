@@ -273,28 +273,61 @@ Put in your path
 alias groovy=groovyclient
 
 
-Item EG2: Know Your Collections
+Item EG02: Know Your Collections
 -------------------------------
 
-01 - Collect 
-02 - Find
-03 - FindAll
-04 - Inject
+01 - collect 
+02 - find
+03 - findAll
+04 - inject
 05 - unique
 06 - memoize
 07 - trampoline
+08 - join
+09 - any
+10 - every
+11 - each
 
-// join
+Item EG03: Know Your Files
+--------------------------
+01 - getText / setText
+02 - File.readLine
+03 - File.append
+
+Item EF04: Synchronization
+--------------------------
+01 - not thread safe
+02 - method synchronization
+03 - internal synchronization
+04 - @Synchronized
+05 - Reentrant Lock
+06 - with Block
+07 - @WithReadLock/@WithWriteLock
+
+Item EG05: Coordination
+-----------------------
+01 - Thread.start and join
+02 - Prefer executor services
+03 - GPars Dataflows
+04 - Coordination via dataflows
+
+
+Item EG06: Prefer Literals
+--------------------------
+List and Map type Literals (including your own)
+
+
+
+
+
 
 
 Basic: 
-List and Map type Literals (including your own)
 Elvis and ConfusingTernary, UnnecessaryTernaryExpression
 Operator overloading rules
 ExplicitCallToCompareToMethod Rule and spaceship: <=>
 ExplicitCall to Get At -> indexed offset
 UnnecessaryCallForLastElement
-UnnecessaryCollectCall -> Spread
 UnnecessaryNullCheck -> Nullsafe Dereference instead 
 Unnecessary Getter -> 
 UnnecessaryObjectReferences -> Use a with block
