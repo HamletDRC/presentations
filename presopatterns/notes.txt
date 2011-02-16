@@ -42,7 +42,7 @@
      - "in fairness" we had success with the event notification part
 
 # Event Bus 3 - Griffon
-     - Show diagram (old). Q: How to controllers talk to one another? 
+     - Show diagram (old). Q: How do controllers talk to one another? 
           - THIS is your maintenance nightmare, not binding
      - Show Demo
      - Show Diagram (new) 
@@ -54,8 +54,10 @@
      - Presentation Model vs. Domain Model
      - There is a Domain Model Griffon Plugin
      - Grasp Backgrounder (Canoo & CodeCamp)
-     - Grasp Diagrams
+     - Grasp Diagrams (old) - Q. How do controllers coordinate many views? 
      - Grasp Demo
+     - Grasp Diagrams (new)
+     pros - complements event system
 
 Credits: http://nataliie.deviantart.com/art/Flying-Spaghetti-Monster-85380490
 ~Nataliie
