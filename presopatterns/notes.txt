@@ -47,7 +47,7 @@
      - Show Demo
      - Show Diagram (new) 
      pros - Simple, it works application wide, convention over configuration
-     cons - It is Groovy, Keys are just Strings, No "Enterprise Flexibility"
+     cons - It is Groovy, Stringly Typed, No "Enterprise Flexibility"
 
 # Event Bus 4 - CDI
      - JSR 299: Contexts and Dependency Injection for the JavaTM EE platform
