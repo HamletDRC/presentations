@@ -9,6 +9,6 @@ class PongController {
         doLater { model.message = 'Pong' }
         sleep(1000)
         edt { model.message = '' }
-        app.event("Ping")
+        app.event('Ping')
     }
 }
