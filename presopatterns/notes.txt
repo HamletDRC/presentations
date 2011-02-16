@@ -55,6 +55,10 @@
      pros: works with Java SE, with JSR, Oracle backed, good IDEA support
      cons: must start and run container
 
+# Event Bus 5 - Spring Application Context
+     ApplicationContext.publishEvent(ApplicationEvent event)
+     ApplicationListener
+
 # Presentation Model Pattern
      - Presentation Model vs. Domain Model
      - There is a Domain Model Griffon Plugin
