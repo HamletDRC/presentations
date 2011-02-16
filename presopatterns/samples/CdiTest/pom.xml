@@ -26,6 +26,12 @@
             <version>1.0.1-Final</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.6.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <repositories>
