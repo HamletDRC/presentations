@@ -1,0 +1,61 @@
+#. Title
+#. About Me / Canoo
+#. Warning: Opinions ahead
+
+
+
+#Context of Presentation Model Pattern: 
+     Applicable to any event-based GUI toolkit, e.g.
+     * Swing, JavaFX, AWT, SWT, and their complements
+     * Flex
+     * Windows Presentation Foundation
+     * Server side: GWT(?), Canoo RIA Suite
++ (Download RIA Suite Animation)
+
+
+
+# About Model <-> View <-> Controller
+     EG 1: Data Model <-> Application <-> Services
+     EG 2: Object Model <-> Presentation <-> Workflow
+     EG 3: Presentation Model <-> Widget <-> Listener
+     EG 4: Widget Model <-> Visual <-> Editor
+
+# This talk is about EG 3: Presentation Model <-> Widget <-> Listener
+
+
+
+# Forces: Talk about MVC Coupling
+     MVC Arrow Overload
+
+# Solution Ideas: Event Bus + Presentation Model
+
+# Event Bus 1 - GWT
+     - Show Diagram (old). Q: How do components talk to one another? 
+     - Show Demo - Comment in Code
+     - Show all the classes required to make this work (events package)
+     - Show Diagram (new) 
+     pros - It works, it is type safe
+     cons - It is complex, it's a lot to type, doesn't work across modules (no shared objects)
+
+# Event Bus 2 - Flex & Pure MVC
+     - show image
+     - "in fairness" we had success with the event notification part
+
+# Event Bus 3 - Griffon
+     - Show diagram (old). Q: How to controllers talk to one another? 
+          - THIS is your maintenance nightmare, not binding
+     - Show Demo
+     - Show Diagram (new) 
+     pros - Simple, it works application wide, convention over configuration
+     cons - It is Groovy, Keys are just Strings, No "Enterprise Flexibility"
+
+
+# Presentation Model Pattern
+     - Presentation Model vs. Domain Model
+     - There is a Domain Model Griffon Plugin
+     - Grasp Backgrounder (Canoo & CodeCamp)
+     - Grasp Diagrams
+     - Grasp Demo
+
+Credits: http://nataliie.deviantart.com/art/Flying-Spaghetti-Monster-85380490
+~Nataliie
