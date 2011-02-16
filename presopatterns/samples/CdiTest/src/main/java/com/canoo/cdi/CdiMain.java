@@ -2,14 +2,17 @@ package com.canoo.cdi;
 
 import org.jboss.weld.environment.se.events.ContainerInitialized;
 
+import javax.enterprise.event.Event;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 
-public class Cdi {
+public class CdiMain {
+
     @Inject
-    IGreeter fGreeter;
+    Event<Greeting> fEvent;
 
     public void start(@Observes ContainerInitialized event) {
-        fGreeter.sayHello("Alberto");
+        String greeting = "Hello Madrid";
+        fEvent.fire(new Greeting(greeting));
     }
 }

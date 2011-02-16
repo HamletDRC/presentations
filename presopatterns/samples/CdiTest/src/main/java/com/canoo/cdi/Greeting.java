@@ -1,4 +1,4 @@
-package com.canoo.cdi.events;
+package com.canoo.cdi;
 
 public class Greeting {
     private final String fContent;
