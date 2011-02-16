@@ -14,8 +14,6 @@ class GriffonEventDemoController {
 
         view.serveButton.visible = false
 
-        doOutside {
-            app.event("Ping")
-        }
+        doOutside { app.event("Ping") }
     }
 }

@@ -6,14 +6,9 @@ class PongController {
     def view
 
     def onPong = { evt = null ->
-        doLater {
-            model.message = 'Pong'
-        }
-
+        doLater { model.message = 'Pong' }
         sleep(1000)
-        edt {
-            model.message = ''
-        }
+        edt { model.message = '' }
         app.event("Ping")
     }
 }
