@@ -37,7 +37,7 @@ def a = new ArrayList()
 def m = new HashMap()
 def hs = new HashSet()
 def st = new Stack()
-
+def ci = new CaseInsensitiveList()
 
 
 
