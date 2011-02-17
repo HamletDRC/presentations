@@ -1,31 +1,9 @@
 package ej02
 
 import domain.Person
+import domain.PersonBuilder
 
 Person p = new PersonBuilder().withID(1).withFirstName("David").withLastName("Villa").build();
-System.out.println(p); 
 
-public static class PersonBuilder {
-    private String firstName
-    private String lastName
-    private Integer id
+System.out.println(p);
 
-    public PersonBuilder withID(int id) {
-        this.id = id;
-        return this;
-    }
-
-    public PersonBuilder withFirstName(String firstName) {
-        this.firstName = firstName;
-        return this;
-    }
-
-    public PersonBuilder withLastName(String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
-
-    public Person build() {
-        return new Person(id, firstName, lastName);
-    }
-}
