@@ -72,6 +72,9 @@ assert myList.contains('element')
 
 
 class CaseInsensitiveList extends ArrayList<String> {
+    def CaseInsensitiveList() {
+    }
+
     def CaseInsensitiveList(Collection<? extends String> c) {
         super(c.collect { String it -> it.toLowerCase() } )
     }
