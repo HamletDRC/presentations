@@ -1,0 +1,31 @@
+1. Table of Contents
+2. Canoo
+3. JetBrains
+3.5 Me & GINA
+
+4. AST Transforms in 1.8
+  - 01CodeGenerationTransformations
+  - 02ClassDesignAnnotations
+  - 03LoggingImprovements
+  - 04DeclarativeConcurrency
+  - 05Externizing
+  - 06SaferScripting
+
+5. Libraries
+  - 07GContracts (+ slide)
+  - 08Spock
+  - DSLs (ArithmeticShell Slides)
+
+6. Implementation
+  - Local Transformations
+  - Global Transformations
+  - AST
+  - Creating AST
+  - Visitors & Wiring Visitors
+
+7. Testing
+8. Limitations
+9. Next Steps (contributing to CodeNarc)
+
+
+
