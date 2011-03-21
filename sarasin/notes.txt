@@ -1,0 +1,65 @@
+Lean Principles
+---------------
+
+1. Intro to Lean
+    - waste article
+    - lean articles
+    - book recommendations
+
+2. Intro to Waste
+    Stop doing things that aren’t worth the effort
+    Do the same things with less effort
+
+3. Examining Waste
+* Partially Done Work	
+    - Too many full bicycles
+    - Half done 'web services', half done featutes
+    - Dividing work into single person projects
+    - Code without tests (importance of unit testing)
+    - Code not checked in (small integrations, CI server, TeamCity) (svn is better than git?)
+    - Undeployed code (functional tests, acceptance tests, automated deployments, continuous integration)
+    - Continuous Integration - Spoiled sashimi and deployment charades
+    - Test Environments - Shared database or standard dataset? 
+
+* Extra Features
+    - 65% of features in software are never used
+    - Avoid BDUF
+    - Keep product backlog, work in Sprints
+    - Use low ceremony methods, like story cards 
+    - Use economic models (profit and loss sheet)
+    - Get closer to the customer
+    - Minimal Marketable Feature Set and Kanban Board
+
+* Relearning
+    - TDD and fix bugs only with a new unit test/acceptance test
+    - how to chronicle failure? 
+
+* Handoffs
+    - paar leiter
+    - team room, pair-programming
+    - open source, non-proprietary technologies
+
+* Task Switching
+    - Stop the lines? 
+    - Maintenance team? Defect Friday's? 
+    - git is better than svn? 
+    
+* Delays
+    - Value Stream Mapping
+    - Avoid large tasks
+    - Beware documentation tasks as preconditions for development
+
+* Defects   
+    - High quality cannot be achieved through better use of meetings or documentation
+    - Inspect to prevent defects, not find them
+    - code quality tools
+    - Extreme code reviews (pairing)
+    - Developers and QA should use the same testing tool. A failing test case must be executable by both.
+
+4. Conclusion
+    * There is a big difference between eliminating waste and not creating it in the first place. - Alan Shalloway    
+
+5. Next Steps - Create a Feedback Cycle
+    - ROTI
+    - Learning Matrix
+    - 
