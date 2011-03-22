@@ -1,6 +1,8 @@
 Lean Principles
 ---------------
 
+0. Table of Contents
+0.5 About Me
 1. Intro to Lean
     - waste article
     - lean articles
