@@ -16,10 +16,11 @@ Lean Principles
 * Partially Done Work	
     - Too many full bicycles
     - Half done 'web services', half done featutes
-    - Dividing work into single person projects
     - Code without tests (importance of unit testing)
     - Code not checked in (small integrations, CI server, TeamCity) (svn is better than git?)
     - Undeployed code (functional tests, acceptance tests, automated deployments, continuous integration)
+
+    - Dividing work into single person projects
     - Continuous Integration - Spoiled sashimi and deployment charades
     - Test Environments - Shared database or standard dataset? 
 
@@ -57,6 +58,7 @@ Lean Principles
     - code quality tools
     - Extreme code reviews (pairing)
     - Developers and QA should use the same testing tool. A failing test case must be executable by both.
+    - Usability
 
 4. Conclusion
     * There is a big difference between eliminating waste and not creating it in the first place. - Alan Shalloway    
@@ -64,4 +66,4 @@ Lean Principles
 5. Next Steps - Create a Feedback Cycle
     - ROTI
     - Learning Matrix
-    - 
+    - Agile Gift Box?
