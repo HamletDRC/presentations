@@ -1,0 +1,55 @@
+* Get the powerpoint
+* Get the JetBrains slide template from ???
+
+2 Interfaces to Static Anal
+    - on demand
+    - on the fly
+
+
+Slide 4
+    - What is this a screenshot from? 
+    - Screenshot from MPS
+
+Slide 6
+    - command line: need a valid .idea / .ipr file
+    - http://www.jetbrains.com/idea/webhelp/running-inspections-offline.html
+    - inspect.bat or inspect.sh in idea/bin
+    - CI Integration: TeamCity has inspections built in
+
+Slide 7
+    - Concurrency is hard to unit test b/c of non-determinism
+    - Concurrency is well supported in inspections
+
+Slide 8 
+    - WebStorm should get a mention
+    - Are there Flex inspections? 
+
+Slide 9
+    - CheckStyle    
+    - These all have plugins for IDEA
+
+Slide 10 
+    - How to write an inspection
+    - How does Structural Search and Replace factor into static analysis? 
+    "Structural Search Inspection"
+
+Slide 11
+    - @Nls, @NonNls - I18n annotations
+    - @PropertyKey - ???
+
+Slide 15 
+    - Copy and Paste threaddump from CI server
+
+Slide 16 
+    - "Scan for null values" - how does this get null? 
+
+Slide 18 - DSM 
+    - Find screencast
+    http://blogs.jetbrains.com/idea/2008/01/intellij-idea-dependency-analysis-with-dsm/
+    http://www.canoo.com/blog/2011/01/09/intellij-idea-series-vi/
+    http://tv.jetbrains.net/videocontent/vaclav-pech-at-geecon-2010-session-getem-before-they-get-you
+
+
+
+
+
