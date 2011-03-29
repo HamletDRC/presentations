@@ -1,5 +1,81 @@
-* Get the powerpoint
-* Get the JetBrains slide template from ???
+
+
+Table of Contents
+
+1. About Me
+-----------
+Canoo, JetBrains
+Groovy, CodeNarc
+JSR Expert Group, Committer
+Groovy in Action 2
+
+
+
+2. Static Code Analysis
+-----------------------
+- What is code analysis: 
+- IDEA analysis: "searches AST for bug patterns (on demand or on fly)"
+- Examples + Quick Fixes
+    - 0) SharedLock example from slides
+    - 1) Field accessed in sync and non-sync context
+    - 2) lock acquired & not properly unlocked 
+    - 3) Suspicious Indentation of Control Statement
+    - 4) Suspicious Variable/Parameter Name
+            int x = 0, y = 0; Rectangle rc = new Rectangle(y, x, 20, 20);
+
+- Advanced Capabilities
+    - Suppressing False Positives
+    - Writing your own using Search & Replace Structurally
+    - Profiles & Batch Mode
+    - Other languages (Js, CSS, HTML, XML, GWT, Struts, EE, ME, Android... (get list)
+    - Other options (findbugs, checkstyle, PMD, CodeNarc)
+    - Command line & CI integration
+
+- How it works
+    - AST Slide
+    - AST Visitor
+
+3. JSR 305 and 308 Annotations
+------------------------------
+- @GuardedBy and @Immutable - GuardedByExample.java
+    - Add jcp classes to classpath
+    - non final GuardedBy field, not guarded correctly
+    - non final field in @Immutable class
+
+- @Nullable, NotNull - NullableExample.java
+    - http://www.jetbrains.com/idea/documentation/howto.html
+    - Add annotations to classpath
+    - Can be associated with other annotations (like Hibernate's)
+    - Infer Nullity - http://www.jetbrains.com/idea/webhelp/inferring-nullity.html
+
+- @Pattern - PatternExample.java
+    - Enforces String against a regex
+
+- @Language - LanguageExample.java
+    - Syntax checks language snippets
+    - http://www.jetbrains.com/idea/webhelp/using-language-injections.html
+
+- @Nls, @NonNls, @PropertyKey 
+    http://www.jetbrains.com/idea/webhelp/extracting-hard-coded-string-literals.html
+    http://www.jetbrains.com/idea/webhelp/nonnls-annotation.html
+
+4. Duplicate Detection
+----------------------
+
+
+5. Stack Trace Analysis
+-----------------------
+
+
+6. Dataflow Analysis
+--------------------
+
+
+
+7. DSM? 
+-------
+
+
 
 2 Interfaces to Static Anal
     - on demand
