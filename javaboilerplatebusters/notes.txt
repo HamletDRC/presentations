@@ -1,0 +1,8 @@
+guave
+proxy
+spring
+interceptors
+anonymous inner classes
+lombok
+groovy
+
