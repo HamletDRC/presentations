@@ -1,0 +1,13 @@
+Track - Agile
+Title - Slimmed Down Software: A Lean, Groovy Approach
+
+Hamlet D'Arcy
+hamlet.darcy@canoo.com
+
+Abstract
+The Groovy Programming Language advertises itself as an "agile and dynamic Language for the JVM", but what does this mean exactly? This session explains Lean Software Development, and shows how your choice of programming language can help your entire process remain nimble and adaptive. Come learn about the principles of Lean, and see how Groovy and the associated ecosystem help eliminate waste, defer commitment, and build quality into your product. Leave with new ideas about collaboration that both developers and business users will embrace. 
+
+Bio of speaker
+Hamlet D'Arcy has been writing software for over a decade, and has spent considerable time coding in C++, Java, and Groovy. He's passionate about learning new languages and different ways to think about problems, and recently he's been discovering the joys of both F# and Scheme. He's a committer on several projects including Groovy and JConch, and is a contributor on a few open source projects (including Griffon and the IDEA Groovy Plugin). He blogs regularly at http://hamletdarcy.blogspot.com
+
+

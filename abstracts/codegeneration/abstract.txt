@@ -1,0 +1,13 @@
+Track - Java
+Title - Code Generation on the JVM
+
+Hamlet D'Arcy
+hamlet.darcy@canoo.com
+
+Abstract
+We're seeing more and more JVM frameworks designed to generate code at compile time: AST Transforms, Project Lombok, Spring Roo, Clojure Macros, and more. This session reviews these approaches, including examples of how and why we'd want to do this. We'll see the newest Groovy language tools, write our own AST Transform, and look at some amazing libraries based on these techniques.
+
+Bio of speaker
+Hamlet D'Arcy has been writing software for over a decade, and has spent considerable time coding in C++, Java, and Groovy. He's passionate about learning new languages and different ways to think about problems, and recently he's been discovering the joys of both F# and Scheme. He's a committer on several projects including Groovy and JConch, and is a contributor on a few open source projects (including Griffon and the IDEA Groovy Plugin). He blogs regularly at http://hamletdarcy.blogspot.com
+
+

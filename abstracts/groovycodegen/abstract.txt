@@ -1,0 +1,13 @@
+Track - Java
+Title - Groovy Code Generation
+
+Hamlet D'Arcy
+hamlet.darcy@canoo.com
+
+Abstract
+A language should have access to its own abstract syntax' John McCarthy, Father of Lisp. Well, now Groovy does! This talk is about why AST transformations are important, what you can do with them, and where the language world is headed. We'll dive into some of the useful Groovy annotations and libraries being written that harness AST transformations, see how to write our own, and work with the AST tools that are available today or being currently developed by the Groovy team.
+
+Bio of speaker
+Hamlet D'Arcy has been writing software for over a decade, and has spent considerable time coding in C++, Java, and Groovy. He's passionate about learning new languages and different ways to think about problems, and recently he's been discovering the joys of both F# and Scheme. He's a committer on several projects including Groovy and JConch, and is a contributor on a few open source projects (including Griffon and the IDEA Groovy Plugin). He blogs regularly at http://hamletdarcy.blogspot.com
+
+
