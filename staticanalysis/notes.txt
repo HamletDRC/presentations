@@ -16,18 +16,18 @@ Groovy in Action 2
 - What is code analysis: 
 - IDEA analysis: "searches AST for bug patterns (on demand or on fly)"
 - Examples + Quick Fixes
-    - 0) SharedLock example from slides
-    - 1) Field accessed in sync and non-sync context
-    - 2) lock acquired & not properly unlocked 
-    - 3) Suspicious Indentation of Control Statement
-    - 4) Suspicious Variable/Parameter Name
-            int x = 0, y = 0; Rectangle rc = new Rectangle(y, x, 20, 20);
+    - 1) SharedLock example from slides
+    - 2) Field accessed in sync and non-sync context
+    - 3) lock acquired & not properly unlocked 
+    - 4) Suspicious Indentation of Control Statement
+    - 5) Suspicious Variable/Parameter Name
+    - http://hamletdarcy.blogspot.com/2008/04/10-best-idea-inspections-youre-not.html
 
 - Advanced Capabilities
     - Suppressing False Positives
     - Writing your own using Search & Replace Structurally
     - Profiles & Batch Mode
-    - Other languages (Js, CSS, HTML, XML, GWT, Struts, EE, ME, Android... (get list)
+    - Other languages (Android, Ant inspections, Application Server Inspections, CDI(Contexts and Dependency Injection)issues, CSS, Faces Model, FreeMarker inspections, Google App Engine, Google Web Toolkit,  Groovy, Guice Inspections, Hibernate Issues, HTML, J2ME, Java EE,  JavaScript, JSF, JSP,  JUnit, LESS, Maven, OSGi, RELAX NG, SCSS, Spring Model, Spring Web Services, SQL, TestNG, Velocity inspections, Java WebServices, Webflow Model, WSDL issues, XML, XPath, XSLT... and many more
     - Other options (findbugs, checkstyle, PMD, CodeNarc)
     - Command line & CI integration
 
@@ -47,6 +47,7 @@ Groovy in Action 2
     - Add annotations to classpath
     - Can be associated with other annotations (like Hibernate's)
     - Infer Nullity - http://www.jetbrains.com/idea/webhelp/inferring-nullity.html
+    - http://blogs.jetbrains.com/idea/2011/03/more-flexible-and-configurable-nullublenotnull-annotations/
 
 - @Pattern - PatternExample.java
     - Enforces String against a regex
