@@ -1,3 +1,8 @@
+functional java
+function objects
+no more void methods
+proxy aspects -> transactions, roles, error handling
+Builders, fluent API
 guave
 proxy
 spring
