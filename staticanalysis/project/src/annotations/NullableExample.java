@@ -17,7 +17,6 @@ public class NullableExample {
     
     @Override
     public String toString() {
-
         if (getName() == null) {
             return getId().toString() + "<unknown>";
         } else {
