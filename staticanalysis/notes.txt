@@ -69,7 +69,9 @@ Groovy in Action 2
 
 5. Stack Trace Analysis
 -----------------------
-
+    - Copy and paste stack traces from Log files into IDEA
+    - http://blogs.jetbrains.com/idea/2006/08/analyzing-external-stack-traces/
+    - Obfuscated code? ZKM Unscrambler available, and others as plugins (ProGuard)
 
 6. Dataflow Analysis
 --------------------
