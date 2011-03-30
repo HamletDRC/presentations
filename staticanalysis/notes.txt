@@ -62,7 +62,10 @@ Groovy in Action 2
 
 4. Duplicate Detection
 ----------------------
-
+    - http://www.jetbrains.com/idea/features/code_duplicate.html
+    - Java, CSS, Ruby
+    - Anonymizes Local Variables, Fields, Methods, Types, Literals
+    - Weighted/Scored analysis
 
 5. Stack Trace Analysis
 -----------------------
