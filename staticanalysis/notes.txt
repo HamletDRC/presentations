@@ -23,16 +23,32 @@ Groovy in Action 2
     - 5) Suspicious Variable/Parameter Name
     - http://hamletdarcy.blogspot.com/2008/04/10-best-idea-inspections-youre-not.html
 
+- Categories: 
+    Bad practice
+    Correctness
+    Internationalization
+    Malicious code vulnerability
+    Multithreaded correctness
+    Performance
+    Code style violations
+    Dodgy
+                (Bill Pugh, FindBugs)
+
 - Advanced Capabilities
     - Suppressing False Positives
     - Writing your own using Search & Replace Structurally
-    - Profiles & Batch Mode
+    - Profiles, Scopes & Batch Mode
     - Other languages (Android, Ant inspections, Application Server Inspections, CDI(Contexts and Dependency Injection)issues, CSS, Faces Model, FreeMarker inspections, Google App Engine, Google Web Toolkit,  Groovy, Guice Inspections, Hibernate Issues, HTML, J2ME, Java EE,  JavaScript, JSF, JSP,  JUnit, LESS, Maven, OSGi, RELAX NG, SCSS, Spring Model, Spring Web Services, SQL, TestNG, Velocity inspections, Java WebServices, Webflow Model, WSDL issues, XML, XPath, XSLT... and many more
+    - Mention WebStorm for other inspections
     - Other options (findbugs, checkstyle, PMD, CodeNarc)
     - Command line & CI integration
+        - command line: need a valid .idea / .ipr file
+        - http://www.jetbrains.com/idea/webhelp/running-inspections-offline.html
+        - inspect.bat or inspect.sh in idea/bin
+        - CI Integration: TeamCity has inspections built in
 
 - How it works
-    - AST Slide
+    - AST Slide - w/ MPS screenshot
     - AST Visitor
 
 3. JSR 305 and 308 Annotations
@@ -75,60 +91,43 @@ Groovy in Action 2
 
 6. Dataflow Analysis
 --------------------
-
-
+    - http://www.jetbrains.com/idea/webhelp/dataflow-analysis.html
+    - code archeology - better understand the inherited project code, interpret complicated parts of the code, find bottlenecks in the source, and more. 
+    - Dataflow to here - Shows how a reference gets set. ie Divide by zero example
+    - Dataflow from here - Shows where a reference goes to. ie new Divide() example
 
 7. DSM? 
 -------
+    - At JetBrains booth
+    - Demos on JetBrains site
+    - http://www.jetbrains.com/idea/features/dependency_analysis.html
+    - http://blogs.jetbrains.com/idea/2008/01/intellij-idea-dependency-analysis-with-dsm/
+    - http://www.canoo.com/blog/2011/01/09/intellij-idea-series-vi/
+    - designed to help analyzing the structure of complex projects
+    - Shows dependencies in a matrix (module, package, and class)
+    - Highlights Cyclic and Backwards dependencies
+    - Helps eliminate illegal dependencies via "Dependency Rules"
+
+    DSM Annotations: 
+    1. The selection highlights classes which dependencies are being viewed.
+    2. The ellipsis in cell indicates there are more than 99 dependencies between maven-core and maven-project.
+    3. The column shows the dependencies of the selected row.
+    4. The row shows the dependencies on the selected row.
+    5. Cell indicates that maven-project has 16 dependencies on maven-settings.
+    6. More dependencies - brighter color.
 
 
+8. Exit
+-------
+My main blog: http://hamletdarcy.blogspot.com
+My JetBrains.tv posts: http://tv.jetbrains.net/tags/hamlet
+IDEA related posts on my blog: http://hamletdarcy.blogspot.com/search/label/IDEA
+IDEA related Posts on my work blog: http://www.canoo.com/blog/tag/idea/
+My screencasts on YouTube: http://www.youtube.com/user/HamletDRC
+Or follow me on Twitter: @HamletDRC
+* Share-a-Canooie
+* Hackergarten
 
-2 Interfaces to Static Anal
-    - on demand
-    - on the fly
-
-
-Slide 4
-    - What is this a screenshot from? 
-    - Screenshot from MPS
-
-Slide 6
-    - command line: need a valid .idea / .ipr file
-    - http://www.jetbrains.com/idea/webhelp/running-inspections-offline.html
-    - inspect.bat or inspect.sh in idea/bin
-    - CI Integration: TeamCity has inspections built in
-
-Slide 7
-    - Concurrency is hard to unit test b/c of non-determinism
-    - Concurrency is well supported in inspections
-
-Slide 8 
-    - WebStorm should get a mention
-    - Are there Flex inspections? 
-
-Slide 9
-    - CheckStyle    
-    - These all have plugins for IDEA
-
-Slide 10 
-    - How to write an inspection
-    - How does Structural Search and Replace factor into static analysis? 
-    "Structural Search Inspection"
-
-Slide 11
-    - @Nls, @NonNls - I18n annotations
-    - @PropertyKey - ???
-
-Slide 15 
-    - Copy and Paste threaddump from CI server
-
-Slide 16 
-    - "Scan for null values" - how does this get null? 
-
-Slide 18 - DSM 
-    - Find screencast
-    http://blogs.jetbrains.com/idea/2008/01/intellij-idea-dependency-analysis-with-dsm/
-    http://www.canoo.com/blog/2011/01/09/intellij-idea-series-vi/
     http://tv.jetbrains.net/videocontent/vaclav-pech-at-geecon-2010-session-getem-before-they-get-you
 
 
