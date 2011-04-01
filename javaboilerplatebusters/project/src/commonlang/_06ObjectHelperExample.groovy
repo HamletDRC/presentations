@@ -1,3 +1,5 @@
+package commonlang
+
 @Grab(group = 'commons-lang', module = 'commons-lang', version = '2.6')
 @Grab(group = 'commons-lang', module = 'commons-lang', version = '2.6', classifier = 'sources')
 import org.apache.commons.lang.builder.ToStringBuilder

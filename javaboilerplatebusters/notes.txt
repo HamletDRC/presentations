@@ -1,16 +1,11 @@
-functional java
-function objects
-no more void methods
-proxy aspects -> transactions, roles, error handling
-Builders, fluent API
-guave
-proxy
-spring
-interceptors
-anonymous inner classes
-lombok
-groovy
-
+1. Apache Commons
+2. Google Guava
+3. Builders / Fluent API
+4. Anonymous Inner Classes / Function Objects (functional java)
+5. Proxies / Interceptors (proxy aspects -> transactions, roles, error handling)
+6. Java 7
+7. Lombok
+8. Groovy
 
 
 
@@ -19,6 +14,8 @@ groovy
 Apache Commons Lang
 --------------------------
 http://www.dzone.com/links/r/stop_writing_so_much_code.html
+http://blog.generationjava.com/roller/bayard/entry/apache-commons-lang-30-beta-released
+
 
 lang.*
 ------
@@ -66,6 +63,7 @@ lang.concurrent.*
 -----------------
 Concurrent initializers
 Synchronization objects
+
 
 
 
