@@ -7,11 +7,42 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="groovy-1.9.0-beta-1-SNAPSHOT" level="application" />
+    <orderEntry type="library" name="$groovy_library_name$" level="application" />
+    <orderEntry type="module-library">
+      <library name="Grab:commons-lang-2.6.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/commons-lang/commons-lang/jars/commons-lang-2.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/commons-lang/commons-lang/jars/commons-lang-2.6-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:commons-lang-2.6-sources.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/commons-lang/commons-lang/jars/commons-lang-2.6-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="module-library">
       <library name="Grab:guava-r08.jar">
         <CLASSES>
           <root url="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:guava-r08-sources.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

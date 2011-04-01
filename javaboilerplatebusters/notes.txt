@@ -11,3 +11,62 @@ anonymous inner classes
 lombok
 groovy
 
+
+
+
+
+--------------------------
+Apache Commons Lang
+--------------------------
+http://www.dzone.com/links/r/stop_writing_so_much_code.html
+
+lang.*
+------
+StringUtils
+    - http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/StringUtils.html
+
+CharUtils
+    http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/CharUtils.html
+
+
+StringEscapeUtils
+    - http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/StringEscapeUtils.html
+    
+Array
+    http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/ArrayUtils.html
+
+Assorted functions - BooleanUtils
+
+Honorable Mentions:
+    SystemUtils
+    ClassUtils
+    Validate - http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/Validate.html
+    - Tokenizer, WordUtils
+    ObjectUtils - http://commons.apache.org/lang/api-2.6/org/apache/commons/lang/ObjectUtils.html
+
+
+lang.builder.*
+--------------
+ToStringBuilder
+EqualsBuilder
+HashCodeBuilder
+CompareToBuilder
+
+
+
+lang.math.*
+-----------
+various utilities for random numbers
+NumberUtils
+  NumberUtils.createNumber(String)
+  NumberUtils also has a related isNumber
+  
+
+lang.concurrent.*
+-----------------
+Concurrent initializers
+Synchronization objects
+
+
+
+

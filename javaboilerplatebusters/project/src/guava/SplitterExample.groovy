@@ -1,6 +1,7 @@
-package guava
+
 
 @Grab(group='com.google.guava', module='guava', version='r08')
+@Grab(group='com.google.guava', module='guava', version='r08', classifier='sources')
 import com.google.common.base.Splitter
 
 
