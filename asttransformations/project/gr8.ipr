@@ -30,6 +30,32 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="InspectionProjectProfileManager">
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+        <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+      </profile>
+    </profiles>
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_PROFILE" value="true" />
+    <version value="1.0" />
+  </component>
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{AJAX, DHTML, DOM Core, DOM Events, DOM Traversal And Range, DOM XPath, EcmaScript, EcmaScript 4, EcmaScript Additional, EcmaScript L5, HTML 5}" />
+    <predefinedLibrary name="AJAX" />
+    <predefinedLibrary name="DHTML" />
+    <predefinedLibrary name="DOM Core" />
+    <predefinedLibrary name="DOM Events" />
+    <predefinedLibrary name="DOM Traversal And Range" />
+    <predefinedLibrary name="DOM XPath" />
+    <predefinedLibrary name="EcmaScript" />
+    <predefinedLibrary name="EcmaScript 4" />
+    <predefinedLibrary name="EcmaScript Additional" />
+    <predefinedLibrary name="EcmaScript L5" />
+    <predefinedLibrary name="HTML 5" />
+  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
     <option name="OPTION_SCOPE" value="protected" />
