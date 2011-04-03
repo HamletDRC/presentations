@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/SampleCode/!svn/ver/14/concurrency/reentrant/src/proxy
+END
+WithWriteLock.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/SampleCode/!svn/ver/13/concurrency/reentrant/src/proxy/WithWriteLock.java
+END
+WithReadLock.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/SampleCode/!svn/ver/13/concurrency/reentrant/src/proxy/WithReadLock.java
+END
+ResourceProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SampleCode/!svn/ver/12/concurrency/reentrant/src/proxy/ResourceProvider.java
+END
+DefaultResourceProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/SampleCode/!svn/ver/12/concurrency/reentrant/src/proxy/DefaultResourceProvider.java
+END
+ResourceController.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/SampleCode/!svn/ver/14/concurrency/reentrant/src/proxy/ResourceController.java
+END

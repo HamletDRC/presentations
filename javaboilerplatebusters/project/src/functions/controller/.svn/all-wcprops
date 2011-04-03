@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SampleCode/!svn/ver/14/concurrency/reentrant/src/controller
+END
+ResourceProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/SampleCode/!svn/ver/8/concurrency/reentrant/src/controller/ResourceProvider.java
+END
+ResourceController.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/SampleCode/!svn/ver/14/concurrency/reentrant/src/controller/ResourceController.java
+END
+GroovyResourceProvider.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SampleCode/!svn/ver/9/concurrency/reentrant/src/controller/GroovyResourceProvider.groovy
+END

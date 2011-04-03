@@ -1,0 +1,24 @@
+package controller
+
+import java.util.concurrent.Callable;
+
+public class GroovyResourceProvider {
+
+	private final ResourceController controller = new ResourceController();
+	private final Map<String, String> data = new HashMap<String, String>();
+
+	public String getResource(final String key) throws Exception {
+		return controller.withReadLock({
+				Thread.sleep(1000)
+				return data.get(key)
+		} as Callable);
+	}
+
+	public void refresh() throws Exception {
+		controller.withWriteLock({
+			//reload the resources into memory
+			Thread.sleep(5000);
+			return null;
+		} as Callable);
+	}
+}
