@@ -7,4 +7,4 @@ class Person {
 
 new Person().method()
 
-
+println "Success"
