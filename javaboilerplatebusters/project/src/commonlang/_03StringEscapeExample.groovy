@@ -5,7 +5,7 @@ import org.apache.commons.lang.StringEscapeUtils
 
 
 String xmlText = "\"Hello\" & \"GoodBye\"";
-String escapedXml = "&quot;Hello&quot; &amp; &quot;GoodBye&quot;";
+String escapedXml = "&quot;Hello&quot; &amp; " + "&quot;GoodBye&quot;";
 
 assert escapedXml == StringEscapeUtils.escapeXml(xmlText);
 assert xmlText == StringEscapeUtils.unescapeXml(escapedXml);

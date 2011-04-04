@@ -8,49 +8,6 @@ import org.apache.commons.lang.builder.HashCodeBuilder
 import org.apache.commons.lang.builder.CompareToBuilder
 
 
-class Person implements Comparable<Person> {
-    String name;
-    Date timestamp = new Date();
-
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this)
-                .append("name", name)
-                .append("timestamp", timestamp)
-                .toString();
-    }
-
-    @Override
-    boolean equals(Object obj) {
-        if (obj.is(null)) { return false; }
-        if (obj.is(this)) { return true; }
-        if (obj.getClass() != getClass()) {
-            return false;
-        }
-        Person rhs = (Person) obj;
-        return new EqualsBuilder()
-                .append(name, rhs.name)
-                .append(timestamp, rhs.timestamp)
-                .isEquals();
-    }
-
-    @Override
-    int hashCode() {
-        return new HashCodeBuilder(99, 33).
-                append(name).
-                append(timestamp).
-                toHashCode();
-    }
-
-
-    int compareTo(Person other) {
-             return new CompareToBuilder()
-               .append(this.name, other.name)
-               .toComparison();
-    }
-}
-
-
 def hamlet = new Person(name: "hamlet")
 def paul = new Person(name: "paul")
 
