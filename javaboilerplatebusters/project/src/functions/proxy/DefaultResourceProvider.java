@@ -16,5 +16,4 @@ public class DefaultResourceProvider implements ResourceProvider {
 	public void refresh() throws Exception {
 		System.out.println("Reloading the settings...");
 	}
-
 }

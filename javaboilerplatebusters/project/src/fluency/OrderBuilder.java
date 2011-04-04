@@ -1,4 +1,4 @@
-package fleuncy;
+package fluency;
 
 
 import java.util.Currency;

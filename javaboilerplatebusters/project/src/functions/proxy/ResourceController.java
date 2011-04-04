@@ -18,7 +18,7 @@ public class ResourceController implements InvocationHandler {
 		try {
 
 			//try to find the method on the target
-			final Method targetMethod = target.getClass().getMethod(
+			Method targetMethod = target.getClass().getMethod(
 				method.getName(),
 				method.getParameterTypes());
 

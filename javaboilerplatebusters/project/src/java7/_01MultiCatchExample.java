@@ -25,7 +25,9 @@ public class _01MultiCatchExample {
         
         try {
             doSomething();
-        } catch (UnsupportedOperationException | IllegalStateException | IllegalArgumentException e) {
+        } catch (UnsupportedOperationException
+                | IllegalStateException
+                | IllegalArgumentException e) {
             handleError(e);
         }
     }

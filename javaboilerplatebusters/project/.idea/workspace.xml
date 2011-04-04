@@ -60,10 +60,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_05FunctionsExample.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/guava/_05FunctionsExample.java">
+      <file leaf-file-name="GroovyResourceProvider.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/functions/controller/GroovyResourceProvider.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="939" selection-end="1376" vertical-scroll-proportion="0.0">
+            <state line="5" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_01MultiCatchExample.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java7/_01MultiCatchExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="0" selection-start="455" selection-end="669" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_02ArmBlockExample.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java7/_02ArmBlockExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="42" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/commonlang/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="0" selection-start="269" selection-end="1391" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,55 +98,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FluentOrder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fleuncy/FluentOrder.java">
+      <file leaf-file-name="Person.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lbk/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="506" selection-end="656" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fleuncy/OrderBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="24" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functions/primitive/ResourceProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="186" selection-end="704" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functions/controller/ResourceProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="118" selection-end="730" vertical-scroll-proportion="0.0">
+            <state line="42" column="1" selection-start="15" selection-end="1065" vertical-scroll-proportion="0.9237537">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ResourceController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/functions/controller/ResourceController.java">
+        <entry file="file://$PROJECT_DIR$/src/functions/proxy/ResourceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="177" selection-end="892" vertical-scroll-proportion="0.0">
+            <state line="26" column="12" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroovyResourceProvider.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/functions/controller/GroovyResourceProvider.groovy">
+      <file leaf-file-name="Usage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/functions/proxy/Usage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.08797654">
+            <state line="8" column="8" selection-start="188" selection-end="564" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultResourceProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/functions/proxy/DefaultResourceProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="75" selection-end="431" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,13 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/guava/_00CollectionsExample.java" />
-        <option value="$PROJECT_DIR$/src/guava/_01StringsExample.groovy" />
-        <option value="$PROJECT_DIR$/src/getdependencies.groovy" />
-        <option value="$PROJECT_DIR$/src/guava/_01StringsExample.java" />
-        <option value="$PROJECT_DIR$/src/guava/_02PreconditionsExample.java" />
-        <option value="$PROJECT_DIR$/src/guava/Person.groovy" />
-        <option value="$PROJECT_DIR$/src/guava/Person2.groovy" />
         <option value="$PROJECT_DIR$/src/guava/_03ObjectHelperExample.groovy" />
         <option value="$PROJECT_DIR$/src/guava/_04ThrowableExample.java" />
         <option value="$PROJECT_DIR$/src/guava/_05FunctionsExample.groovy" />
@@ -155,6 +159,13 @@
         <option value="$PROJECT_DIR$/src/fleuncy/_01BuilderExample.groovy" />
         <option value="$PROJECT_DIR$/src/fleuncy/FluentOrder.java" />
         <option value="$PROJECT_DIR$/src/fleuncy/OrderBuilder.java" />
+        <option value="$PROJECT_DIR$/src/functions/controller/GroovyResourceProvider.groovy" />
+        <option value="$PROJECT_DIR$/src/functions/proxy/DefaultResourceProvider.java" />
+        <option value="$PROJECT_DIR$/src/functions/proxy/ResourceController.java" />
+        <option value="$PROJECT_DIR$/src/functions/proxy/Usage.java" />
+        <option value="$PROJECT_DIR$/src/java7/_01MultiCatchExample.java" />
+        <option value="$PROJECT_DIR$/src/java7/_02ArmBlockExample.java" />
+        <option value="$PROJECT_DIR$/src/lbk/Person.java" />
       </list>
     </option>
   </component>
@@ -234,29 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="functions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BoilerplateBusters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="lbk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,7 +512,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251029" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="574" y="361" width="866" height="539" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -591,103 +580,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/getdependencies.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.09698276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guava/_03ObjectHelperExample.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="144" selection-end="144" vertical-scroll-proportion="0.2262931">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/com/google/common/base/Throwables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="26" selection-start="8291" selection-end="8291" vertical-scroll-proportion="0.33238232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guava/_04ThrowableExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="736" selection-end="736" vertical-scroll-proportion="0.40656206">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guava/_02PreconditionsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="147" selection-end="462" vertical-scroll-proportion="0.29957205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guava/_01StringsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1185" selection-end="1389" vertical-scroll-proportion="0.828816">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guava/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="384" selection-end="384" vertical-scroll-proportion="0.36376604">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/com/google/common/base/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="899" selection-end="899" vertical-scroll-proportion="0.33238232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fleuncy/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="47" selection-start="450" selection-end="591" vertical-scroll-proportion="0.5777461">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guava/_05FunctionsExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="939" selection-end="1376" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fleuncy/FluentOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="506" selection-end="656" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fleuncy/OrderBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/primitive/ResourceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="186" selection-end="704" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/controller/ResourceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="118" selection-end="730" vertical-scroll-proportion="0.0">
@@ -702,9 +594,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/proxy/WithReadLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="18" selection-start="270" selection-end="270" vertical-scroll-proportion="0.1319648">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/proxy/ResourceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/proxy/DefaultResourceProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="75" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/proxy/ResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="12" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/functions/proxy/Usage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="188" selection-end="564" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/controller/GroovyResourceProvider.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.08797654">
+        <state line="5" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java7/_01MultiCatchExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="455" selection-end="669" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/Closeable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="17" selection-start="489" selection-end="489" vertical-scroll-proportion="0.61538464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="54" selection-start="879" selection-end="879" vertical-scroll-proportion="0.3240469">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/InputStreamReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="43" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.313783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="43" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0601173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java7/_02ArmBlockExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="42" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commonlang/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="269" selection-end="1391" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lbk/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="1" selection-start="15" selection-end="1065" vertical-scroll-proportion="0.9237537">
           <folding />
         </state>
       </provider>

@@ -9,21 +9,20 @@ import java.io.IOException;
  */
 public class _02ArmBlockExample {
 
-    String readFirstLineFromFile_old(String path) throws IOException {
+    int readFirst_old(String path) throws IOException {
 
-        BufferedReader br = new BufferedReader(new FileReader(path));
-
+        FileReader reader = new FileReader(path);
         try {
-            return br.readLine();
+            return reader.read();
         } finally {
-            br.close();
+            reader.close();
         }
     }
 
-    String readFirstLineFromFile(String path) throws IOException {
+    int readFirst(String path) throws IOException {
 
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            return br.readLine();
+        try (FileReader reader = new FileReader(path)) {
+            return reader.read();
         }
     }
 

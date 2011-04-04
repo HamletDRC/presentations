@@ -4,8 +4,8 @@ import java.util.concurrent.Callable;
 
 public class GroovyResourceProvider {
 
-	private final ResourceController controller = new ResourceController();
-	private final Map<String, String> data = new HashMap<String, String>();
+	private final def controller = new ResourceController();
+	private final Map<String, String> data = [:]
 
 	public String getResource(final String key) throws Exception {
 		controller.withReadLock({ data.get(key) } as Callable);
