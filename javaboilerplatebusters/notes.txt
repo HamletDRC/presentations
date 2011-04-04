@@ -1,9 +1,9 @@
 * 1. Apache Commons
 ! 2. Google Guava
 * 3. Builders / Fluent API
-*  4. Anonymous Inner Classes / Function Objects (functional java)
-*  5. Proxies / Interceptors (proxy aspects -> transactions, roles, error handling)
-  6. Java 7
+* 4. Anonymous Inner Classes / Function Objects (functional java)
+* 5. Proxies / Interceptors (proxy aspects -> transactions, roles, error handling)
+* 6. Java 7
 * 7. Lombok
 * 8. Groovy
 
