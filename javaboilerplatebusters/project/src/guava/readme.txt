@@ -9,5 +9,4 @@ http://piotrjagielski.com/blog/google-guava-vs-apache-commons-for-argument-valid
 (includes Google Collections classes)
 
 immutable collections
-handling primitives
 easier I/O

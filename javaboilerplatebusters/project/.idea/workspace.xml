@@ -59,7 +59,26 @@
     <favorites_list name="BoilerplateBusters" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/guava/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="48" selection-start="1" selection-end="49" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_00CollectionsExample.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/guava/_00CollectionsExample.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="40" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.6666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -73,8 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/guava/_05FunctionsExample.groovy" />
-        <option value="$PROJECT_DIR$/src/fleuncy/_01BuilderExample.groovy" />
         <option value="$PROJECT_DIR$/src/functions/_01ErrorHandlingExample.groovy" />
         <option value="$PROJECT_DIR$/src/functions/proxy/ResourceProvider.java" />
         <option value="$PROJECT_DIR$/src/functions/proxy/WithReadLock.java" />
@@ -89,6 +106,8 @@
         <option value="$PROJECT_DIR$/src/java7/multicatch/arm/_01MultiCatchExample.java" />
         <option value="$PROJECT_DIR$/src/java7/_01MultiCatchExample.java" />
         <option value="$PROJECT_DIR$/src/java7/_02ArmBlockExample.java" />
+        <option value="$PROJECT_DIR$/src/guava/readme.txt" />
+        <option value="$PROJECT_DIR$/src/guava/_00CollectionsExample.groovy" />
       </list>
     </option>
   </component>
@@ -107,7 +126,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -123,6 +142,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -131,10 +152,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoilerplateBusters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoilerplateBusters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoilerplateBusters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoilerplateBusters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BoilerplateBusters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,22 +249,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Groovy Script.Usage">
-    <configuration default="false" name="ObjectHelperExample" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
-      <module name="BoilerplateBusters" />
-      <setting name="path" value="$PROJECT_DIR$/src/guava/ObjectHelperExample.groovy" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="$PROJECT_DIR$/src/guava" />
-      <setting name="debug" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Groovy Script._00CollectionsExample">
     <configuration default="false" name="_02PreconditionsExample" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
       <module name="BoilerplateBusters" />
       <setting name="path" value="$PROJECT_DIR$/src/guava/_02PreconditionsExample.groovy" />
@@ -213,6 +299,17 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/functions/proxy" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="_00CollectionsExample" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
+      <module name="BoilerplateBusters" />
+      <setting name="path" value="$PROJECT_DIR$/src/guava/_00CollectionsExample.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/guava" />
       <setting name="debug" value="false" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -340,11 +437,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Groovy Script.ObjectHelperExample" />
-      <item index="1" class="java.lang.String" itemvalue="Groovy Script._02PreconditionsExample" />
-      <item index="2" class="java.lang.String" itemvalue="Groovy Script._05FunctionsExample" />
-      <item index="3" class="java.lang.String" itemvalue="Groovy Script._01BuilderExample" />
-      <item index="4" class="java.lang.String" itemvalue="Groovy Script.Usage" />
+      <item index="0" class="java.lang.String" itemvalue="Groovy Script._02PreconditionsExample" />
+      <item index="1" class="java.lang.String" itemvalue="Groovy Script._05FunctionsExample" />
+      <item index="2" class="java.lang.String" itemvalue="Groovy Script._01BuilderExample" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy Script.Usage" />
+      <item index="4" class="java.lang.String" itemvalue="Groovy Script._00CollectionsExample" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -385,21 +482,21 @@
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32536522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="574" y="361" width="866" height="539" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26180556" sideWeight="0.30411687" order="1" side_tool="true" content_ui="tabs" x="1027" y="24" width="413" height="635" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26180556" sideWeight="0.20849934" order="1" side_tool="true" content_ui="tabs" x="1027" y="24" width="413" height="635" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26180556" sideWeight="0.685259" order="0" side_tool="false" content_ui="tabs" x="988" y="24" width="452" height="635" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26180556" sideWeight="0.4555113" order="0" side_tool="false" content_ui="tabs" x="988" y="24" width="452" height="635" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.39885497" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1054" y="660" width="866" height="540" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32536522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="574" y="361" width="866" height="539" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910156" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32536522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="574" y="361" width="866" height="539" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39980915" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -451,108 +548,100 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/functions/controller/GroovyResourceProvider.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/controller/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="20" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/controller/ResourceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-6-sun/src.zip!/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="11" selection-start="2846" selection-end="2846" vertical-scroll-proportion="1.5912305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/proxy/WithReadLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/proxy/WithWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/proxy/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="29" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.809593">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/functions/proxy/DefaultResourceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="53" selection-start="423" selection-end="423" vertical-scroll-proportion="0.30991736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/proxy/ResourceProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="44" selection-end="44" vertical-scroll-proportion="0.06198347">
-          <folding />
-        </state>
+        <state line="3" column="17" selection-start="44" selection-end="44" vertical-scroll-proportion="0.06198347" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/functions/proxy/Usage.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="425" selection-end="425" vertical-scroll-proportion="0.26859504">
-          <folding />
-        </state>
+        <state line="13" column="28" selection-start="425" selection-end="425" vertical-scroll-proportion="0.26859504" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/lang/AutoCloseable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="17" selection-start="364" selection-end="364" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="33" column="17" selection-start="364" selection-end="364" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/Closeable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="41" selection-start="513" selection-end="513" vertical-scroll-proportion="0.6487603">
-          <folding />
-        </state>
+        <state line="37" column="41" selection-start="513" selection-end="513" vertical-scroll-proportion="0.6487603" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="55" selection-start="880" selection-end="880" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="50" column="55" selection-start="880" selection-end="880" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/bin/jdk1.7.0.b136/src.zip!/java/io/BufferedReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="41" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="62" column="41" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java7/_02ArmBlockExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="39" selection-start="759" selection-end="759" vertical-scroll-proportion="0.661157">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="32" column="39" selection-start="759" selection-end="759" vertical-scroll-proportion="0.661157" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/guava/_02PreconditionsExample.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java7/_01MultiCatchExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="48" selection-end="48" vertical-scroll-proportion="0.08264463">
+        <state line="7" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.1446281">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/guava/_05FunctionsExample.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="0" selection-end="148" vertical-scroll-proportion="0.041322313">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/guava/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="48" selection-start="1" selection-end="49" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/com/google/common/collect/HashBasedTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="50" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.020661157">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/com/google/common/collect/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="3430" selection-end="3430" vertical-scroll-proportion="0.9375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/com/google/common/collect/Multimap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="17" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/jars/guava-r08-sources.jar!/com/google/common/collect/BiMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="3574" selection-end="3574" vertical-scroll-proportion="0.9375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/guava/_00CollectionsExample.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="40" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.6666667">
           <folding />
         </state>
       </provider>

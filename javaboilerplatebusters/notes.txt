@@ -1,5 +1,10 @@
 * 1. Apache Commons
 ! 2. Google Guava
+    * Why Common Libraries
+        - Portable knowledge
+        - Hireable knowledge
+        - Learnable
+  ?. Pair - Possibly include based on time
 * 3. Builders / Fluent API
 * 4. Anonymous Inner Classes / Function Objects (functional java)
 * 5. Proxies / Interceptors (proxy aspects -> transactions, roles, error handling)
