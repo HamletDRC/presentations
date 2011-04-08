@@ -63,12 +63,10 @@ x. Using Groovy
 Social Problems
 ---------------
 x. Social Problems (& Solutions)
-    - 6 - Cultural Issues
-    - 6 - Cut and Run
+    - 6 - Cut and Run - Problems with You
+    - 6 - Cultural Issues - Problems with the Team
+    - Stop Digging when you are in a whole, slowing down the digging is not enough
     
-"We Don't have Time"
-    - 52 - Code review hueristics - line count, import list, keep & broadcast results
-
 "I'm Burned out and Depressed"
     - 7 - Burnout - Naggum Quote / serenity prayer
     - 6 - Glacial Pace
@@ -76,26 +74,52 @@ x. Social Problems (& Solutions)
 "My co-workers are idiots"
     - 55 - assume positive intent, examine reward structures, peter principle
 
-"Avoid the big rewrite" - 56
-    
 "I hate my job" - 57
     - make it fun (build trophy vs. 100% club)
+    - Quit - 6 
+
+
+"We don't know how to do this"
+    - Share a canooie
+    - 15 Minute Daily Refactoring (Geepaw Hill)
+        - practices skills
+        - become habitualized to refactoring
+        - helps create long term vision
+
+
+
+"I'd rather fund a big rewrite" - 56
+     - what about a refactoring team? 
 
 "I can't do it alone" 60 
+    - no you can't
+    - small refactorings are good opportunities for pairing
+    - beware trying to pair with a suboptimal environment. 
 
 "We can't get traction" - 61
 
 "They won't let us" - 62
+    - Need to prove you're not going backwards; you don't need to prove change is a good one. Uncertainty. 
 
 "The Pace is Glacial" - 6
 
-"I'm going to quite" - then do it. 6
+"We Don't have Time"
+    - Uncle Bob - "What's the soonest date by which you can't prove you won't ship."
+    - Estimation Theatre
+    - 52 - Code review hueristics - line count, import list, keep & broadcast results
+
+"I Don't know where to start"
+    - Sonar
+    - Highest # of commits 
+    - Use Metrics / Inspections but avoid tumbleweeding
 
 Unsolved Mysteries - 54
-    - Where to start - Sonar can help? 
 
 
 x. Agenda Review
 x. Feathers Quote - "The last hazards are fear and resignation: fear that we can't change a particular piece of code and make it easier to work with, and resignation because whole areas of the code just aren't getting any better."  Michael Feathers 
 x. Closing Slide and Links 
+
+
+
 
