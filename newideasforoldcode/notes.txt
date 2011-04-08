@@ -1,25 +1,6 @@
 New Ideas for Old Code
 ----------------------
 
-0. Title
-1. Agenda
-2. About Me
-
-Introducing the Topic
----------------------
-3. Definition
-    - what is legacy code
-    - finding your longest class
-    - how it ties to depression
-
-4. Solving Legacy Code
-    - Know where to go
-    - Learn how to get there
-    - apply the 51% rule
-
-
-x. Ideas from Me
-
 Refactoring
 -----------
 28 - Refactoring vs. Reengineering
@@ -35,7 +16,7 @@ Refactoring
 51 - Scratch Refactoring
 
 x. Refactoring Book Club
-
+ * Find Images of the 3 books. 
 
 
 Testing
@@ -115,10 +96,6 @@ x. Social Problems (& Solutions)
 
 Unsolved Mysteries - 54
 
-
-x. Agenda Review
-x. Feathers Quote - "The last hazards are fear and resignation: fear that we can't change a particular piece of code and make it easier to work with, and resignation because whole areas of the code just aren't getting any better."  Michael Feathers 
-x. Closing Slide and Links 
 
 
 
