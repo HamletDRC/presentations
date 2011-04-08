@@ -1,0 +1,380 @@
+Tip 2: Consider a Builder
+------------------
+* Object w/ many ctor params, same type
+* Builder lets object be immutable
+
+class Person {
+     private final String firstName
+     private final String lastName    
+     public String getFirstName() { return firstName; }
+     public String getLastName() { return lastName; }
+     public Person(String firstName, String lastName) {
+          this.firstName = firstName; 
+          this.lastName = lastName; 
+     }
+}
+Person p = new Person("David", "Villa"); 
+
+class Person {
+     private final String firstName
+     private final String lastName    
+     public String getFirstName() { return firstName; }
+     public String getLastName() { return lastName; }
+     private Person(String firstName, String lastName) {
+          this.firstName = firstName; 
+          this.lastName = lastName; 
+     }
+     public static class PersonBuilder {
+          private String firstName
+          private String lastName    
+          public PersonBuilder withFirstName(String firstName) {
+               this.firstName = firstName; 
+               return this; 
+          }
+          public PersonBuilder withLastName(String lastName) {
+               this.lastName = lastName; 
+               return this; 
+          }
+          public Person build() {
+               return new Person(firstName, lastName); 
+          }
+     }
+}
+Person p = new PersonBuilder()
+               .withFirstName("David")
+               .withLastName("Villa")
+               .build();
+
+
+
+@groovy.transform.Immutable
+class Person {
+
+    String firstName
+    String lastName    
+}
+
+new Person(firstName: 'David', lastName: 'Villa')
+
+
+Tip 5: Avoid Creating Unnecessary Objects
+-----------------------------------------
+new String('value')
+new Boolean(true)
+-- both CodeNarc and IDEA catch these for you
+
+CodeNarc extras: 
+new ArrayList()     -->  []
+new HashMap()       -->  [:]
+new Stack()         -->  [] as Stack
+new MyList()        -->  [] as MyList
+
+new BigInteger      -->  123G
+new BigDecimal      -->  123.45G
+
+
+
+Item 8: Obey the general contract when overriding equals
+--------------------------------------------------------
+Reflexive, symmetric, transitive, consistent, null is false
+class Person {
+     private final String firstName
+     private final String lastName    
+     public String getFirstName() { return firstName; }
+     public String getLastName() { return lastName; }
+     public Person(String firstName, String lastName) {
+          this.firstName = firstName; 
+          this.lastName = lastName; 
+     }
+     public boolean equals(Object o) {
+          if (o == null) return false; 
+          if (o.getClass() != getClass()) return false; 
+          Person p = (Person)o; 
+          return ((firstName == null ? p.firstName == null : firstName.equals(p.firstName))
+               || (lastName == null ? p.lastName == null : lastName.equals(p.lastName)));
+     }
+}
+assert (new Person('a', 'b').equals(new Person('a', 'b'))); 
+
+
+
+@groovy.transform.Immutable
+@groovy.transform.EqualsAndHashCode
+class Person {
+
+    String firstName
+    String lastName    
+}
+assert new Person(firstName: 'a', lastName: 'b') == new Person(firstName: 'a', lastName: 'b')
+
+
+Item 9: Always Override hashCode() when you override equals()
+-------------------------------------------------------------
+Same as above example:
+@groovy.transform.Immutable
+@groovy.transform.EqualsAndHashCode
+class Person {
+
+    String firstName
+    String lastName    
+}
+assert new Person(firstName: 'a', lastName: 'b') == new Person(firstName: 'a', lastName: 'b')
+
+CodeNarc & IDEA have analysis for this common problem
+
+Item 10: Always Override toString()
+-----------------------------------
+class Person {
+     private final String firstName
+     private final String lastName    
+     public String getFirstName() { return firstName; }
+     public String getLastName() { return lastName; }
+     public Person(String firstName, String lastName) {
+          this.firstName = firstName; 
+          this.lastName = lastName; 
+     }
+     public String toString() {
+          return "Person{firstName:" + firstName + ", lastName:" + lastName + "}"
+     }
+}
+
+
+@groovy.transform.Immutable
+@groovy.transform.EqualsAndHashCode
+class Person {
+
+    String firstName
+    String lastName    
+
+     public String toString() {
+          return "Person{firstName: $firstName, lastName: $lastName}"
+     }
+}
+
+@groovy.transform.Immutable
+@groovy.transform.EqualsAndHashCode
+@groovy.transform.ToString
+class Person {
+
+    String firstName
+    String lastName    
+}
+
+
+
+Tip 11: Override Clone Judiciously
+----------------------------------
+CodeNarc: 
+  CloneableWithoutClone 
+<< Experimental >>
+@groovy.transform.Immutable
+@groovy.transform.EqualsAndHashCode
+@groovy.transform.ToString
+@groovy.transform.AutoClone
+class Person {
+
+    String firstName
+    String lastName    
+}
+
+
+
+Tip 12: Consider implementing Comparable
+----------------------------------------
+Even more important in Groovy b/c Groovy Truth relies on this
+  CompareToWithoutComparable
+
+
+
+Tip 13: Minimize Mutability
+---------------------------
+@Immutable - Enough said. 
+
+Tip 16: Favor Composition over Inheritence
+------------------------------------------
+@Delegate Example
+
+Tip 19: Use Interfaces only to define types
+-------------------------------------------
+CodeNarc rule
+
+
+Tip 21: Use Function Oobjects to represent strategies
+-----------------------------------------------------
+Closures
+
+
+Tip 36: Consistently use @Override
+----------------------------------
+CodeNarc & IDEA
+
+
+Tip 41: Use Overloading Judisiously (overturned)
+-----------------------------------
+Groovy does this at Runtime
+
+Tip 43: Return Empty Arrays or Collections, not nulls
+-----------------------------------------------------
+CodeNarc and IDEA
+
+
+
+
+Item 47: Know and use the libraries
+-----------------------------------
+standard GDK
+Read the release notes
+
+
+
+Item 63: Include Failure-capture information in detailed messages
+-----------------------------------------------------------------
+Especially important in Groovy where you don't need to catch exceptions. 
+
+Item 68: Prefer Executors to Threads
+------------------------------------
+and GPars to that
+
+Item 69: Prefer concurrency utilities to wait and notify
+--------------------------------------------------------
+CodeNarc
+DataFlows from GPars
+
+
+Item 71: Use Lazy Initialization judiciously
+--------------------------------------------
+covered by Andres
+@Lazy
+
+
+
+
+Item EG1: Use Groovy Serv
+-------------------------
+
+
+Basic: 
+List and Map type Literals (including your own)
+Elvis and ConfusingTernary, UnnecessaryTernaryExpression
+Operator overloading rules
+ExplicitCallToCompareToMethod Rule and spaceship: <=>
+ExplicitCall to Get At -> indexed offset
+UnnecessaryCallForLastElement
+UnnecessaryCollectCall -> Spread
+UnnecessaryNullCheck -> Nullsafe Dereference instead 
+Unnecessary Getter -> 
+UnnecessaryObjectReferences -> Use a with block
+UnnecessaryReturnKeyword
+rule: replace substring with subscript operator
+ConsecutiveStringConcatenation - join or use GStrings
+Use Strings when Strings, GStrings when templated
+-> writer parameter
+* Feature - Create UnnecessaryPublicModifier rule
+* Feature - 	rule: unneeded def in method declaration
+* Feature create UnnecessaryAnonymousRunnable rule
+* Feature - create UseEqualsToCompareStrings rule
+* Feature - create UselessStringValueOf rule
+* Feature - create a rule for transforming for loops into for each loops
+* Feature - create rule: ternary could be elvis
+* Feature - create rule: prefer head()/first() to get(0) and [0]
+* create rule - should use tr not replaceAll
+* create "should use collect" rule
+* create excessive string newlines (should be multiline string
+
+
+Best Practice: 
+ReturnsNullInsteadOfEmptyArray Rule
+ReturnsNullInsteadOfEmptyCollection
+
+
+Threading: 
+SynchronizedMethod -> @Synchronized -> WithReadLock
+AvoidBusyWait
+AvoidDoubleCHeckedLocking
+InconsistentPropertyLocking
+InconsistentPropertySynchronization
+SynchronizedOnBoxedPrimitive
+* Feature - rule: mismatched @WithReadLock/@WithWriteLock
+* Feature - rule: Serializable class synchronizing on Object
+
+Design: 
+AbstractClassWithoutAbstractMethod 
+CloseWithoutCloseable
+
+Testing: 
+JUnitStyleAssertions
+UseAssertEqualsInsteadOfAssertTrue
+UseAssertFalseInsteadOfNegation
+UseAssertTrueInsteadOfAssertEqualsRule
+UseAssertTrueInsteadOfNegation
+UseAssertNullInsteadOfAssertEquals
+UseAssertSameInsteadOfAssertTrue
+JUnitFailWithoutMessage
+UnnecessaryFail
+* Rules work for assert statements as well
+* Use Spock
+
+Logging: 
+LoggerForDifferentClass
+MultipleLoggers
+
+
+
+Other: 
+Overloaded methods -> Default Parameters
+Use foreach not .each 
+Spread into arguments
+Should write arm block, not call close method. 
+If statements -> Guard Clauses -> chained function methods
+prefer private static methods
+Memoize function / Trampoline
+
+Return from closure -- confusing
+
+*** Analyze IntelliJ IDEA ones as well
+Incompatible Types Assignments Inspections
+Return statement could be implicit
+Methods with too many parameters - Dyk quote
+list get/set, Map get/set, getter can be keyed access
+variables with field names
+* Access to unresolved expression
+* Access to untyped expression
+* Second unsafe call
+*Concurrency - Access to static field locked on instance data
+*Concurrency - Busy Wait
+*Concurrency - Double checked locking
+*Concurrency - non private field accessed in synchronized context
+*Concurrency - unsynchronized method overrides synchronized method
+
+IDEA Java but not Groovy
+Class extends Thread
+Lock acquired but not safely unlocked
+Synchronized block could be synchronized method
+java lang import (and others)
+return of collection or array field
+
+Patterns - 
+No More Template Patterns
+No More Strategy Patterns 
+No More Command Patterns
+
+Effective GPars - 
+WithPool for multithreading
+collect parallel, find all parallel
+
+*** Analyze Eclipse Intentions
+
+
+
+Builder Pattern: 
+
+@groovy.transform.Immutable
+class Person {
+
+    String firstName
+    String lastName    
+}
+
+new Person(firstName: 'hamlet', lastName: "d'Arcy")
+
+
