@@ -3,9 +3,6 @@ New Ideas for Old Code
 
 Refactoring
 -----------
-28 - Refactoring vs. Reengineering
-29 - Lean on the Compiler
-30 - Lean on the Tools
 33 - You don't need BPM
     - Break out Method Object
     - Extract Class
