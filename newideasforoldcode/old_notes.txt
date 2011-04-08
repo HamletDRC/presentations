@@ -1,0 +1,74 @@
+
+Legacy Code and Testability 
+
+A slide with the definition of legacy code is condescending. 
+A slide that says "no silver bullet" is condescending. 
+
+
+Only answer is write testable code
+Many technologies will give you write only test coverage. 
+what is the goal of all this? Make _verifiable_ changes more easily. 
+
+
+Groovy in enterprise notes. 
+
+
+Unused Notes
+The Big Rewrite (Chad Fowler). Does this ever work? Is it what you want? I'd rather staff a project to the 51% improvement rule and let time trend it towards 100%. 
+
+Beward misleading pattern names. Adapter and Factory are names commonly used by people with no understanding of the pattern. They do more harm than good. 
+
+Sometimes using a coding convention is just as good as using a restrictive language feature. Think about what your tests need. MF final/sealed.
+
+"Object-Oriented Reengineering Patterns". In pdf
+
+"Every person who is touching the code should know the architecture, and everyone else who touches the code should be able to benefit from what that person learned" MF You need to communicate intent to others. Everyone needs to be on board. As patterns emerge communicate them to co-workers. 
+
+"One of the worst mistakes a team can make is it to feel that design is over at some point in development."
+
+it pays to bais toward introducing new functions rather than adding code to old ones. At the very least, we can write tests for the new functions that we write." MF
+
+
+"At the end of the process, we ended up with a much neater orthogonal design, but it didn't feel like we were designing. It was more like we were noticing what was there and moving the code closer to its essence, what it really was." MF
+
+escaping 'this' might need to be relaxed as a standard. violated often. 
+
+"The static portions of a class can be seen as a"staging area" for things that don't quite belong in a class"
+
+"Extract INterface is one of the safest dependency-breaking techniques. If you get a step wrong, the compiler tells you immedietly."
+
+Singleton lives in legacy code. Singleton violates SRP... it makes a statement about scoping and behavior. Why mix the two? 
+
+
+Static public methods... oh good lord. Do you have "make method static" inspection? Is your solution to actually make the method static? I'd rather see needless instances and turn the inspection off. 
+Bracha - statics suck post. 
+
+Humble Dialog - Incremental refactoring leaves you with humble objects. 
+
+Know thy structured search. 
+
+In a fight against something, the fight has value, victory has none. In a fight for something, the fight is a loss, victory merely relief. 
+Eric Naggum (1965-2009)
+
+"Software systems almost always degrade into a mess...The rot is so pervasive that we've come up with a special name for rotten programs. We call them: Legacy Code." - Bob Martin, WELC
+
+Stu on Legacy: 
+ “Legacy” is the degree to which code 
+   fails to capture intent 
+   fails to communicate intent 
+   captures irrelevant detail (ceremony) 
+  Other characterizations of legacy are implications or symptoms of the above
+(I disagree on this). 
+
+"Legacy code... conjures odors of murk, slime, stagnancy, and offal. Although our first joy of programming may have been intense, the misery of dealing with legacy code is often sufficient to extinguish that flame." 
+
+How are you judging success? 
+
+Are you fighting against legacy code? Or are you fighting for Clean Code? 
+
+After 12 months of fighting, what will your energy level and mindstate be? Have you had 12 months of successfully keeping legacy code at bay? Or have you had 12 months of fighting and your codebase still isn't where it needs to be? 
+
+If it's not feasible to fix every legacy code problem then fight against legacy code. 
+
+If it is feasible to eliminate all legacy code, then fight for clean code. 
+
