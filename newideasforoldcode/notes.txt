@@ -41,21 +41,6 @@ x. Social Problems (& Solutions)
     - 6 - Cultural Issues - Problems with the Team
     - Stop Digging when you are in a whole, slowing down the digging is not enough
     
-"I'm Burned out and Depressed"
-    - 7 - Burnout - Naggum Quote / serenity prayer
-
-"My co-workers are idiots"
-    - 55 - assume positive intent, examine reward structures, peter principle
-
-"I hate my job" - 57
-    - make it fun (build trophy vs. 100% club)
-    - Quit - 6 
-
-
-"I can't do it alone" 60 
-    - no you can't
-    - small refactorings are good opportunities for pairing
-    - beware trying to pair with a suboptimal environment. 
 
 
 "We don't know how to do this"
@@ -86,7 +71,7 @@ x. Social Problems (& Solutions)
     - Use Metrics / Inspections but avoid tumbleweeding
 
 Unsolved Mysteries - 54
-
+    - co workers that you can't fire
 
 
 
