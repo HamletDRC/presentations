@@ -1,0 +1,101 @@
+New Ideas for Old Code
+----------------------
+
+0. Title
+1. Agenda
+2. About Me
+
+Introducing the Topic
+---------------------
+3. Definition
+    - what is legacy code
+    - finding your longest class
+    - how it ties to depression
+
+4. Solving Legacy Code
+    - Know where to go
+    - Learn how to get there
+    - apply the 51% rule
+
+
+x. Ideas from Me
+
+Refactoring
+-----------
+28 - Refactoring vs. Reengineering
+29 - Lean on the Compiler
+30 - Lean on the Tools
+33 - You don't need BPM
+    - Break out Method Object
+    - Extract Class
+    - 37 Move towards a meaningful abstraction
+38 - 40 - Maniacal Focus on Dependencies, prefer private static methods
+41 - Inversion of control, (return out not pass in), 42 - Snip Dependency Trees with Spring
+48 - Undetermined Effects - Use JUnit, BCEL, class analyzer to check special parts of the code
+51 - Scratch Refactoring
+
+x. Refactoring Book Club
+
+
+
+Testing
+-------
+49 - I write unit tests so that... 
+x. Using Groovy 
+    - 9 - easy vs. notational convenience
+    - 10 - My story from Pearson
+    - 11 - Groovy as a testing DSL
+            12 - Default parameters, 14 - Builders
+            16 - Groovy Assertions, 18 - Multiline Strings
+            20 - partial interfaces, 22 - Private method access
+            24 - Mocks, 25 - Flow of Groovy
+            26 - Downsides
+    - 17 - Cooler tools - Reality is that your problms may not be /fixed/ 
+
+44 - Busy Constructors (are no problem to test)
+46 - Subclass and Override
+50 - Prefer Functional Tests? 
+
+31 - Testability vs. Readability, 32 - Meaningless Abstractions
+
+
+
+Social Problems
+---------------
+x. Social Problems (& Solutions)
+    - 6 - Cultural Issues
+    - 6 - Cut and Run
+    
+"We Don't have Time"
+    - 52 - Code review hueristics - line count, import list, keep & broadcast results
+
+"I'm Burned out and Depressed"
+    - 7 - Burnout - Naggum Quote / serenity prayer
+    - 6 - Glacial Pace
+
+"My co-workers are idiots"
+    - 55 - assume positive intent, examine reward structures, peter principle
+
+"Avoid the big rewrite" - 56
+    
+"I hate my job" - 57
+    - make it fun (build trophy vs. 100% club)
+
+"I can't do it alone" 60 
+
+"We can't get traction" - 61
+
+"They won't let us" - 62
+
+"The Pace is Glacial" - 6
+
+"I'm going to quite" - then do it. 6
+
+Unsolved Mysteries - 54
+    - Where to start - Sonar can help? 
+
+
+x. Agenda Review
+x. Feathers Quote - "The last hazards are fear and resignation: fear that we can't change a particular piece of code and make it easier to work with, and resignation because whole areas of the code just aren't getting any better."  Michael Feathers 
+x. Closing Slide and Links 
+
