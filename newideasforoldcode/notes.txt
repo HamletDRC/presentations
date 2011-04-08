@@ -3,10 +3,6 @@ New Ideas for Old Code
 
 Refactoring
 -----------
-33 - You don't need BPM
-    - Break out Method Object
-    - Extract Class
-    - 37 Move towards a meaningful abstraction
 38 - 40 - Maniacal Focus on Dependencies, prefer private static methods
 41 - Inversion of control, (return out not pass in), 42 - Snip Dependency Trees with Spring
 48 - Undetermined Effects - Use JUnit, BCEL, class analyzer to check special parts of the code
@@ -47,7 +43,6 @@ x. Social Problems (& Solutions)
     
 "I'm Burned out and Depressed"
     - 7 - Burnout - Naggum Quote / serenity prayer
-    - 6 - Glacial Pace
 
 "My co-workers are idiots"
     - 55 - assume positive intent, examine reward structures, peter principle
@@ -57,6 +52,12 @@ x. Social Problems (& Solutions)
     - Quit - 6 
 
 
+"I can't do it alone" 60 
+    - no you can't
+    - small refactorings are good opportunities for pairing
+    - beware trying to pair with a suboptimal environment. 
+
+
 "We don't know how to do this"
     - Share a canooie
     - 15 Minute Daily Refactoring (Geepaw Hill)
@@ -64,22 +65,15 @@ x. Social Problems (& Solutions)
         - become habitualized to refactoring
         - helps create long term vision
 
-
-
-"I'd rather fund a big rewrite" - 56
+"We need a big rewrite" - 56
      - what about a refactoring team? 
-
-"I can't do it alone" 60 
-    - no you can't
-    - small refactorings are good opportunities for pairing
-    - beware trying to pair with a suboptimal environment. 
 
 "We can't get traction" - 61
 
 "They won't let us" - 62
     - Need to prove you're not going backwards; you don't need to prove change is a good one. Uncertainty. 
 
-"The Pace is Glacial" - 6
+"Our Pace is Glacial" - 6
 
 "We Don't have Time"
     - Uncle Bob - "What's the soonest date by which you can't prove you won't ship."
