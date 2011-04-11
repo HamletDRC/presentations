@@ -3,13 +3,8 @@ New Ideas for Old Code
 
 Refactoring
 -----------
-38 - 40 - Maniacal Focus on Dependencies, prefer private static methods
-41 - Inversion of control, (return out not pass in), 42 - Snip Dependency Trees with Spring
 48 - Undetermined Effects - Use JUnit, BCEL, class analyzer to check special parts of the code
-51 - Scratch Refactoring
 
-x. Refactoring Book Club
- * Find Images of the 3 books. 
 
 
 Testing
@@ -31,12 +26,5 @@ x. Using Groovy
 50 - Prefer Functional Tests? 
 
 31 - Testability vs. Readability, 32 - Meaningless Abstractions
-
-
-
-Unsolved Mysteries - 54
-    - co workers that you can't fire
-
-
 
 
