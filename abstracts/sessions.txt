@@ -22,19 +22,12 @@ Effective Groovy
 "Effective Java" by Joshua Bloch is the gold standard for how to write correct and idiomatic Java code. Wouldn't it be great if the same thing existed for Groovy? Well here it is. This interactive, live coding session discusses what separates good Groovy code from the bad, what makes some code great, and how best to use the many available libraries. We'll also look at several static analysis tools for Groovy that aid in these pursuits. This session appeals to both those with a Java knowledge looking to learn Groovy and advanced Groovy programmers looking to learn more. 
 
 
-This session examines the Groovy language and 
-
-Here he shares 57 "nuggets"--rules and code examples showing what works, what doesn't, and how to use the language and its libraries to best effect.
-
-Accessible by anyone who knows the language, but food for thought even for advanced programmers.
-"Effective Java" by Joshua Bloch 
-
 
 
 
 Jazoon 
 ------
-Groovy AST Transformations
+Implementing Groovy AST Transformations
 'A language should have access to its own abstract syntax' John McCarthy, Father of Lisp. Well, now Groovy 1.7 does! Besides explaining just what an AST transformation is, this talk will show you why AST transformations are important, what you can do with them, and where the language world is headed. We'll dive into some of the useful Groovy annotations and libraries being written that harness AST transformations, see how to write our own, and work with the AST tools that came out in the latest version.
 
 

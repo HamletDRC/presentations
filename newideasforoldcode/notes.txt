@@ -34,42 +34,6 @@ x. Using Groovy
 
 
 
-Social Problems
----------------
-x. Social Problems (& Solutions)
-    - 6 - Cut and Run - Problems with You
-    - 6 - Cultural Issues - Problems with the Team
-    - Stop Digging when you are in a whole, slowing down the digging is not enough
-    
-
-
-"We don't know how to do this"
-    - Share a canooie
-    - 15 Minute Daily Refactoring (Geepaw Hill)
-        - practices skills
-        - become habitualized to refactoring
-        - helps create long term vision
-
-"We need a big rewrite" - 56
-     - what about a refactoring team? 
-
-"We can't get traction" - 61
-
-"They won't let us" - 62
-    - Need to prove you're not going backwards; you don't need to prove change is a good one. Uncertainty. 
-
-"Our Pace is Glacial" - 6
-
-"We Don't have Time"
-    - Uncle Bob - "What's the soonest date by which you can't prove you won't ship."
-    - Estimation Theatre
-    - 52 - Code review hueristics - line count, import list, keep & broadcast results
-
-"I Don't know where to start"
-    - Sonar
-    - Highest # of commits 
-    - Use Metrics / Inspections but avoid tumbleweeding
-
 Unsolved Mysteries - 54
     - co workers that you can't fire
 
