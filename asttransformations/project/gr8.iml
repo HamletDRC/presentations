@@ -5,12 +5,12 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/codenarc" />
-      <excludeFolder url="file://$MODULE_DIR$/src/spock" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="$groovy_library_name$" level="application" />
     <orderEntry type="library" name="gcontracts-core" level="project" />
+    <orderEntry type="library" name="$spock_library_name$" level="application" />
+    <orderEntry type="library" name="groovy-1.8.x" level="application" />
   </component>
 </module>
 

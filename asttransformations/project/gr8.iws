@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ef693a5a-997c-42d4-bc65-56665863219d" name="Default" comment="" />
+    <list default="true" id="ef693a5a-997c-42d4-bc65-56665863219d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../demochecklist.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CodeGeneration_JAX.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../asttransformations_strangeloop.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../asttransforms_30Mins.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../asttransforms_GR8.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../asttransforms_czjug.pdf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../examples/07GContracts/GContractsDemo.groovy" afterPath="$PROJECT_DIR$/../examples/07GContracts/GContractsDemo.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gr8.iml" afterPath="$PROJECT_DIR$/gr8.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gr8.ipr" afterPath="$PROJECT_DIR$/gr8.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gr8.iws" afterPath="$PROJECT_DIR$/gr8.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/Event.groovy" afterPath="$PROJECT_DIR$/../scripts/Event.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../scripts/lombok/Person.java" afterPath="$PROJECT_DIR$/../scripts/lombok/Person.java" />
+    </list>
     <ignored path="$USER_HOME$/.grails/" />
     <ignored path="$USER_HOME$/.griffon/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,19 +73,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GoodRocket.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gcontracts/GoodRocket.groovy">
+      <file leaf-file-name="MathSpec.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/spock/MathSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ariane5.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gcontracts/Ariane5.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.041322313">
+            <state line="7" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.12396694">
               <folding />
             </state>
           </provider>
@@ -101,9 +105,9 @@
         <option value="$PROJECT_DIR$/src/spock/ArithmeticShell.groovy" />
         <option value="$USER_HOME$/groovy-core/src/examples/astbuilder/MainIntegrationTest.groovy" />
         <option value="$PROJECT_DIR$/src/gcontracts/BadRocket.groovy" />
-        <option value="$PROJECT_DIR$/src/spock/MathSpec.groovy" />
         <option value="$PROJECT_DIR$/src/gcontracts/svenstest.groovy" />
         <option value="$PROJECT_DIR$/src/gcontracts/Ariane5.groovy" />
+        <option value="$PROJECT_DIR$/src/spock/MathSpec.groovy" />
       </list>
     </option>
   </component>
@@ -127,7 +131,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -141,7 +145,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -152,62 +156,16 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gr8" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gr8" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gr8" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gcontracts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -218,7 +176,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Groovy Script.svenstest">
+  <component name="RunManager" selected="JUnit.MathSpec">
     <configuration default="false" name="GoodRocket" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
       <module name="gr8" />
       <setting name="path" value="$PROJECT_DIR$/src/gcontracts/GoodRocket.groovy" />
@@ -469,23 +427,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1440" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.52964044" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38564274" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42371234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23535156" sideWeight="0.61497325" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38486314" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42190015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46355686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46256685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -537,29 +495,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/spock/ArithmeticShell.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="897" selection-end="897" vertical-scroll-proportion="0.2848837" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gcontracts/BadRocket.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="2" selection-start="326" selection-end="326" vertical-scroll-proportion="0.6987741" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/spock/MathSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="207" selection-end="207" vertical-scroll-proportion="0.12587413" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gcontracts/GoodRocket.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0" />
+        <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="0.062413316" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spock/ArithmeticShell.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="14" selection-start="5473" selection-end="5473" vertical-scroll-proportion="0.031073445" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/dev/groovy-1.8.x/target/install/embeddable/groovy-all-1.8.1-SNAPSHOT.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="165" selection-end="165" vertical-scroll-proportion="0.15988372" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gcontracts/Ariane5.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.041322313">
+        <state line="14" column="4" selection-start="284" selection-end="320" vertical-scroll-proportion="0.34848484" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/dev/spock-core_1.8/spock-core/build/libs/spock-core-0.5-groovy-1.8-SNAPSHOT.jar!/org/spockframework/runtime/BaseSpecRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="31" selection-start="2160" selection-end="2160" vertical-scroll-proportion="0.59177214" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/spock/MathSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.12396694">
           <folding />
         </state>
       </provider>
@@ -568,41 +536,79 @@
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
-        <UIState>
+        <settings>
+          <artifact-editor />
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
           </splitter-proportions>
-          <settings />
-        </UIState>
+        </settings>
       </state>
-      <state key="ProjectJDKs.UI">
-        <UIState>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
           </splitter-proportions>
-          <last-edited>1.5</last-edited>
-        </UIState>
+        </settings>
       </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <UIState>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>groovy-1.8.x</last-edited>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
           </splitter-proportions>
-          <settings />
-        </UIState>
+        </settings>
       </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>$project_jdk_name$</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>gr8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI" />
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>gcontracts-core</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI" />
     </states>
   </component>
 </project>

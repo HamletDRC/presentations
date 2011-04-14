@@ -1,0 +1,20 @@
+1. Reherse and write out Lombok annotations to demo
+2. Reherse and write out Roo demo
+    project --topLevelPackage contacts
+    persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+    entity --class Person
+    field string firstName 
+    field string lastName
+    controller all --package ~.web
+    perform package
+    mvn tomcat:run
+3. Reherse Groovy demo
+    - getters/setters
+    - @Delegate
+    ⁻ @Canonical
+    - @Immutable
+    - @Log
+3. Open GEdit w/ big font
+4. Open GroovyConsole with GContracts 1.1
+5. Run meta-key app
+
