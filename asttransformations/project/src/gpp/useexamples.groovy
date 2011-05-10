@@ -1,4 +1,4 @@
-package gpp.useexamples
+package gpp
 
 use(Collections) {
     List l = (0..10).toList()
