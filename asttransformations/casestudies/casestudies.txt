@@ -1,0 +1,59 @@
+Hello Peter (Mr. Spock), Andre (Mr. GContracts), and Roshan and Alex (Mssrs. Groovy++, 
+
+I am giving a 3 hour talk on Groovy AST Transformations at both GR8 conferences this year. The first 90 minutes is a survey of the AST ecosystem, such as basic annotations, tools, and also frameworks built on the feature (like GContracts, Spock, Groovy++, and CodeNarc). 
+
+The second 90 minutes is an implementors guide: how the wiring works, compile phases, visitors, writing AST, and some details about how your projects are implemented. What I'd like to do is structure the 2nd 90 minutes as a series of case studies that tell the story of implementing AST transforms. The main point is to explain all the concepts and challenges of writing AST Transforms, and the story or narrative is a walk through our 5 projects. The goal is not to explain our particular projects in depth for end-users, but that will be a side-effect of structuring a 90 minute talk as a series of case studies. Does that make sense? The goal is explaining AST and the means to the goal is looking at our implementations.
+
+Of course, to do this I could use a little help from you. Even if you have just 10 minutes, I would appreciate it. If you don't have time I understand too. Andre and I are considering having Andre present the GContracts section, and I am quite open to that too as long as the the educational goals are met. 
+
+Right now, I have this proposed outline: 
+
+@Main (from Groovy Examples)
+    - How local transformations work
+    - How to write a new method into a class 
+    - How to use the AstBuilder
+
+CodeNarc
+    - how to collect information with visitors and trees
+    - managing scope in a visitor with a stack
+    - compiler phases and phase limitations
+
+GContracts
+    - annotations in closures
+    - moving code from annotation into a method
+
+Spock 
+    - hide functionality by writing hidden methods into the class
+    - continuous automation and Groovy 1.8 and 1.9 SNAPSHOT builds
+
+Groovy++
+    - how type inference works
+    - how global transformations work
+    - how the file associations work for .gpp and .grunit
+
+  [8:57:07 PM] Hamlet D'Arcy: that's ok, we'll have to pick just a small section. For instance, I need to show the file extension trick for .gpp and .grunit...
+  [8:57:37 PM] Hamlet D'Arcy: so I plan to demo .grunit for a few minutes, and then show the implementation of how the file extensions get wired in.
+  [9:00:32 PM] Alex Tkachman: the second thing is global ast transform which have a look on source extension
+  [9:00:36 PM] Alex Tkachman: if (source.name.endsWith(".grunit")) {....}
+
+  http://en.wikipedia.org/wiki/Directed_acyclic_graph
+
+
+The only codebase I'm not really familiar with is Groovy++. The others I have at least reviewed and partially understood. 
+
+Do you think your project can make a valuable contribution given the outline? Or do you think that this information about your project will not be relevant to people learning about AST transforms? Do you have any recommendations or revisions about the outline? 
+
+Also, (there is no obligation) but it would be great if you could think about some of the following questions:
+ - Why does your project work this way? 
+ - What implementation problems did you have? 
+ - What are the maintenance challenges? 
+ - Is your framework code written in Java or Groovy? Why? 
+ - What is an improvement you could add to Groovy to make your project easier to implement? 
+
+Maybe, if you answer these questions, then we can also make a series of interview-style blog posts that promote the projects. 
+
+I'm available for Skype or IM or email to discuss all this with you. I'll do whatever I can to make it easy for you to contribute here. If you don't have time then I understand. 
+
+Any feedback is welcome, either with a reply-all or directly to me. 
+
+
