@@ -1,0 +1,83 @@
+package gpp
+
+import org.junit.Test
+import com.sun.jmx.snmp.Enumerated
+
+@Trait class WithCoordinates {
+    int x, y
+
+    def moveTo(int newX, int newY) {
+        x = newX
+        y = newY
+    }
+}
+
+@Trait class WithSize {
+    int height, width
+
+    def resize(int h, int w) {
+        height = h
+        width = w
+    }
+}
+
+/* Rectangle inherits implementation from both traits */
+class Rectangle implements WithCoordinates, WithSize {
+
+    @Override
+    String toString() {
+        "$x $y, $height $width"
+    }
+
+}
+
+def r = new Rectangle()
+r.resize(5, 10)
+r.moveTo(2, 3)
+println(r)
+
+println('Success')
+
+// traits can refer to properties in children
+@Trait class Walker implements Iterable {
+
+    def walk() {
+        for (i in iterator()) {
+            println("Walking... $i")
+        }
+    }
+
+}
+
+class CanWalk implements Walker {
+
+    Iterator iterator() {
+        [1, 2, 3].iterator()
+    }
+
+}
+
+new CanWalk().walk()
+
+// Test inheritance in traits
+@Trait class HasParent {
+    String parentName
+}
+
+@Trait class HasChild implements HasParent {
+    String childName
+}
+
+class Person implements HasChild {
+    @Override
+    String toString() {
+        "Person($parentName : $childName)"
+    }
+
+}
+
+println(new Person(parentName: 'Bro', childName: 'Stella'))
+
+
+
+

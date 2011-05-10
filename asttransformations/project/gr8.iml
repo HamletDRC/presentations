@@ -11,6 +11,17 @@
     <orderEntry type="library" name="gcontracts-core" level="project" />
     <orderEntry type="library" name="$spock_library_name$" level="application" />
     <orderEntry type="library" name="groovy-1.8.x" level="application" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.mbte.groovypp/groovypp-all/jars/groovypp-all-0.4.231_1.8.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.mbte.groovypp/groovypp/jars/groovypp-0.4.231_1.8.0-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
 

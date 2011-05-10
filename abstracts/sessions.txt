@@ -3,6 +3,10 @@ Hamlet D'Arcy has been writing software for over a decade, and has spent conside
 
 Static Analysis in IntelliJ IDEA
 --------------------------------
+Let's face it - the code we write contains bugs. These bugs impact stability, reliability, correctness, performance or maintainability of our applications as well as our own reputation as developers. I'll show you some handy tools that help in finding and eliminating bugs, tools that enable you to start fixing reported exceptions in seconds, tools that highlight repetitive pieces of code, analyze flow of values through your program, visualize dependencies in code and highlight possible dependency problems. During the presentation I'll show you an alternative view on IntelliJ IDEA, a Java IDE with more than a 10 year history in the field. You'll get a chance to see lots of hands-on practical demos revealing the analysis aspect of the IDE and gain more insight into how you can fight for greater code quality in your projects, today.
+
+Defects impact stability, reliability, and correctness, as well as our reputation as developers. This session shows tools for finding and eliminating bugs, fixing reported exceptions, highlighting duplicate code, analyzing program flow, and visualizing dependencies. Come see a new view of IntelliJ IDEA, see hands-on demos, and gain insight into how you can fight for greater code quality.
+
 
 Groovy AST Transformations
 --------------------------
@@ -10,6 +14,9 @@ Groovy AST Transformations
 Code Generation on the JVM: Writing Code that Writes Code
 ---------------------------------------------------------
 "The Pragmatic Programmer" admonished us all to "write code that writes code": use code generators to increase productivity and avoid duplication. Today's language communities have clearly caught on, as more and more frameworks generate code at compile time: AST Transforms, Project Lombok, Spring Roo, and more. This session reviews these approaches including examples of how and why we'd want to do this. Come see the newest Groovy language tools, look in-depth at production deployed AST Transforms, and view libraries based on these techniques. Audience: developers searching for cutting edge solutions to increasing team velocity.
+
+More and more JVM frameworks are generating code at compile time: AST Transforms, Project Lombock, and Spring Roo, and more. This session reviews these approaches, including examples of how and why we'd want to do this. We'll see the newest Groovy language tools, write our own AST Transform, and look at some amazing libraries based on these techniques. 
+
 
 New Ideas for Old Code
 ----------------------
@@ -19,13 +26,21 @@ Slimmed Down Software: A Lean Approach
 --------------------------------------
 Waterfall, Scrum, XP, Crystal... there are a lot of software methodologies on sale in the world today, but Lean Software brings something different to the table. This session uses practical examples to explain what makes software valuable and which parts are waste. Come explore how systems thinking can lead your team to deliver faster, create knowledge, and eliminate waste, and return to work Monday with news ideas about delighting your customers.
 
+Waterfall, Scrum, XP... many software methodologies on sale in the world today, but Lean Software brings something different to the table. This session uses practical examples to explain the difference between software value and waste. Explore how your team can to deliver faster, create knowledge, and eliminate waste, and return to work Monday with news ideas about delighting your customers.
+
 Tales of Little 'a' Agile
 -------------------------
 Skeptical, cynical, and little suspicious? Welcome to the club. This session is for people motivated to make positive, pragmatic changes but wary of "Buy the Book" Agile. Come see the results of years of bottom-up agile: real stories and real practices that were really used. We'll share what worked and what didn't and spread new ideas that aren't found in training courses. And we promise, we're not trying to sell anything!
 
+This session is for people motivated to make positive, pragmatic changes but wary of "Buy the Book" Agile. Come see the results of years of bottom-up agile: real stories and real practices that were really used. We'll share what worked and what didn't and spread new ideas that aren't found in training courses. And we promise, we're not trying to sell anything!
+
+
 Effective Groovy
 ----------------
 "Effective Java" by Joshua Bloch is the gold standard for how to write correct and idiomatic Java code. Wouldn't it be great if the same thing existed for Groovy? Well here it is. This interactive, live coding session discusses what separates good Groovy code from the bad, what makes some code great, and how best to use the many available libraries. We'll also look at several static analysis tools for Groovy that aid in these pursuits. This session appeals to both those with a Java knowledge looking to learn Groovy and advanced Groovy programmers looking to learn more. 
+
+Wouldn't it be great if "Effective Java" existed for Groovy? Well here it is. This live coding session discusses what separates good Groovy code from the bad, what makes some code great, and how best to use the many available libraries. This session appeals to both those with a Java knowledge looking to learn Groovy and advanced Groovy programmers looking to learn more. 
+
 
 
 
