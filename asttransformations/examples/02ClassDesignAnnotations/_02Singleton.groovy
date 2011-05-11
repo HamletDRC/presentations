@@ -1,5 +1,0 @@
-@Singleton
-class Zeus {
-}
-
-

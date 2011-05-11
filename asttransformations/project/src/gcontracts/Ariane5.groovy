@@ -2,7 +2,6 @@ package gcontracts
 
 import org.gcontracts.annotations.Ensures
 import org.gcontracts.annotations.Requires
-import org.gcontracts.annotations.Contracted
 
 
 class Ariane5 {

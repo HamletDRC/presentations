@@ -1,5 +1,5 @@
-//import groovy.transform.*
+import groovy.transform.*
 
 public class Event {
-    Date when
+    @Delegate Date when
 }

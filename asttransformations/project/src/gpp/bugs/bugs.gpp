@@ -1,0 +1,49 @@
+package gpp.bugs
+
+String method(String s) { return s }
+int method(int i) { return i }
+String method2(String s) { return s }
+
+def x = method('string')
+def y = method(1)
+def z = new String('')
+
+println x.class
+println y.class
+
+@Typed
+class MyLogic {
+    void logic() {
+        List l = (0..10).toList()
+        l.shuffle()
+        println l
+    }
+}
+
+//use Collections, MyLogic.logic
+
+
+@Typed
+@Use(Collections)
+def someMethod() {
+    new MyLogic().logic()
+}
+
+
+someMethod()
+
+
+// Cannot find static method MyLogic.logic()
+
+@Trait class WithHeight {
+    int height
+    String field = '123'
+}
+
+class Line implements WithHeight {
+    @Override
+    String toString() {
+        "$field.bytes"
+    }
+
+}

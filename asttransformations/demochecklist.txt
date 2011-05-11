@@ -1,4 +1,8 @@
 1. Reherse and write out Lombok annotations to demo
+    - @Getter, @Setter
+    - @Data
+    - @Synchronized
+    
 2. Reherse and write out Roo demo
     project --topLevelPackage contacts
     persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
