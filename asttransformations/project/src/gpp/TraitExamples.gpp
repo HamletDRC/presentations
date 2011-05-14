@@ -38,6 +38,17 @@ println(r)
 
 println('Success')
 
+
+
+
+
+
+
+
+
+
+
+
 // traits can refer to properties in children
 @Trait class Walker implements Iterable {
 
@@ -58,6 +69,21 @@ class CanWalk implements Walker {
 }
 
 new CanWalk().walk()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Test inheritance in traits
 @Trait class HasParent {

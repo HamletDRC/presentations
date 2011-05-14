@@ -97,7 +97,7 @@ private class SecurityFilteringNodeOperation extends PrimaryClassNodeOperation {
         ModuleNode ast = source.getAST()
 
         if (ast.getImports()) { throw new SecurityException("Imports of the form 'import package.ClassName' are not allowed.") }
-        if (ast.getStarImports()) { throw new SecurityException("Imports of the form 'import package.*' are not allowed.") }
+        //if (ast.getStarImports()) { throw new SecurityException("Imports of the form 'import package.*' are not allowed.") }
         if (ast.getStaticImports()) { throw new SecurityException("Static imports of the form 'import static package.ClassName.fieldOrMethodName' are not allowed.") }
         def staticStarImports = ast.getStaticStarImports().keySet() as List
         if (staticStarImports != ['java.lang.Math']) { throw new SecurityException("Only java.lang.Math is allowed for static imports. Found: " + staticStarImports) }

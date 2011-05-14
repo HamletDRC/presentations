@@ -4,28 +4,65 @@
 3.5 Me & GINA
 
 4. AST Transforms in 1.8
-  - 01CodeGenerationTransformations
-  - 02ClassDesignAnnotations
-  - 03LoggingImprovements
-  - 04DeclarativeConcurrency
-  - 05Externizing
-  - 06SaferScripting
+    - 01 CodeGenerationTransformations
+    - 02 ClassDesignAnnotations
+    - 03 LoggingImprovements
+    - 04 DeclarativeConcurrency
+    - 05 Externizing
+    - 06 SaferScripting
 
 5. Libraries
-  - 07GContracts (+ slide)
-  - 08Spock
-  - DSLs (ArithmeticShell Slides)
+    - 07 GContracts (+ slide)
+        - @Requires, @Ensures, @Invariant
+        - Annotating interfaces
+        - Show in AstViewer
+    - Embedded DSLs (ArithmeticShell Slides)
+    - CodeNarc (Slides)
+    - 08 Spock
+        - AstViewer for Specification
+    - Groovy++
+        - PowerGroovy.groovy Speed Example - @Typed with jd-gui decompiler
+        - RecursionExamples - make slides and show in decompiler
+        - UseExamples - categories through annotations? 
+        - Traits - show in decompiler
 
 6. Implementation
-  - Local Transformations
-  - Global Transformations
-  - AST
-  - Creating AST
-  - Visitors & Wiring Visitors
+    - Local Transformations (Case Study for GPars)
+        - 09 GPars - Show @AsyncFun in AstBrowser
+        - Show code in IDEA - show initialValueExpression and ClassHelper
+    - Global Transformations
+        - Case Study for AST Builder
+        - show java source
+        - show meta-inf file 
+    - AST - Slides & Tree View
+    - Creating AST
+        - slides 
+        - /home/hdarcy/dev/groovy-core/src/examples/astbuilder/MainTransformation.groovy 
+        - MainExample.groovy
+        - Main.groovy 
+    - Visitors & Wiring Visitors
+        - ArithmeticShell & CompilationCustomizers
+        - Visitors & Visitor Classes
+            - ReturnsNullInsteadOfEmptyCollectionRule - Visitor within Visitor
+            - Type Inference - AstUtil.classNodeImplementsType
+            - CompilerPhases - Runs in Phases.Conversion (+ SLIDES)
+    - Creativity
+        - already seen GPP
+        - already seen Spock
+        - GContracts Case Study
 
-7. Testing
-8. Limitations
-9. Next Steps (contributing to CodeNarc)
+8. Testing
+    - GroovyShell/GroovyClassLoader
+    - Transformation Helper
 
+9. Limitations
+    - Splicing Source into AST - GEP - 4 AST Templates
+    - Splicing AST into Source / Missing True Transformations - Metamethods
+    - Rigid Groovy / Java syntax - ANTLR Plugins
+    - Variable Capture
+
+10. Next Steps
+    - contributing to CodeNarc
+    - Hackergarten  
 
 
