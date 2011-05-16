@@ -2,12 +2,21 @@ package gpp
 
 // unoptimized recursion
 def reverse
-reverse = { input, seed = '' ->
-    if (!input) return seed
-    if (input.size() == 1) return seed + input
-    return reverse(input[0..-2], seed + input[-1])
+reverse = { input, accumulatedResult = '' ->
+    if (input.size() < 2) { accumulatedResult + input }
+    else { reverse(input[0..-2], accumulatedResult + input[-1]) }
 }
 println reverse("hello world")
+
+
+@Typed
+class StringUtils {
+    static reverse(String input, String accumulatedResult = '') {
+        if (input.size() < 2) { accumulatedResult + input }
+        else { reverse(input[0..-2], accumulatedResult + input[-1]) }
+    }
+}
+println StringUtils.reverse('hello world' * 1000)
 
 
 

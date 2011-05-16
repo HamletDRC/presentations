@@ -1,9 +1,18 @@
+- Change Resolution
+- Change Scheme in IDEA
+- Open GEdit with Larger Font
+- Open groovyConsole 1.8 w/ font
+    - GContracts Jar Loaded
+    - Open Ast
+    - Load Spock Jar
+
 1. Table of Contents
 2. Canoo
 3. JetBrains
 3.5 Me & GINA
 
 4. AST Transforms in 1.8
+    - Getter/Setter generation
     - 01 CodeGenerationTransformations
     - 02 ClassDesignAnnotations
     - 03 LoggingImprovements
@@ -19,11 +28,11 @@
     - Embedded DSLs (ArithmeticShell Slides)
     - CodeNarc (Slides)
     - 08 Spock
-        - AstViewer for Specification
+        - Show Specification in AstViewer
     - Groovy++
-        - PowerGroovy.groovy Speed Example - @Typed with jd-gui decompiler
+        - PlainOldGroovy.groovy - Show in Decompiler
+        - PowerGroovy.groovy - @Typed with jd-gui decompiler
         - RecursionExamples - make slides and show in decompiler
-        - UseExamples - categories through annotations? 
         - Traits - show in decompiler
 
 6. Implementation
