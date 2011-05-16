@@ -62,7 +62,7 @@
     - Variable Capture
 
 10. Next Steps
-    - contributing to CodeNarc
+    - Contributing to CodeNarc
     - Hackergarten  
 
 
