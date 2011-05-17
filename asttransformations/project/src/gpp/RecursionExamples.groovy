@@ -6,7 +6,7 @@ reverse = { input, accumulatedResult = '' ->
     if (input.size() < 2) { accumulatedResult + input }
     else { reverse(input[0..-2], accumulatedResult + input[-1]) }
 }
-println reverse("hello world")
+println reverse("hello world" * 1000)
 
 
 @Typed
@@ -17,6 +17,8 @@ class StringUtils {
     }
 }
 println StringUtils.reverse('hello world' * 1000)
+
+
 
 
 

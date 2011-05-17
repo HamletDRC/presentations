@@ -21,6 +21,11 @@ import com.sun.jmx.snmp.Enumerated
     }
 }
 
+
+
+
+
+
 /* Rectangle inherits implementation from both traits */
 class Rectangle implements WithCoordinates, WithSize {
 
