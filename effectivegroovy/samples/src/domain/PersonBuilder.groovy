@@ -4,7 +4,7 @@ package domain
  * 
  * @author Hamlet D'Arcy
  */
-public static class PersonBuilder {
+public class PersonBuilder {
     private String firstName
     private String lastName
     private Integer id

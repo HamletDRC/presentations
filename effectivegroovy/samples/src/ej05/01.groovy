@@ -16,29 +16,16 @@ def b = new Boolean(true)
 
 
 
-BigInteger bi = new BigInteger('12345')
-BigDecimal bd = new BigDecimal('123.45')
+assert 12345G   instanceof BigInteger
+assert 123.45G  instanceof BigDecimal
 
+assert  []                  instanceof ArrayList
+assert  [:]                 instanceof HashMap
+assert  ([] as Set)         instanceof HashSet
+assert  ([] as Stack)       instanceof Stack
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-def a = new ArrayList()
-def m = new HashMap()
-def hs = new HashSet()
-def st = new Stack()
-def ci = new CaseInsensitiveList()
-
+CaseInsensitiveList list = [] as CaseInsensitiveList
+assert  list instanceof CaseInsensitiveList
 
 
 
