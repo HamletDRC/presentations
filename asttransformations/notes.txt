@@ -3,8 +3,9 @@
 - Open GEdit with Larger Font
 - Open groovyConsole 1.8 w/ font
     - GContracts Jar Loaded
-    - Open Ast
     - Load Spock Jar
+    - Load GPars Jar
+    - Open Ast
 
 1. Table of Contents
 2. Canoo
@@ -73,5 +74,4 @@
 10. Next Steps
     - Contributing to CodeNarc
     - Hackergarten  
-
 
