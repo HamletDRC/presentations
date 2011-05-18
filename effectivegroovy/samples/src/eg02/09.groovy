@@ -15,6 +15,6 @@ System.out.println("Joe Found: " + found);
 
 
 
-
+assert people.any { it.firstName == 'Joe' }
 
 println people.any { it.firstName == 'Joe' }
