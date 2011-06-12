@@ -1,3 +1,8 @@
+effective groovy tip: Prefer assert keyword to JUnit's assert methods. From 1.7 on the diagnostics are better. (via @rfletcherEW)
+
+
+
+
 Notes
 -----
 
