@@ -1,0 +1,39 @@
+Questioning Extreme Programming - Pete McBreen
+
+xvii - "Extreme Programming sounds great! Can we do it without changing our process?"
+
+Tom DeMarco (2001) "In my experience, standard processes for knowledge work are almost always empty at the center.... I see design stanards that don't tell you how to come up wiht a good design (only how to write it down), ... testing standards that don't tell you how to invent a test that is worth running."
+
+The greatest risk we face in sofware development is that of overestimating our own knowledge. James Highsmith
+
+48 "Changing organizational cultures is an intriguing subject forstudy, but rarely something that you want to tackle just to get slightly better software development" 
+
+50 "Every approach to software development should have a strategy for emergent requirements because the newly emerged opportunities may be even more valuable than the original application."
+
+57 "Everyone developers incrementally; the difference is in the size of the increments."
+
+64 "...the practice of Refactoring has to be supported by really strong and stringent Testing practices and cContinuous Integration. Without these two, Refactoring would be exceedingly risky, error prone, and likely to slow down the overall speed of development."
+
+69 "Many projects could benefit from using a simpler architecture that is easier to explain and elaborate."
+
+72 "A failing test is immensely useful because it tells you when you are done." - Pete McBreen (in Questioning Extreme Programming)
+
+"Every minute between when the programmer thinks the story is done, and when she has run the acceptance test and PROVEN that the story is done, is a minute the project is running our of control" Ron Jeffries
+
+Without a caoch, someone on a team will always come up with a reason for not doing a practice, and sooner or later this will cause problems. - XP Applied
+
+113 "For some organizations, the status of a manager depends on the size of the team managed, not on what the team accomplishes."
+
+125 "Overall, the cost of fixing errors of understanding is closely related to the time that elapses between making the mistake and detecting the mistake."
+
+131 "... the larger the gap betwen the espoused process and the actual process, the more stressed the team."
+
+144 "The fact that a process does or does not produce a certain item of documentation sas nothing about the value or usefulness of the process."
+
+"Everyone is trying to developer 'by the book,' not because it makes any particular sense, but because they want to be able to say at the end that it wasn't their fault, they were following the process." Kent Beck
+
+145 "...playing to win is a reasonable strategy only if there is a large upsdie for a win and little downside for a loss... for most software development projects there is a large downside to failing."
+
+"If you document everything, you are giving everything an equal weight. Do that for a complex system, and you are buried in detail. In any system there are some aspects that are more important than the others, key aspects of the system that once understood, will help someone to learn more. The art in documentation is to find how to document these aspects as clearly as possible." Martin Fowler
+
+
