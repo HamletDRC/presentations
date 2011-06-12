@@ -1,4 +1,4 @@
-package eg02
+package collections.eg02
 
 int factorial(int seed) {
     if (seed == 1) return 1;

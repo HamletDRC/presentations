@@ -12,10 +12,18 @@ for (Person p : people) {
 }
 println familyReps
 
+assert people != familyReps
 familyReps = people.unique() { it.lastName }
 
 println familyReps
+assert people == familyReps  // OH NOES, mutation! 
+
+
+// sort display the same error
+def unsortedList = [2, 3, 1]
+def sortedList = unsortedList.sort()
+assert sortedList == [1, 2, 3]
+assert unsortedList == [1, 2, 3]
 
 println 'Success'
-
 

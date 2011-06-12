@@ -1,4 +1,4 @@
-package eg03
+package files
 
 
 BufferedReader input = new BufferedReader(new FileReader("./01.groovy"));

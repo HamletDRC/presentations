@@ -2,7 +2,7 @@ package ej41
 
 import groovy.util.logging.Log
 
-@Log class OldCalculator {
+@Log class OldLogFacade {
 
     def log(methodName, parm1, parm2) {
         log.info(
@@ -19,22 +19,14 @@ import groovy.util.logging.Log
     def log(methodName) {
         log(methodName, null, null)
     }
-
-    def add(x, y) {
-        log('add', x, y); x+y
-    }
-
-    def increment(x) {
-        log('increment', x); x++
-    }
 }
 
+OldLogFacade facade = new OldLogFacade()
+facade.log('add', 1, 3)
+facade.log('increment', 2)
 
-new OldCalculator().add(1, 3)
-new OldCalculator().increment(2)
 
-
-@Log class Calculator {
+@Log class LogFacade {
 
     def log(String methodName, Object parm1 = null, Object parm2 = null) {
         log.info(
@@ -43,16 +35,8 @@ new OldCalculator().increment(2)
                         (parm2 ? ", p2: $parm2" : '')
         )
     }
-
-    def add(x, y) {
-        log('add', x, y)
-        x+y
-    }
-
-    def increment(x) {
-        log('increment', x)
-    }
 }
 
-new Calculator().add(1, 3)
-new Calculator().increment(2)
+LogFacade facade2 = new LogFacade()
+facade2.log('add', 1, 3)
+facade2.log('increment', 2)

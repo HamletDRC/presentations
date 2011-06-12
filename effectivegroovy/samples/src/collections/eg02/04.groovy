@@ -12,13 +12,25 @@ for (Person p : people) {
 }
 println frequencies
 
-frequencies = people.inject([:]) { acc, p ->
-    acc[p.lastName] ? acc[p.lastName].add(p) : (acc[p.lastName] = [p])
-    acc
-}
-
+// group by is another
+frequencies = people.groupBy { it.lastName }
 println frequencies
 
 println 'Success'
 
+
+
+
+// inject is one way
+int charCount = 0;
+for (Person p : people) {
+    charCount += p.getLastName().length();
+}
+println charCount
+
+charCount = people.inject(0) { acc, p ->
+    acc+= p.lastName.length()
+    acc
+}
+println charCount
 

@@ -1,4 +1,4 @@
-package eg03
+package files
 
 def file = new File('./03.groovy')
 file.text = file.text + '\n // hello! '

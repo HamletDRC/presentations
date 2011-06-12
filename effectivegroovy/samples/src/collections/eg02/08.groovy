@@ -1,4 +1,4 @@
-package eg02
+package collections.eg02
 
 import domain.Person
 
