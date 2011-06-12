@@ -4,11 +4,14 @@ class MyTest extends GroovyTestCase {
 
     public void testBooleanLogic() {
 
+        def result = 4
+
+        assert result == 5
         // 1
         assertEquals(true, result)
-        assertTrue(result)
-
         assertEquals(false, result)
+
+        assertTrue(result)
         assertFalse(result)
 
         // 2
@@ -20,13 +23,16 @@ class MyTest extends GroovyTestCase {
         assertSame(result, source)
 
         // 4
+        assert result == 5
+
+        // 5
         try {
             something()
         } catch (Exception e) {
             fail(e.message)
         }
 
-        // 5
+        // 6
         fail() // should never happen
         fail('should never happen')
     }

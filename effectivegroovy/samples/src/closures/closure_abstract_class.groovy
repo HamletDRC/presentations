@@ -12,7 +12,7 @@ public abstract class TwoPhaseEncryptionInJava {
     protected abstract String phase2(String text);
 }
 
-public final class ReversingRot13InJava extends TwoPhaseEncryptionInJava {
+public class ReversingRot13InJava extends TwoPhaseEncryptionInJava {
 
     protected String phase1(String text) {
         return new StringBuffer(text).reverse().toString();
@@ -46,20 +46,19 @@ class TwoPhaseEncryption {
     public String perform(String text) {
         return phase2(phase1(text));
     }
-
 }
 
 class ReversingRot13 extends TwoPhaseEncryption {
 
     ReversingRot13() {
-        super(ReversingRot13.&phase1, ReversingRot13.&phase2)
+        super(phase1, phase2)
     }
 
-    private static phase1(String text) {
-        text.reverse()
+    private static phase1 = {
+        it.reverse()
     }
 
-    private static phase2(String text) {
+    private static phase2 = { text ->
         text.toCharArray().collect {
             switch (it) {
                 case 'A'..'M': case 'a'..'m': return (it + 13) as char
