@@ -21,7 +21,9 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true" />
+    <annotationProcessing enabled="true" useClasspath="true">
+      <processModule name="gr8" />
+    </annotationProcessing>
   </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />

@@ -1,0 +1,37 @@
+Annotation Processor
+--------------------
+annotation processor compiles annotations into separate contract class files
+- APT specified in Jar Servicse javax.annotation.processing.Processor file
+The annotation processor takes care of compiling the strings into bytecode and runs along the Java compiler, so you get static syntax and typing errors at compile time, as usual.
+
+
+javac \
+    -cp cofoja-1.0-20110613.jar \
+    -processor com.google.java.contract.core.apt.AnnotationProcessor \
+    Kettle.java  \
+
+
+
+instrumentation agent
+---------------------
+The instrumentation agent weaves these contract files with the
+real classes before they are loaded into the JVM
+- premain specified in MANIFEST.MF$
+
+java -ea -javaagent:./cofoja-1.0-20110613.jar Kettle \
+
+
+
+offline bytecode rewriter
+-------------------------
+the offline bytecode rewriter can be used to produce pre-weaved class
+files that can be directly deployed without any Cofoja dependency
+
+java \
+    -cp cofoja-1.0-20110613.jar \
+    -Dcom.google.java.contract.classoutput=compiled \
+    com.google.java.contract.core.agent.PreMain \
+    Kettle.class
+
+
+
