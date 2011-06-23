@@ -6,27 +6,23 @@ import java.util.List;
 public class MultipleRetValue {
 
     static Object[] getEvenNumbers(int bottom, int top) {
-        List<Integer> result = new ArrayList<>();
-        int count = 0;
+        List<Integer> elements = new ArrayList<>();
         for (int x = bottom; x <= top; x++) {
             if (x % 2 == 0) {
-                result.add(x);
-                count++;
+                elements.add(x);
             }
         }
-        return new Object[] {result, count};
+        return new Object[] {elements, elements.size()};
     }
 
     static ResultObj getEvenNumbers2(int bottom, int top) {
-        List<Integer> result = new ArrayList<>();
-        int count = 0;
+        List<Integer> elements = new ArrayList<>();
         for (int x = bottom; x <= top; x++) {
             if (x % 2 == 0) {
-                result.add(x);
-                count++;
+                elements.add(x);
             }
         }
-        return new ResultObj(result, count);
+        return new ResultObj(elements, elements.size());
     }
 
     static class ResultObj {
@@ -42,14 +38,12 @@ public class MultipleRetValue {
 
     static Pair<List<Integer>, Integer> getEvenNumbers3(int bottom, int top) {
         List<Integer> elements = new ArrayList<>();
-        int count = 0;
         for (int x = bottom; x <= top; x++) {
             if (x % 2 == 0) {
                 elements.add(x);
-                count++;
             }
         }
-        return Pair.from(elements, count);
+        return Pair.from(elements, elements.size());
     }
 
 
@@ -70,9 +64,10 @@ public class MultipleRetValue {
             return right;
         }
         static <T, U> Pair<T, U> from(T left, U right) {
-            return new Pair<T, U>(left, right);
+            return new Pair<>(left, right);
         }
     }
+
     public static void main(String[] args) {
         Object[] x = getEvenNumbers(5, 20);
         System.out.println("elements: " + x[0]);
