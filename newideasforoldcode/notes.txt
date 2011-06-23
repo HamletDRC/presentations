@@ -1,6 +1,31 @@
 New Ideas for Old Code
 ----------------------
 
+Return back, not out
+--------------------
+
+
+Whenever you are tempted to use ‘ref’ or ‘out’ in C# consider whether you can do the work by designing functions with single return values.
+
+Sometimes we find that we can decompose the problem into several functions rather than one.  
+
+When you don’t have exceptions, error codes are often munged into the return value. Passing values back via parameters can be cleaner at times in C, but if you are working in a more modern language there really are better alternatives.
+
+
+At other times we find some relationship between outputs that leads us to create a new class or struct that we can use as a single return type.  
+
+A function is supposed to do some thing for you, not some things.  If a function is giving you two things, it's beyond its quota
+
+Tuple when you want to return two values from a function? Either built in or a Pair object
+
+
+Array
+ResultObj
+Tuple (groovy)
+Pair
+
+
+
 Refactoring
 -----------
 48 - Undetermined Effects - Use JUnit, BCEL, class analyzer to check special parts of the code
