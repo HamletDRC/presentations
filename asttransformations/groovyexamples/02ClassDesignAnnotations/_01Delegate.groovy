@@ -1,10 +1,18 @@
-class Book {
-    @Delegate Date releaseDate
+class NoisySet extends HashSet {
+    @Override 
+    boolean add(i) {
+        println "adding $i"
+        super.add(i)
+    }
+
+    @Override 
+    boolean addAll(Collection i) {
+        for(def x : i) { println "adding $x" }
+        super.addAll(i)
+    }
 }
 
-def gina = new Book(releaseDate: new Date() - 7)
-def regina = new Book(releaseDate: new Date() + 7)
+def set = [] as NoisySet
 
-assert gina.before(regina.releaseDate)
-assert regina.after(gina.releaseDate)
-assert (regina <=> gina.releaseDate == 1)
+set.add(1)
+//set.addAll([1, 2, 3])
