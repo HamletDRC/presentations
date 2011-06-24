@@ -21,17 +21,6 @@ public class _01MultiCatchExample {
         }
     }
 
-    void newStyle() {
-        
-        try {
-            doSomething();
-        } catch (UnsupportedOperationException
-                | IllegalStateException
-                | IllegalArgumentException e) {
-            handleError(e);
-        }
-    }
-
     void handleError(Exception e) {
         e.printStackTrace(System.err);
         System.err.println(e.getMessage());
@@ -39,5 +28,16 @@ public class _01MultiCatchExample {
 
     private void doSomething() {
         // ... do something
+    }
+
+    void newStyle() {
+
+        try {
+            doSomething();
+        } catch (UnsupportedOperationException
+                | IllegalStateException
+                | IllegalArgumentException e) {
+            handleError(e);
+        }
     }
 }

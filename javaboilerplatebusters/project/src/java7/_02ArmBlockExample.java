@@ -19,10 +19,19 @@ public class _02ArmBlockExample {
         }
     }
 
-    int readFirst(String path) throws IOException {
 
-        try (FileReader reader = new FileReader(path)) {
-            return reader.read();
+
+
+
+    private static class MyResource implements AutoCloseable {
+
+        String getResource() {
+            return "some resource";
+        }
+
+        @Override
+        public void close() throws Exception {
+            System.out.println("Whee... closing.");
         }
     }
 
@@ -33,15 +42,11 @@ public class _02ArmBlockExample {
         }
     }
 
-    private static class MyResource implements AutoCloseable {
+    int readFirst(String path) throws IOException {
 
-        String getResource() {
-            return "some resource"; 
-        }
-
-        @Override
-        public void close() throws Exception {
-            System.out.println("Whee... closing.");
+        try (FileReader reader = new FileReader(path)) {
+            return reader.read();
         }
     }
+
 }

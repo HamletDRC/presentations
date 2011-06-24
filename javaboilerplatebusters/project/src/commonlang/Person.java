@@ -39,7 +39,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(99, 33).
+        return new HashCodeBuilder().
                 append(name).
                 append(timestamp).
                 toHashCode();
