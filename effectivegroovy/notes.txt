@@ -1,62 +1,23 @@
-
-TOC
-
-1. Effective Java Tips
-    - Builders
-    - Singletons
-    - Literals
-    - Finalizers
-    - Equals/HashCode contract
-    - ToString
-    - Comparable
-    - Immutability
-    - @Delegate
-    - Overloading
-    - Empty Arrays/Collections (not null)
-    - Exceptions
-
-2. Effective Groovy Tips
-    - Implement interfaces as maps judiciously
-    - Know and use the libraries
-        - Collection
-            - collect (spread)
-            - find / findAll
-            - group by / inject
-            - sort / unique
-        - Closures
-            - memoize
-            - trampoline
-        - Files
-            - get/setText
-            - append
-        - Testing
-            - UseAssertTrueInsteadOfAssertEqualsRule
-            - UseAssertEqualsInsteadOfAssertTrue
-            - Unnecessary Fail (CodeNarc)
-            - JUnitFailWithoutMessage
-            - Use assert keyword
-    - Closures
-        - Use Closures to Create Higher Order Functions
-        - Use Closures to replace Template Methods
-        - Use Closures to replace Strategy Objects
-        - Use Closures to simplify Command Pattern
-        - Use Closures
-    - Concurrency
-        - Prefer declarative synchronization
-        - Prefer ARM Blocks
-        - Prefer declarative locking
-        - Prefer concurrency utilities
-        - Prefer Executors & tasks for threads
-        - Prefer declarative coordination
-        - Learn to use @Grab
+------------------------------------------
+--------------  unused -------------------
+------------------------------------------
+Tip: Learn to Write a Builder
+Tip: XMLSlurper/XMLParser - Do not mix with business logic/layers/etc
 
 
+Threading Tips 
+Tip: Avoid Busy Wait - CodeNarc Rule
+Tip: Avoid Double Checked Locking - CodeNarc Rule
+Tip: Inconsistent Property Locking - CodeNarc Rule
+Tip: Inconsistent Property Synchronization - CodeNarc and IDEA rule
+Tip: Synchronized On Boxed Primitive - CodeNarc and IDEA rule
 
 
+------------------------------------------
+--------------  unused -------------------
+------------------------------------------
 
-effective groovy tip: Prefer assert keyword to JUnit's assert methods. From 1.7 on the diagnostics are better. (via @rfletcherEW)
-
-
+Item EJ71: Use Lazy Initialization judiciously - Or use @Lazy from Groovy
 
 
 Notes

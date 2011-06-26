@@ -1,9 +1,0 @@
-------------------------------------------
---------------  unused -------------------
-------------------------------------------
-
-Item Tip 21: Use Function Objects to represent strategies
-Item EJ71: Use Lazy Initialization judiciously - Or use @Lazy from Groovy
-Item EJ63: Include Failure-capture information in detailed messages - Especially important in Groovy where you don't need to catch exceptions (see blog)
-Item EJ11: Override Clone Judiciously - Use Groovy's @AutoClone (judiciously) or @Canonical (judiciously)
-
