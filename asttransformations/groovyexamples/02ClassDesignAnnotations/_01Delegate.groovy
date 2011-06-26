@@ -13,6 +13,4 @@ class NoisySet extends HashSet {
 }
 
 def set = [] as NoisySet
-
-set.add(1)
-//set.addAll([1, 2, 3])
+set.addAll([1, 2, 3])

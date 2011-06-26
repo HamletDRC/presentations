@@ -7,5 +7,5 @@ class StringUtils {
         else { reverse(input[0..-2], accumulatedResult + input[-1]) }
     }
 }
-println StringUtils.reverse('hello world')
+println StringUtils.reverse('hello world' * 1000)
 
