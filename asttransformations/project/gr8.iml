@@ -6,6 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/codenarc" />
     </content>
+    <content url="file://$MODULE_DIR$/../scripts/asm">
+      <sourceFolder url="file://$MODULE_DIR$/../scripts/asm/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../scripts/asm/asm" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gcontracts-core" level="project" />
