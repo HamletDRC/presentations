@@ -1,0 +1,11 @@
+ASM is an all purpose Java bytecode manipulation and analysis framework. It can be used to modify existing classes or dynamically generate classes, directly in binary form. Provided common transformations and analysis algorithms allow to easily assemble custom complex transformations and code analysis tools.
+
+
+: the core API provides an event based representation of classes, while
+the tree API provides an object based representation
+
+The ASM API for generating and transforming compiled classes is based on
+the ClassVisitor interface 
+
+
+

@@ -3,6 +3,7 @@
 @Grab('org.mbte.groovypp:groovypp-all:0.4.231_1.8.0')
 @Grab('org.mbte.groovypp:groovypp:0.4.231_1.8.0')
 @Grab('org.mbte.groovypp:groovypp:0.4.231_1.8.0:sources')
+@Grab(group='asm', module='asm', version='3.3.1')
 import groovy.lang.Grab
 
 println """

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project name="asm-demo" default="jar">
+
+    <target name="init" description="cleanup old class files">
+        <delete dir="asm"/>   <!-- class files -->
+        <delete>
+            <fileset dir="." includes="AtMainTransformation.jar"/>
+        </delete>        
+    </target>
+
+    <target name="compile" depends="init" description="Compiles the AST Transformation">
+    
+        <javac destdir="."
+                srcdir="./src"
+                includes="**/*.java"
+                includeantruntime="false"    
+                listfiles="true">
+            <classpath>
+                <pathelement path="/home/hdarcy/.groovy/grapes/asm/asm/jars/asm-3.3.1.jar"/>
+            </classpath>
+        </javac>
+        
+    </target>
+
+    <target name="jar" depends="compile" description="Creates a .jar file for the asm stuff" >
+        <jar destfile="AtMainTransformation.jar"
+                basedir="."
+                includes="asm/instrument/**.class,META-INF/MANIFEST.MF" >
+            <manifest>
+                <attribute name="Manifest-Version" value="1.0" />
+                <attribute name="Premain-Class" value="asm.instrument.AtMainPreMain" />
+            </manifest>
+        </jar>
+
+        <echo>You can now run 
+    java -cp .:/home/hdarcy/.groovy/grapes/asm/asm/jars/asm-3.3.1.jar -javaagent:./AtMainTransformation.jar asm.Greeter
+to see that the transformation worked.</echo>
+    </target>
+</project>
+
