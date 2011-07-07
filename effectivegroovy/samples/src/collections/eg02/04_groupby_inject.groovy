@@ -12,16 +12,26 @@ for (Person p : people) {
 }
 println frequencies
 
-// group by is another
+// group by is one way
 frequencies = people.groupBy { it.lastName }
 println frequencies
 
 println 'Success'
 
 
+// how about a group-by, group-by
+def expected = [
+        Buck:[
+                Chuck:'[domain.Person(1, Chuck, Buck)]',
+                Joe:'[domain.Person(3, Joe, Buck)]]',
+        ],
+        Plumber:[
+                Mario:'[domain.Person(2, Mario, Plumber)]']
+        ]
+def result = people.groupBy({ it.lastName }, { it.firstName })
+//assert result == expected
 
-
-// inject is one way
+// inject is another way
 int charCount = 0;
 for (Person p : people) {
     charCount += p.getLastName().length();
