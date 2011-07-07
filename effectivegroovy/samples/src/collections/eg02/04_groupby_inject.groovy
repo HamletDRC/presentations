@@ -44,3 +44,17 @@ charCount = people.inject(0) { acc, p ->
 }
 println charCount
 
+// map inject
+def map = [a: 'apple', b: 'banana', c: 'cheese']
+def result2 = map.inject(0) { acc, key, value ->
+    acc+= value.length()
+    acc
+}
+assert result2 == 17
+
+
+def result3 = map.inject(0) { acc, entry ->
+    acc+= entry.value.length()
+    acc
+}
+assert result3 == 17
