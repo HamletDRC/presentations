@@ -1,0 +1,33 @@
+Static Analysis in IntelliJ IDEA
+--------------------------------
+Let's face it - the code we write contains bugs. These bugs impact stability, reliability, correctness, performance or maintainability of our applications as well as our own reputation as developers. I'll show you some handy tools that help in finding and eliminating bugs, tools that enable you to start fixing reported exceptions in seconds, tools that highlight repetitive pieces of code, analyze flow of values through your program, visualize dependencies in code and highlight possible dependency problems. During the presentation I'll show you an alternative view on IntelliJ IDEA, a Java IDE with more than a 10 year history in the field. You'll get a chance to see lots of hands-on practical demos revealing the analysis aspect of the IDE and gain more insight into how you can fight for greater code quality in your projects, today.
+
+Defects impact stability, reliability, and correctness, as well as our reputation as developers. This session shows tools for finding and eliminating bugs, fixing reported exceptions, highlighting duplicate code, analyzing program flow, and visualizing dependencies. Come see a new view of IntelliJ IDEA, see hands-on demos, and gain insight into how you can fight for greater code quality.
+
+Effective Groovy
+----------------
+"Effective Java" by Joshua Bloch is the gold standard for how to write correct and idiomatic Java code. Wouldn't it be great if the same thing existed for Groovy? Well here it is. This interactive, live coding session discusses what separates good Groovy code from the bad, what makes some code great, and how best to use the many available libraries. We'll also look at several static analysis tools for Groovy that aid in these pursuits. This session appeals to both those with a Java knowledge looking to learn Groovy and advanced Groovy programmers looking to learn more.
+
+Java Boilerplate Busters
+------------------------
+Java has a reputation for boilerplate code: ubiquitous getters and setters, a verbose anonymous class syntax, and redundant declarations to name a few. It doesn't have to be this way! There are many ways to bust the boilerplate and this session provides a solid understanding of the most modern techniques. Come learn about inversion of control idioms, Proxy objects, code generation tools, and the latest libraries that both create and manage boilerplate code so you don't have to. A leaner, meaner codebase is yours for the taking.
+
+Groovy AST Transformations
+--------------------------
+Part I: Practical AST Transformations
+Part II: Implementors Guide to AST Transformations
+'A language should have access to its own abstract syntax' John McCarthy, Father of Lisp. Well, now Groovy 1.8 does! Besides explaining just what an AST transformation is, this talk will show you why AST transformations are important, what you can do with them, and where the language world is headed. We'll dive into some of the useful Groovy annotations and libraries being written that harness AST transformations, see how to write our own, and work with the AST tools that came out in the latest version. The session concludes with several case studies from AST transformation based projects.
+
+Code Generation on the JVM: Writing Code that Writes Code
+---------------------------------------------------------
+"The Pragmatic Programmer" admonished us all to "write code that writes code": use code generators to increase productivity and avoid duplication. Today's language communities have clearly caught on, as more and more frameworks generate code at compile or runtime. This session covers Project Lombok, Cofoja, Spring Roo, GContracts, Groovy++, and more. We'll reviews the different approaches, including examples of how and why we'd want to do this. Come see how these frameworks are using things like Java and Groovy AST Transformations, AspectJ intertype definitions, and ASM bytecode generators. You'll get an in-depth look at language tools and production deployed AST Transforms and code generators. Audience: developers searching for cutting edge solutions to increasing team velocity.
+
+New Ideas for Old Code
+----------------------
+Left unattended software can expand into a complex, brittle maintenance nightmare. But don't despair! This session teaches strategies for modernizing even the most horrid code swamps, examining incremental refactorings and the dos and don'ts of testing legacy code. We'll also tackle the harder, cultural issues: how to inspire your co-workers and keep your moral high even on the dirtiest jobs.
+
+Slimmed Down Software: A Lean Approach
+--------------------------------------
+Waterfall, Scrum, XP, Crystal... there are a lot of software methodologies on sale in the world today, but Lean Software brings something different to the table. This session uses practical examples to explain what makes software valuable and which parts are waste. Come explore how systems thinking can lead your team to deliver faster, create knowledge, and eliminate waste, and return to work Monday with news ideas about delighting your customers.
+
+
