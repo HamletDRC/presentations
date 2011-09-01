@@ -1,0 +1,56 @@
+https://github.com/mirah/mirah/wiki/GWT
+
+mirah -V
+mirahp
+homogenous vs. hetero enous ast
+mirah puts and print ast transformations
+Runs on Android? GWT? 
+* how quote and tick work
+
+Phase 1: Parse Ruby
+a. Ruby + Type Annotations
+b. Parsed by JRubyParser
+c. Creates Ruby AST + type nodes
+
+Phase 2: Transform to Duby AST
+a. Ruby AST + type nodes
+b. Transformer (with plugins)
+c. Untyped Duby AST
+
+Phase 3: Infer Types
+a. Untyped Duby AST
+b. Typer (with plugins)
+c. Typed Duby AST
+
+Phase 4: Generate Native Code
+a. Typed Duby AST
+b. Compilers (with plugins)
+c. Platform native code
+
+
+
+
+
+
+How to create getters/setters: 
+ import duby.lang.compiler.StringNode 
+      class Foo 
+        macro def attr_accessor(name_node, type) 
+          name = StringNode(name_node).literal 
+          quote do 
+            def `name` 
+              @`name` 
+            end 
+            def `"#{name}_set"`(`name`:`type`) 
+              @`name` = `name` 
+            end 
+          end 
+        end 
+        make_attr :foo, :int 
+      end 
+      x = Foo.new 
+      puts x.foo 
+      x.foo = 3 
+      puts x.foo 
+
+

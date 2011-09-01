@@ -1,0 +1,23 @@
+
+1. Lombok
+    - todo: reread Alex's article
+
+2. AST
+    - todo: make ClassNode diagram based on Java Types
+    
+3. Groovy AST Transforms
+
+4. IDEA Inspections and Fixes
+    - add screenshot of working fix
+       
+5. CodeNarc
+
+6. GContracts, Spock, Groovy++
+    - Add slides
+
+
+9. Mirah
+
+10. Homoiconic & Homogeneous AST
+
+
