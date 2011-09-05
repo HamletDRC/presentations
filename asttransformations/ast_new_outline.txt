@@ -6,6 +6,7 @@
     - todo: make ClassNode diagram based on Java Types
     
 3. Groovy AST Transforms
+    - rework 1 + 2 + 3 example to show "x happens before y" relationship
 
 4. IDEA Inspections and Fixes
     - add screenshot of working fix
@@ -21,3 +22,7 @@
 10. Homoiconic & Homogeneous AST
 
 
+
+
+
+-- Tree Pattern Matching

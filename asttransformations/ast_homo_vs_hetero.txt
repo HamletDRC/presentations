@@ -1,0 +1,62 @@
+AST
+---
+Why we build trees in the first place? 
+How we should structure ASTs and why?
+How to enforce tree structure with an implementation language's static type system?
+
+
+- The needs of the intended application dictate the nature of the IR.
+    (parenthesis?)
+- Guidelines: dense (no unnecessary nodes), convenient (easy to walk), and meaningful (emphasize operators, operands, and the relationship between them)
+- ASTs hold the key tokens from the input stream and record grammatical relationships discovered during the parse. 
+- ASTs are the lingua franca spoken by the various stages in a language application. Each stage performs a computation, rewrites the tree, or creates another data structure before passing the tree along to the next stage.
+- To do their work, the stages need to walk the trees and trigger actions when they encounter specific subtree patterns.
+
+The key idea behind AST structure is that tokens representing operators or operations become subtree roots. All other tokens become operands (children of operator nodes). 
+
+Parse Tree (Concrete Syntax Tree)
+A parse tree describes how a parser recognized an input sentence.
+
+- Pros: Parser generators can automatically build these for us. 
+- Cons: Parse trees are full of noise (unnecessary nodes). 
+- Cons: They are sensitive to changes in the grammar unrelated to syntax. 
+- Cons: If a parser generator generates heterogeneous node types, there can be literally hundreds of class definitions
+
+
+Homogeneous AST
+"A homogeneous tree implements an abstract syntax tree (AST) using a single node data type and a normalized child list representation."
+- The most important thing about a tree is ts shape, not its node data type. Nodes track children with lists of child pointers. 
+- By normalizing the references to the children of every node, it’s much easier to provide tree construction and tree-walking support machinery. 
+- Homogeneous AST makes it harder to enforce static typing rules. It's hard to figure out which nodes need which fields (what the constraints are).
+Pros: Homogeneous
+trees are very simple. Cons: It’s cumbersome to annotate AST
+nodes because the single node type has the union of all needed
+fields. There is no way to add methods specific to a particular
+kind of node.
+
+
+Normalized Heterogeneous AST
+- Trees with a multitude of node types are called heterogeneous trees. Normalized heterogeneous trees use a normalized list of children like homogeneous trees.
+- You refer to children nodes by position (like children[1], children[2])
+- Easily enforce a bit of structure
+Pros: It’s
+easy to add operator or operand-specific data and methods. Cons:
+Large grammars like Java’s need about 200 class definitions to be
+fully heterogeneous. That’s a lot of files to read and write.
+
+
+Irregular Heterogeneous AST 
+"This pattern implements an abstract syntax tree (AST) using more than a single node data type but with a normalized child list representation."
+- When we refer to an AST as heterogeneous, we also assume that the nodes have irregular children. Instead of a normalized child list, the nodes have named fields, one per child.
+- It’s harder to automatically generate tree visitors for irregular child lists.
+- Irregular, named fields can lead to more readable code
+- Irregular Heterogeneous AST is no fix for static typing: 
+    - CTor helps: AddNode(ExprNode left, ExprNode right) {...}
+    - But not always: VectorNode(List<ExprNode> elements) { ... } // empty?
+    - By relying on the implementation language’s type system to represent structure, the only sure way to determine the exact order and cardinality of children is to examine how methods use those children. The set of valid data structure organizations is therefore not explicitly described.
+- Worse, node functionality is spread across multiple node class definition files. The data structure organization is not encapsulated into a single description file.
+Pros: It’s easy to add operator- or operand-specific data and methods. Sometimes code operating on nodes is more readable because the children (operands) have names rather than positions like children[0]. Building tree-walking methods for a small set of heterogeneous nodes is quick and easy. Cons: As with Pattern 10, Normalized Heterogeneous AST , on page 111, there are lots of AST classes to read and write. Having irregular children makes building external visitors difficult. Most of the time we have to build tree walkers by hand using Pattern 12, Embedded Heterogeneous Tree Walker, on page 128.
+
+If you’re in doubt about which is best in your situation, choosing Pattern 10, Normalized Heterogeneous AST , on page 111 is a safe bet. That said, I tend to use Pattern 9, Homogeneous AST , on page 109 because I care most about tree structure, not about node types. If I have to annotate trees, though, I add some distinct node types, thus moving toward a heterogeneous tree.
+
+

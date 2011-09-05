@@ -1,0 +1,59 @@
+
+
+Restructure trees for simplification and translation: 
+    x + 0 -> x
+    x==y -> strcmp(x, y)
+
+At first glance, tree walking seems like no big deal.
+
+Do we have the source code for our tree nodes? 
+Do the trees have normalized children? 
+Are the trees homogeneous or heterogeneous? 
+Do we need to rewrite the trees while walking?
+Do we have to walk in particular order? 
+
+Embedded Heterogeneous Tree Walker
+- "This pattern walks heterogeneous ASTs using a set of recursive methods defined within the node class definitions." 
+- The nodes themselves define walking methods that execute actions & walk children
+- tree walking distributed across 100s of files. 
+- simple but not flexible
+- explicitly dictates node visitation order
+- can't alter walking algorithm
+
+External Tree Visitor
+- "This pattern encapsulates all tree-walking code associated with a particular task into a single visitor class."
+- encapsulates tree walking code (for both homogeneous and heterogeneous ASTs) into a single class definition.
+- allows us to alter tree-walking behavior without altering AST node definitions. 
+- straightforward to implement
+- tedious to implement manually.
+- explicitly dictates node visitation order
+- In practice, not that useful. Typically we have specific structure we're searching for, not just a simple node type.
+
+Tree Grammar
+- "Tree grammars are a terse and formal way of building an external visitor."
+- can be automated with ANTLR
+- describes the structure of valid ASTs
+- specifies the complete "syntax" of all valid ASTs for a particular application just as a parser grammar specifies a valid set of sentences.
+- allows automation of tree visitor construction
+- explicitly dictates node visitation order
+- CONS: in practice, we need a solution that lets us focus only on the tree patterns we care about for a particular phase. To make this work, we need to separate our tree traversal strategy from pattern matching and action execution
+- CONS: combines tree traversal with pattern matching
+
+Tree Pattern Matcher
+- "This pattern walks trees, triggering actions or tree rewrites as it encounters tree patterns of interest."
+- Instead of specifying an entire tree grammar, this pattern lets us focus on just those subtrees we care about.
+- decouple the tree traversal strategy from pattern matching.
+- Good because different applications care about different parts of the tree
+- decouples the order in which we apply tree patterns from the tree patterns themselves.
+- tree patterns don’t specify how to walk the tree (The pattern matching engine dictates the tree traversal strategy.)
+- In its simplest form, a pattern matcher repeatedly tries to match patterns against subtrees. When it finds a match, the pattern matcher triggers an action or tree rewrite.
+
+
+Visiting a tree means executing some actions on the nodes of a tree. 
+Tree traversal order is important
+- Preorder traversal or top-down traversal: + 1 2.
+- Inorder traversal: 1 + 2
+- Postorder traversal or bottom-up traversal: 1 2 +
+
+
+
