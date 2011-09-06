@@ -1,20 +1,21 @@
-import duby.lang.compiler.StringNode 
-
 
 class Person  
     macro def make_attr(name, type) 
-        quote do 
+        attribute_name = name.string_value()
+        quote {
             def `name` 
                 @`name` 
             end 
-            def `name``"_set"`(`name`:`type`) 
-                @`name` = `name` 
+            def `"#{attribute_name}_set"`(value:`type`) 
+                @`name` = value
             end 
-        end 
+        }
     end
 
-    make_attr :name, :string 
+    make_attr :firstName, :string 
 end 
 
 
-Person.new
+p = Person.new
+p.firstName = 'hamlet'
+puts p.firstName
