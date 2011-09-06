@@ -1,6 +1,8 @@
     - todo: reread Alex's article
     - todo: rework agenda
     - todo: make getter/setter example work
+    - todo: add Kotlin logo and a question mark? 
+    - todo: look up findbugs / pmd patterns
 
 1. Lombok
     - Demos
@@ -13,7 +15,6 @@
     - Demo with GroovyConsole code view
     - Demo with GroovyConsole tree view
     - Show AST Diagram
-    - add 1+2+3, 1+2*3, 1+'2'*3 example
     - Describe Local AST Transformations
     - Show main demo
 
@@ -26,6 +27,7 @@
     - Get some other example running
     - Explain sample rules
     - Explain different Tree walking approaches
+    - add 1+2+3, 1+2*3, 1+'2'*3 example
 
 6. GContracts, Spock, Groovy++
     - Add slides
