@@ -1,5 +1,4 @@
     - todo: reread Alex's article
-    - todo: rework agenda
     - todo: make getter/setter example work
     - todo: add Kotlin logo and a question mark? 
     - todo: look up findbugs / pmd patterns

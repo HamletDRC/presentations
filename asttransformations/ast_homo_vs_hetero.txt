@@ -39,9 +39,8 @@ Normalized Heterogeneous AST
 - Trees with a multitude of node types are called heterogeneous trees. Normalized heterogeneous trees use a normalized list of children like homogeneous trees.
 - You refer to children nodes by position (like children[1], children[2])
 - Easily enforce a bit of structure
-Pros: It’s
-easy to add operator or operand-specific data and methods. Cons:
-Large grammars like Java’s need about 200 class definitions to be
+Pros: It’s easy to add operator or operand-specific data and methods. 
+Cons: Large grammars like Java’s need about 200 class definitions to be
 fully heterogeneous. That’s a lot of files to read and write.
 
 
