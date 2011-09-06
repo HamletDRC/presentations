@@ -1,6 +1,14 @@
-    - todo: reread Alex's article
-    - todo: add Kotlin logo and a question mark? 
-    - todo: look up findbugs / pmd patterns
+Pre Demo CHecklist
+- Lombok is clean
+- Mirah is clean
+- Mirah demo directions are written out
+- Groovy Ast Browser works
+- Startup CodeNarc Web Console
+- Startup IDEA in gr8 project
+- Dump Font in console, GroovyConsole, GEdit, and IDEA
+
+    - todo: write out Mirah Directions
+    - todo: walk through presentation
 
 1. Lombok
     - Demos
@@ -22,6 +30,8 @@
        
 5. CodeNarc
     - Get returns null example running
+    - unnecessary null check before instanceof 
+    - UnnecessaryCollectCall
     - Get some other example running
     - Explain sample rules
     - Explain different Tree walking approaches

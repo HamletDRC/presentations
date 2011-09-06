@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/codenarc" />
+      <excludeFolder url="file://$MODULE_DIR$/src/gpp" />
     </content>
     <content url="file://$MODULE_DIR$/../scripts/asm">
       <sourceFolder url="file://$MODULE_DIR$/../scripts/asm/src" isTestSource="false" />
