@@ -1,26 +1,49 @@
+    - todo: reread Alex's article
+    - todo: rework agenda
+    - todo: make getter/setter example work
 
 1. Lombok
-    - todo: reread Alex's article
+    - Demos
+    - Explanation of Lombok
+    - Java AST Diagrams
+    - Alex's Building AST slide
 
 3. Groovy AST Transforms
-    - rework 1 + 2 + 3 example to show "x happens before y" relationship
+    - Demo
+    - Demo with GroovyConsole code view
+    - Demo with GroovyConsole tree view
+    - Show AST Diagram
     - add 1+2+3, 1+2*3, 1+'2'*3 example
+    - Describe Local AST Transformations
+    - Show main demo
 
-2. AST
-    - todo: include AST diagrams
-    - GroovyConsole demo
-    
 4. IDEA Inspections and Fixes
-    - add screenshot of working fix
+    - get demo working of not-null fix
+    - describe finding condition (& Kotlin motivation)
        
 5. CodeNarc
+    - Get returns null example running
+    - Get some other example running
+    - Explain sample rules
+    - Explain different Tree walking approaches
 
 6. GContracts, Spock, Groovy++
     - Add slides
 
-
 9. Mirah
-
+    - jruby FizzBuzz.mirah
+    - jrubyc FizzBuzz.mirah && jd-gui
+    - mirah FizzBuzz.mirah
+    - mirahc FizzBuzz.mirah && jd-gui
+    - mirahc --java FizzBuzz.mirah
+    - show mirah macro
+    - show mirahp
+    - show JRuby AST 
+    - Explain how Mirah works
+    
 10. Homoiconic & Homogeneous AST
+    - Explain the types of AST
 
+11. Next Steps
+    - Lisp? 
 
