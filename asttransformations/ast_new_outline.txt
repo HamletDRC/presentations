@@ -2,12 +2,14 @@
 1. Lombok
     - todo: reread Alex's article
 
-2. AST
-    - todo: make ClassNode diagram based on Java Types
-    
 3. Groovy AST Transforms
     - rework 1 + 2 + 3 example to show "x happens before y" relationship
+    - add 1+2+3, 1+2*3, 1+'2'*3 example
 
+2. AST
+    - todo: include AST diagrams
+    - GroovyConsole demo
+    
 4. IDEA Inspections and Fixes
     - add screenshot of working fix
        
@@ -22,7 +24,3 @@
 10. Homoiconic & Homogeneous AST
 
 
-
-
-
--- Tree Pattern Matching

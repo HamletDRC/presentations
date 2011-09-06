@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.codehaus.groovy.ast</OriginalElement>
+  <nodes>
+    <node x="3481.437527707274" y="2066.0622661057664">org.codehaus.groovy.ast.InnerClassNode</node>
+    <node x="1999.2366694617572" y="4597.612268012555">org.codehaus.groovy.ast.expr.UnaryMinusExpression</node>
+    <node x="4219.208611346518" y="1476.644230692304">org.codehaus.groovy.ast.ModuleNode</node>
+    <node x="3149.947759913868" y="3714.978256169891">org.codehaus.groovy.ast.expr.MapExpression</node>
+    <node x="1545.3566346903017" y="3988.987797861041">org.codehaus.groovy.ast.expr.GStringExpression</node>
+    <node x="2432.759818494288" y="3802.5848587033033">org.codehaus.groovy.ast.expr.Expression</node>
+    <node x="5852.33863967598" y="2187.099862120542">org.codehaus.groovy.ast.stmt.AssertStatement</node>
+    <node x="1753.0487135221156" y="3346.9774738504">org.codehaus.groovy.ast.expr.BooleanExpression</node>
+    <node x="3634.509654205266" y="2690.8944853296416">org.codehaus.groovy.ast.ImportNode</node>
+    <node x="3226.963571984166" y="3185.3629957681514">org.codehaus.groovy.ast.expr.ArgumentListExpression</node>
+    <node x="3224.7084303677993" y="2558.0291068699066">org.codehaus.groovy.ast.PropertyNode</node>
+    <node x="3584.3260843241433" y="2444.911914678849">org.codehaus.groovy.ast.AnnotatedNode</node>
+    <node x="3184.8071836326153" y="3980.8318966491015">org.codehaus.groovy.ast.expr.ConstantExpression</node>
+    <node x="5072.702776060378" y="1677.8522870098209">org.codehaus.groovy.ast.stmt.ExpressionStatement</node>
+    <node x="1926.1336782334797" y="3137.70464309638">org.codehaus.groovy.ast.expr.BinaryExpression</node>
+    <node x="5729.286974971164" y="1847.0460789552922">org.codehaus.groovy.ast.stmt.IfStatement</node>
+    <node x="2876.9042307001837" y="4483.785631944053">org.codehaus.groovy.ast.expr.MethodCallExpression</node>
+    <node x="3942.4309386771884" y="2361.483080446654">org.codehaus.groovy.ast.Parameter</node>
+    <node x="5857.973232913614" y="2385.644392020903">org.codehaus.groovy.ast.stmt.EmptyStatement</node>
+    <node x="1526.3294343225602" y="3722.4284021844596">org.codehaus.groovy.ast.expr.SpreadExpression</node>
+    <node x="5253.853157356851" y="2165.460059497462">org.codehaus.groovy.ast.stmt.Statement</node>
+    <node x="5702.975285700885" y="2678.0489324895857">org.codehaus.groovy.ast.stmt.BreakStatement</node>
+    <node x="4395.715487253825" y="1409.8380905136191">org.codehaus.groovy.ast.GenericsType</node>
+    <node x="4857.401672229798" y="2710.038176804855">org.codehaus.groovy.ast.stmt.TryCatchStatement</node>
+    <node x="3282.6174585467656" y="4532.996478430602">org.codehaus.groovy.ast.expr.AttributeExpression</node>
+    <node x="5528.648416080271" y="2780.7574551107573">org.codehaus.groovy.ast.stmt.ReturnStatement</node>
+    <node x="2536.6395022656748" y="2856.0252634334706">org.codehaus.groovy.ast.expr.ElvisOperatorExpression</node>
+    <node x="2991.771627795316" y="3381.5989926545735">org.codehaus.groovy.ast.expr.TupleExpression</node>
+    <node x="2683.169123830742" y="4568.174413103526">org.codehaus.groovy.ast.expr.UnaryPlusExpression</node>
+    <node x="5303.4345156508425" y="1665.2577492607297">org.codehaus.groovy.ast.stmt.ForStatement</node>
+    <node x="5808.967045141975" y="1999.9470509656044">org.codehaus.groovy.ast.stmt.ThrowStatement</node>
+    <node x="2512.220408490512" y="3035.0467745699552">org.codehaus.groovy.ast.expr.TernaryExpression</node>
+    <node x="2226.792707341376" y="4634.38661722373">org.codehaus.groovy.ast.expr.MapEntryExpression</node>
+    <node x="1717.7143240442174" y="4272.758761271287">org.codehaus.groovy.ast.expr.ClosureExpression</node>
+    <node x="1451.6251261272587" y="3212.8147499885317">org.codehaus.groovy.ast.expr.NotExpression</node>
+    <node x="2993.1216003826057" y="2301.4026849490097">org.codehaus.groovy.ast.ConstructorNode</node>
+    <node x="3281.997180879397" y="2371.3370006971995">org.codehaus.groovy.ast.MethodNode</node>
+    <node x="3479.431343667513" y="2258.7407520198335">org.codehaus.groovy.ast.ClassNode</node>
+    <node x="3423.748673308033" y="4045.564325122061">org.codehaus.groovy.ast.expr.AnnotationConstantExpression</node>
+    <node x="1463.1055697362397" y="3865.034295725187">org.codehaus.groovy.ast.expr.BitwiseNegationExpression</node>
+    <node x="5182.22309857405" y="2878.019498710761">org.codehaus.groovy.ast.stmt.DoWhileStatement</node>
+    <node x="5374.370859013813" y="2851.614457402944">org.codehaus.groovy.ast.stmt.WhileStatement</node>
+    <node x="2461.364490582084" y="4618.59781846619">org.codehaus.groovy.ast.expr.SpreadMapExpression</node>
+    <node x="1724.6476563098563" y="4384.739734408758">org.codehaus.groovy.ast.expr.MethodPointerExpression</node>
+    <node x="3297.5554489154797" y="1866.1177062150894">org.codehaus.groovy.ast.InterfaceHelperClassNode</node>
+    <node x="4656.894231822462" y="2357.2360062727093">org.codehaus.groovy.ast.stmt.ContinueStatement</node>
+    <node x="1570.2228735572796" y="4139.847218951027">org.codehaus.groovy.ast.expr.ConstructorCallExpression</node>
+    <node x="3162.6821137792226" y="3858.7407594839287">org.codehaus.groovy.ast.expr.ClassExpression</node>
+    <node x="1850.2681385848045" y="3254.8677249155876">org.codehaus.groovy.ast.expr.RangeExpression</node>
+    <node x="3578.0708731105315" y="1853.2564574909104">org.codehaus.groovy.ast.EnumConstantClassNode</node>
+    <node x="4552.545191055749" y="1494.7601689906687">org.codehaus.groovy.ast.AnnotationNode</node>
+    <node x="3929.794698758378" y="2468.110318882416">org.codehaus.groovy.ast.FieldNode</node>
+    <node x="2066.388472348902" y="3046.613061862683">org.codehaus.groovy.ast.expr.RegexExpression</node>
+    <node x="5002.996703638067" y="2808.0188830166403">org.codehaus.groovy.ast.stmt.CatchStatement</node>
+    <node x="5812.818048769213" y="2524.6014683635285">org.codehaus.groovy.ast.stmt.SwitchStatement</node>
+    <node x="1593.4258415087593" y="3589.3332983033843">org.codehaus.groovy.ast.expr.StaticMethodCallExpression</node>
+    <node x="2761.3541915315473" y="3088.837974794692">org.codehaus.groovy.ast.expr.EmptyExpression</node>
+    <node x="3840.237300195192" y="2579.945198047953">org.codehaus.groovy.ast.PackageNode</node>
+    <node x="1672.7036441021396" y="3479.2049291295816">org.codehaus.groovy.ast.expr.PostfixExpression</node>
+    <node x="2211.1394209555065" y="2880.1379745220374">org.codehaus.groovy.ast.expr.ClosureListExpression</node>
+    <node x="5484.250017488885" y="1725.4953343729426">org.codehaus.groovy.ast.stmt.SynchronizedStatement</node>
+    <node x="1859.9414391014247" y="4510.5488403238705">org.codehaus.groovy.ast.expr.VariableExpression</node>
+    <node x="4685.028645662296" y="2161.861812140691">org.codehaus.groovy.ast.stmt.CaseStatement</node>
+    <node x="4758.30098763257" y="2536.5971850648166">org.codehaus.groovy.ast.stmt.BlockStatement</node>
+    <node x="3173.5850216232843" y="4096.499062636726">org.codehaus.groovy.ast.expr.FieldExpression</node>
+    <node x="4414.703139011079" y="1555.4454499332578">org.codehaus.groovy.ast.ASTNode</node>
+    <node x="1733.5535744226268" y="3007.6636583989516">org.codehaus.groovy.ast.expr.DeclarationExpression</node>
+    <node x="3462.5319531117193" y="3682.1310934754474">org.codehaus.groovy.ast.expr.NamedArgumentListExpression</node>
+    <node x="3154.4779401770297" y="4231.520981373465">org.codehaus.groovy.ast.expr.CastExpression</node>
+    <node x="2277.654139248407" y="2992.65543363831">org.codehaus.groovy.ast.expr.ListExpression</node>
+    <node x="3263.3695378422294" y="2181.03147548481">org.codehaus.groovy.ast.MixinNode</node>
+    <node x="3030.9861242752813" y="4388.001170436192">org.codehaus.groovy.ast.expr.PropertyExpression</node>
+    <node x="3076.222120266958" y="3504.4189186848917">org.codehaus.groovy.ast.expr.PrefixExpression</node>
+    <node x="3129.40254443671" y="3611.3006649465206">org.codehaus.groovy.ast.expr.ArrayExpression</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.codehaus.groovy.ast.expr.ClosureListExpression" target="org.codehaus.groovy.ast.expr.ListExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.SpreadMapExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.AttributeExpression" target="org.codehaus.groovy.ast.expr.PropertyExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.ConstructorNode" target="org.codehaus.groovy.ast.MethodNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.MethodNode" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ElvisOperatorExpression" target="org.codehaus.groovy.ast.expr.TernaryExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.BitwiseNegationExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.MethodPointerExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.EmptyStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ConstantExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.MapEntryExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.ReturnStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.CatchStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.NamedArgumentListExpression" target="org.codehaus.groovy.ast.expr.MapExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.AssertStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.AnnotationNode" target="org.codehaus.groovy.ast.ASTNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.InnerClassNode" target="org.codehaus.groovy.ast.ClassNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.DoWhileStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.RangeExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.BooleanExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.CaseStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.TryCatchStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.PropertyNode" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.ModuleNode" target="org.codehaus.groovy.ast.ASTNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.StaticMethodCallExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.VariableExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.SpreadExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ClassExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.AnnotatedNode" target="org.codehaus.groovy.ast.ASTNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.ImportNode" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.GenericsType" target="org.codehaus.groovy.ast.ASTNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.BinaryExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.Expression" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.PropertyExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.ContinueStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.UnaryPlusExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.TupleExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ArrayExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.TernaryExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.IfStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.AnnotationConstantExpression" target="org.codehaus.groovy.ast.expr.ConstantExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.MethodCallExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.NotExpression" target="org.codehaus.groovy.ast.expr.BooleanExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.Statement" target="org.codehaus.groovy.ast.ASTNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.GStringExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.SynchronizedStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.ThrowStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.EmptyExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.FieldExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ArgumentListExpression" target="org.codehaus.groovy.ast.expr.TupleExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.PostfixExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.MapExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.BreakStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.Parameter" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.PackageNode" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.UnaryMinusExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.BlockStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.ClassNode" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.DeclarationExpression" target="org.codehaus.groovy.ast.expr.BinaryExpression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.PrefixExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.CastExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.ExpressionStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.ForStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.MixinNode" target="org.codehaus.groovy.ast.ClassNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.EnumConstantClassNode" target="org.codehaus.groovy.ast.InnerClassNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.SwitchStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.FieldNode" target="org.codehaus.groovy.ast.AnnotatedNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ClosureExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ListExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.InterfaceHelperClassNode" target="org.codehaus.groovy.ast.InnerClassNode">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.stmt.WhileStatement" target="org.codehaus.groovy.ast.stmt.Statement">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.RegexExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="org.codehaus.groovy.ast.expr.ConstructorCallExpression" target="org.codehaus.groovy.ast.expr.Expression">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.1852224512062068" x="4378.217749852739" y="2894.7181098239416" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
