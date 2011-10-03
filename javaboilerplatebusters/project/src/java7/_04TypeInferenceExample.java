@@ -5,5 +5,5 @@ import java.util.Map;
 
 public class _04TypeInferenceExample {
 
-    Map<Integer, String> map = new HashMap<>();
+    Map<Integer, String> map = new HashMap<Integer, String>();
 }
