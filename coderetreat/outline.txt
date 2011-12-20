@@ -1,0 +1,37 @@
+ 
+Start: update http://live.coderetreat.org/
+Nametags: 
+
+* Welcome
+   - Local Sponsors
+   - Global Sponsors (Heroku Video)
+
+
+Polls: 
+* Who knows what language?
+* Who does TDD today? 
+* Who has written the game of life before? 
+* Who has done a code retreat before? 
+* Who has fascilitated a code retreat before? 
+* Who has a laptop with an IDE and can get started NOW
+
+Local Sponsor Talk
+
+* Mailing List
+  - Hackergarten
+  - Git Training Type Things
+  - Open Houses
+  - About 3-4 mails per year
+
+* Canoo
+  - Share-a-Canooie
+  - GWT Work
+  - Agile
+  - Refactoring / Legacy Code
+
+* Give-Aways
+  - T-Shirts
+  - Stickers
+  - Pragmatic Press eBook
+  - JetBrains License
+  - Code School

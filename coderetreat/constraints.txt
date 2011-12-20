@@ -1,0 +1,35 @@
+writing methods of max 8/6/4 lines of code
+
+using no ifs
+using no cycles
+name everything precisely
+pen and paper for 12 minutes
+no imports, no arrays. Just java.lang. 
+OO Calesthenics
+
+TDD as if you meant it: 
+  - only pull out of test when you need to
+  - write a single test (that fails)
+  - only extract a method when there is duplication
+  - takes a lot of discipline
+  - reinforce the red-green-refactor cycle
+Ping Pong - One writes test, next writes production code
+Missing Tool - No IDE? No Primitives. No Conditionals/ifs (polymorphism). No loops. 
+  - quality constraints. 4 line methods, x chars per line
+  - verbs not nouns (behavior not state)
+  - no mutability. immutable objects. do verb abstraction, not noun abstraction
+Code Swap - don't delete code, but swap workstations
+Promiscious Pair - Driver goes to different group after 22 minutes
+Focus on Metaphor - Decide metaphors up front? 
+
+Retro: write best thing and worst thing about code. Use in retrospective
+  - switch best to worst and focus on best thing as worst thing. 
+
+
+* don't say how much time is left
+
+* infinite grid, not a 2d array
+* take notes on each group, bring notepad
+  - what was interesting
+  
+
