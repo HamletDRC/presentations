@@ -1,6 +1,0 @@
-@font-face {
-  font-family: 'Varela Round';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Varela Round'), local('VarelaRound-Regular'), url('http://themes.googleusercontent.com/static/fonts/varelaround/v2/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff') format('woff');
-}
