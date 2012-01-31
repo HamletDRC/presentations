@@ -1,0 +1,79 @@
+Groovy Night Notes
+
+* Groovy Milestones
+2003 - Groovy Created
+2004 - JSR Created
+2007 - 1.0 Released
+2007 - 1.5 Released - Java 5, Elvis, ExpandoMetaClass, invokeMethod 
+2009 - 1.6 Released - multiple assignments, AST Transformations, @Grab, 
+2009 - 1.7 Released - power asserts, AST Viewer, ASTBuilder
+2011 - 1.8 Released - Command chains, JSONBuilder, AST Transforms
+2012 - 2.0 Released - @TypeChecked 
+
+* Grails Milestones
+2005 - Work started
+2006 - 0.1 Released - Spring, Hibernate, SiteMesh, ORM, Scaffolding
+       0.2
+       0.3
+2007 - 0.4 Released - Plugin System
+       0.5 Released - URL Mapping, Domain Object Composition
+       0.6
+       0.7          - Spring WebFlow, Joint Compilation
+2008 - 1.0 Released - Gorm
+2009 - 1.1          - 
+     - 1.2          - Dependency Resolution DSL, Named Queries, Testing Refactor
+2010 - 1.3 Released - Groovy 1.7, Better Plugins, 
+2011 - 2.0          - Class Reloading, static resources, new GORM features
+
+* Releases
+2006 - Canoo WebTest Released
+2007 - G2One is formed
+2007 - IntellIJ IDEA Support
+2008 - GParallelizer (later GPars)
+2008 - Gradle 0.1
+2008 - Grails ULC Plugin
+2008 - Griffon 0.1
+2008 - SpringSource buys G2One
+2009 - CodeNarc 0.1
+2009 - Gradle 0.6
+2009 - Spock 0.1 to 0.3
+2009 - VMWare acquires SpringSource
+2010 - GContracts
+2010 - Griffon 0.9
+2010 - SpringSource Eclipse Support
+2010 - Spock 0.4 to 0.5
+2011 - Gaelyk 1.0
+2012 - CodeNarc 0.17
+2012 - Gradle 1.0
+
+
+Commits: 
+Dierk - 2005 - Grails Commit
+      - 2005 - Groovy Commit
+      - 2009 - GPars Commit
+      - 2011 - Gradle
+Andres - 2007 - Groovy Commit
+       - 2008 - Griffon Commit
+Hamlet - 2010 - CodeNarc
+       - 2009 - Groovy
+       - 2011 - Gradle
+
+Plugin Counts - 
+735 - Grails
+157 - Griffon
+
+2007 - My First Groovy Blog Post
+
+SVN Details
+Closure - 2003 - jstrachan
+GString - 2003 - "Refactored CompositeString to be called GString :)"
+Range - 2003
+groovy.sql - 2003
+MarkupBuilder - 2003 - jstrachan
+SimpleTemplateEngine - 2004 - spullara
+XmlSlurper - 2005 - tug
+groovy.time.Duration - 2006 - tug
+MockFor/StubFor - 2006 - dierk
+ConfigSlurper - 2007 - graeme
+@Grab - 2008 - shemnon
+
