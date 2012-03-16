@@ -5,6 +5,7 @@ import spock.lang.Unroll
 
 class MathSpec extends Specification {
 
+    @Unroll
     def "Does simple math work?"() {
 
         expect:

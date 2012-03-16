@@ -10,6 +10,5 @@ class NoisySet extends HashSet {
         super.addAll(i)
     }
 }
-
 def set = [] as NoisySet
 set.addAll([1, 2, 3])

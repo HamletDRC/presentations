@@ -1,8 +1,11 @@
+import lombok.*;
 
+
+@EqualsAndHashCode
 public class Person {
 
-    String firstName; 
-    String lastname;   
-
+	@Getter @Setter private String firstName;
+	@Getter @Setter private String lastName;
 }
+
 
