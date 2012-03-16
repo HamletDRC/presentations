@@ -1,0 +1,11 @@
+
+
+Static Code Analysis and AST Transformations
+
+The goal of static analysis is to let your computer find the bugs and problems in your code before your customers do. 
+This session covers several popular and open-source static analysis tools available in the Java ecosystem today, 
+and shows how we can use them to improve the quality of our software projects. We'll take a look at IntelliJ IDEA's static
+analysis capabilities as well as other projects like CodeNarc, PMD, AndroidLint, and Groovy 2.0. We'll also take a deep
+dive into how these tools are built, and how they use a compiler's Abstract Syntax Tree to work their magic. 
+
+
