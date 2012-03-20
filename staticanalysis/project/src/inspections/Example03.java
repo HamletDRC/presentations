@@ -3,7 +3,7 @@ package inspections;
 
 import java.awt.*;
 
-public class _05Example {
+public class Example03 {
 
     Frame makeFrame(int height, int width) {
         Frame frame = new Frame();

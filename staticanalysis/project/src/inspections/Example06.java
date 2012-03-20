@@ -3,7 +3,7 @@ package inspections;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class _03Example {
+public class Example06 {
 
     private final ReentrantLock lock = new ReentrantLock();
     private boolean active = false;

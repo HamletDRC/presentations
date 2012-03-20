@@ -1,0 +1,81 @@
+1. About Me
+-----------
+Canoo, JetBrains
+Groovy, CodeNarc
+JSR Expert Group, Committer
+Groovy in Action 2
+
+2. User Space
+-------------
+* Java Static Analysis (inspections package)
+  * Examples
+    * Example01 - Multicatch
+    * Example02 - ARM Block
+    * Example03 - x,y/h,w example
+    * Example04 - instance lock/static write
+    * Example05 - Inconsistent Synchronization
+    * Example06 - Inconsistent Locking
+    * Example07 - Whitespace Issues
+  * Run Live or in batch from IDE/Command Line
+  * Run Inspection by Name
+
+* FindBugs Static Analysis
+  * Example1 - Boolean returns null
+  * Example2 - Inconsistent Synchronization
+  * Example3 - Broken Oddness Check
+
+* PMD Static Analysis
+  * Example1 - Jumbled Incrementor
+  * Example2 - Misplaced null check
+  * Example3 - Literal first String compares
+
+* FindBugs vs PMD vs IDEA
+  * IDEA has a ton of inspections, quickfixes, and TeamCity integration
+  * Dedicated IDEA shops don't really need the other two
+  * IDEA not always easy to run with build/CI
+  * IDEA inspections cannot easily be used from Eclipse
+  * FindBugs literally finds bugs. PMD is more best practices
+
+* QAPlug vs. Dedicated Plugins
+  * QAPlug - Can run for Uncommitted Files
+  * QAPlug - Nicer user interface 
+  * QAPlug gives you less control over rulesets and rules
+  * Dedicated plugins are a little easier to share config files with
+
+* AndroidLint
+  * Inconsistent Arrays
+  * Reference to an ID that is not in the current layout
+  * HashMap can be replaced with SparseArray
+  * Unused Resources
+  * Duplicate icons
+  * Many resource issues... 
+  * Design issues like ... and (c), etc
+
+* CodeNarc (in web console)
+  * Example 1 - Overloading equals, not override
+  * Example 2 - Broken oddness, return null not []
+  * Example 3 - unique() assignment, println 
+
+* Groovy 2.0
+  * Example1 - toUppercase()
+  * Example2 - instanceof downcasting
+  * Example3 - Spread Operator
+
+3. System Space (Technical)
+---------------------------
+* ast
+* ast transformations
+* idea example w/ rewrite
+* PMD - XPath xpressions in AST
+
+4. Beyond Space
+---------------
+* lombok + lombok idea plugin
+  * lombok.Person example
+
+* groovy transformations 
+  * groovy.Person (InheritConstructors, TupleConstructors)
+  * groovy.NoisySet (@Delegate)
+  * groovy.MathSpec (spock)
+
+

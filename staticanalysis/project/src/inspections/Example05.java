@@ -1,7 +1,7 @@
 package inspections;
 
 
-public class _02Example {
+public class Example05 {
 
     private boolean active = false;
 

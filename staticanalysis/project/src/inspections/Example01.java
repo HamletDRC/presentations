@@ -1,6 +1,6 @@
 package inspections;
 
-public class _06Example {
+public class Example01 {
 
     {
         try {

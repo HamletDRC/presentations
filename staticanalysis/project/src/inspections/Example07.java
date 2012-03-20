@@ -1,6 +1,6 @@
 package inspections;
 
-public class _04Example {
+public class Example07 {
     private static final boolean DEFAULT = true;
 
     void myMethod(Boolean value) {
