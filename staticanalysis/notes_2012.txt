@@ -67,6 +67,7 @@ Groovy in Action 2
 * ast transformations
 * idea example w/ rewrite
 * PMD - XPath xpressions in AST
+* Structural Search & Replace (MyClass)
 
 4. Beyond Space
 ---------------
@@ -78,4 +79,13 @@ Groovy in Action 2
   * groovy.NoisySet (@Delegate)
   * groovy.MathSpec (spock)
 
+5. Not Covered
+* Link to slides on SlideShare
+* @Immutable, @GuardedBy
+* @Pattern
+* @Language
+* @Nls, @NonNls, @PropertyKey
+* Duplicate Detection
+* Dataflow Analysis
+* Dependency Analysis, Dependency Structure Matrix
 

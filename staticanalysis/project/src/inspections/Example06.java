@@ -8,7 +8,7 @@ public class Example06 {
     private final ReentrantLock lock = new ReentrantLock();
     private boolean active = false;
 
-    public boolean isActive() throws Exception {
+    public boolean isActive() {
         lock.lock();
         boolean result = active;
         lock.unlock();
